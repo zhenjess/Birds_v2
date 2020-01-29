@@ -1,0 +1,177 @@
+.shoe-bar-filters {
+    .shoe-bar-filter-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin-right: 80px;
+        height: 80px;
+
+        li {
+            user-select: none;
+        }
+    }
+}
+
+#Black {
+    background-color: rgb(65, 65, 65);
+    &:hover {
+       background-color: rgb(90, 90, 90);
+    }
+}
+
+#Grey {
+    background-color: rgb(199, 199, 199);
+    &:hover {
+       background-color: rgb(211, 211, 211);
+    }
+}
+
+#White {
+    background-color: rgb(240, 240, 230);
+    &:hover {
+       background-color: rgb(245, 246, 238);
+    }
+}
+
+#Red {
+    background-color: #b41e37;
+    &:hover {
+       background-color: #ce2440;
+    }
+}
+
+#Green {
+    background-color: #475c3f;
+    &:hover {
+       background-color: #58754d;
+    }
+}
+
+#Blue {
+    background-color: #100858;
+    &:hover {
+       background-color: #3e358a;
+    }
+}
+
+.size-dropdown-attributes {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 18px;
+    margin: 0px 0 10px 10px;
+    &:hover {
+        background-color: rgb(224, 224, 224);
+        cursor: pointer;
+    }
+}
+
+.color-dropdown-attributes {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: 12px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    h4 {
+        transform: translateY(18px);
+    }
+
+}
+
+.style-dropdown-attributes {
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    background-color: beige;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+        h4 {
+            font-size: 17px;
+            transition: .1s;
+            color: black;
+        }
+    }
+
+    h4 {
+        transform: translateY(18px);
+        color: rgb(66, 66, 66);
+    }
+}
+
+#Runners {
+    background: url("https://s3-us-west-1.amazonaws.com/alldays-seeds/icon_silhouette_runner.png"); 
+}
+
+#Loungers {
+    background: url("https://s3-us-west-1.amazonaws.com/alldays-seeds/icon_silhouette_lounger.png"); 
+}
+
+#Skippers {
+    background: url("https://s3-us-west-1.amazonaws.com/alldays-seeds/icon_silhouette_skipper.png"); 
+}
+
+#Toppers {
+    background: url("https://s3-us-west-1.amazonaws.com/alldays-seeds/icon_silhouette_topper.png"); 
+}
+
+#Runners, 
+#Loungers,
+#Skippers,
+#Toppers {
+    background-size: 40px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin-left: 40px;
+}
+
+.material-dropdown-attributes {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background-color: beige;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 50px;
+
+    &:hover {
+        border: 2px solid rgba(207, 207, 207, 0.863);
+        cursor: pointer;
+    }
+
+    h4 {
+        transform: translateX(40px);
+    }
+}
+
+#Wool {
+    background-color: rgb(240, 240, 230);
+    &:hover {
+        background-color: rgb(245, 246, 238);
+    }
+}
+
+#Tree {
+    background-color: #2d5c1a;
+    &:hover {
+        background-color: #58754d;
+    }
+}

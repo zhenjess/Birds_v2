@@ -1,0 +1,24 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: rgba(0,0,0,0.7);
+}
+
+.summary {
+    margin: 10% 3% 3% 3%;
+    color: white;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialicons {
+    display: flex;
+    justify-content: space-evenly;
+}

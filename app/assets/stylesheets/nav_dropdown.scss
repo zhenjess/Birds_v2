@@ -1,0 +1,249 @@
+@import 'utils';
+
+#nav-dropdown {
+    position: fixed;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+    min-width: 800px;
+    padding: 50px 100px 50px 100px;
+    background-color: $bg-grey;
+    z-index: 1;
+}
+
+#nav-dropdown.visible {
+    position: absolute;
+    max-height: 550px;
+    z-index: 1;
+}
+
+.swipe-down {
+    animation: swipe-down .4s;
+}
+
+.swipe-up-down {
+    animation: swipe-up-down .5s;
+}
+
+#nav-dropdown.invisible {
+    max-height: 0px;
+    padding: 0;
+    transition: .2s;
+}
+
+// .nav-dropdown-box {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: space-around;
+
+// }
+
+#nav-dropdown > div > ul {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $mid-grey;
+    padding: 20px 0 30px 0;
+    margin-bottom: 20px;
+    min-width: 600px;
+    
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        &:hover .dropdown-show-img-item {
+            transform: scale(1.06);
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        &:hover h3 {
+            color: black;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .dropdown-shoe-img {
+            box-sizing: border-box;
+            height: 150px;
+            width: 150px;
+            background-color: $bg-grey;
+            margin: 0 10px 0 10px;
+        }
+
+        .dropdown-show-img-item {
+            max-width: 8.7vw;
+            max-height: 55vh;
+            object-fit: cover;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: $light-grey;
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+
+.dropdown-header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid lightgray;
+}
+
+.dropdown-shoe-img .dropdown-show-image-item {
+    object-fit: cover;
+    height: 100px;
+    width: 130px;
+}
+
+// #dropdown-attributes-container {
+//     display: flex;
+
+//     .right-arrow {
+//         margin: 0 10px 0 10px;
+//         padding: none;
+//         font-family: 'Roboto', sans-serif;
+//         font-size: 20px;
+//         text-align: center;
+//         color: black;
+//         transform: translateY(-2px);
+//         user-select: none;
+//         &:hover {
+//             cursor: pointer;
+//         }
+//     }
+    
+//     ul {
+//         display: flex;
+//         padding: 12px;
+//         width: 500px;
+//         justify-content: flex-start;
+
+//         li {
+//             display: flex;
+//             flex-direction: column;
+//             padding: 0 15px 0 15px;
+//             margin: 0 15px 0 40px;
+    
+
+//             h3 {
+//                 color: $light-grey;
+//                 margin-bottom: 10px;
+//             }
+
+//             ol {
+//                 display: flex;
+//                 flex-direction: column;
+//                 flex-wrap: wrap;
+//                 max-height: 135px;
+
+//                 .attribute-link {
+//                     margin: 10px 20px 10px 0;
+//                     font-size: 14px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// #dropdown-attributes-container > div {
+//     display: flex;
+//     padding: 15px;
+    
+//     a {
+//         height: 20px;
+//         user-select: none;
+//     }
+
+//     h2 {
+//         font-family: $title-font-1;
+//         font-size: 14px; 
+//         user-select: none;
+//     }
+// }
+
+.close-nav-dropDown {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    .uparrow {
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        font-size: 30px;
+        color: black;
+        transition: .2s;
+        width: 15px;
+        bottom: 5px;
+
+        &:hover {
+            color: black;
+            cursor: pointer;
+            user-select: none;
+            transition: .2s;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// .nav-dropdown-box {
+//     display: flex;
+//     position: relative;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     height: 100%;
+//     padding: 3px 0px;
+//     background-color: $bg-grey;
+// }
+
+// .dropdown-header {
+//     font-family: 'Roboto', sans-serif;
+//     font-size: 14px;
+//     border-bottom: 1px solid lightgray;
+// }
+
+// #nav-dropdown > div > ul li {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-family: 'Roboto', sans-serif;
+//     font-size: 10px;
+// }
+
+// .dropdown-show-img-item {
+//     max-width: 10vw;
+//     max-height: 20vh;
+//     object-fit: cover;
+// }
+
+// .dropdown-shoe-img {
+//     box-sizing: border-box;
+//     height: 150px;
+//     width: 150px;
+//     background-color: $bg-grey;
+//     margin: 0 10px 0 10px;
+// }
+
+// .attribute-link > li {
+//     display: flex;
+//     flex-direction: row;
+//     position: relative;
+//     justify-content: space-evenly;
+// }

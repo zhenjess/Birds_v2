@@ -1,0 +1,102 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  // position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 95%;
+  margin-left: -135px;
+
+//   right: 100%;
+  transform: translate(-50%, -50%);
+    background: white;
+  // width: 450px;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart-form {
+    margin-left: -120px;
+
+    .cart-text {
+        border-bottom: 3px solid grey;
+
+        .cart-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .shop-links {
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        // position: absolute;
+        height: 55px;
+        // width: 800px;
+        flex-direction: column;
+        justify-content: center;
+        // padding: 10px 10px 10px 0px;
+        // margin-top: 460px;
+        // border-bottom: 2px solid lightgray;
+    
+        .shop-link {
+            // display: flex;
+            // position: relative;
+            // flex-direction: row;
+           
+            // position: relative;
+            // left: 1230px;
+            
+            margin: 10px;
+            input {
+                box-sizing: border-box;
+                // min-height: 40px;
+                min-width: 175px;
+                padding: 0px 60px 0px 60px;
+                border: 1px solid #E6E5E5;
+                right: 60px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 13px;
+                border-radius: 2px;
+                text-align: center;
+            }
+        
+            .submit:hover {
+                cursor: pointer;
+                background-color: black;
+                color: white;
+                font-weight: bold;
+            }
+        
+            .submit{
+                background-color: white;
+                color: black;
+                box-sizing: border-box;
+                //min-width: 390px;
+               // min-height: 40px;
+                padding: 20px;
+                // margin: 20px;
+                transition: 0.3s;
+                border: 2px solid black;
+        
+                value:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+

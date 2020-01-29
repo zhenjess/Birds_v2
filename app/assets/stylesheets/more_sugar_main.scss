@@ -1,0 +1,43 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.sugar {
+  footer {
+        height: 200px;
+        width: 100%;
+        background-color: #1f3131;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        font-family: 'Poppins', sans-serif;
+        vertical-align: baseline;
+  }
+}
+
+
+/* The hero image */
+.more-sugar-main-image {
+      // background-position: bottom;
+    display: flex;
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("https://allgoodtales.com/wp-content/uploads/2018/11/Screen-Shot-2018-11-13-at-16.48.22-610x262.png");
+    
+      /* Set a specific height */
+    height: 690px;
+    width: 100%;
+    
+      /* Position and center the image to scale nicely on all screens */
+    //background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    //margin-left: 490px;
+}

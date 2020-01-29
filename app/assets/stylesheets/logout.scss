@@ -1,0 +1,120 @@
+.logout {
+    height: 100vh;
+    background-color: #f1ebe6;
+    box-sizing: border-box;
+  
+    .logout-form-container {
+        background-color: #F1EBE7;
+        display: flex;
+        // flex-direction: column;
+        // height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-position: 50% 100%;
+        padding-top: 250px;
+    
+        h2 {
+            font-family: 'HurmeGeometricSans3-Bold', Helvetica, Arial, sans-serif;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            // display: flex;
+            // align-items: center;
+            // margin: 5px;
+            // margin-left: -35px;
+            // top: 300px;
+        }
+    
+        // p {
+        //     text-align: left;
+        //     // vertical-align: baseline;
+        //     // margin: 0px;
+        //     // padding: 0px;
+        //     // border: 0px;
+        //     // font-size: 100%;
+        //     font: inherit;
+        // }
+    
+        .logout-link {
+            // border-bottom: 20px;
+            // border-bottom-color: black;
+            // display: flex;
+            // align-items: center;
+            // top: 300px;
+            // left: 200px;
+            display: block;
+            font-family: 'HurmeGeometricSans3-SemiBold', Helvetica, Arial, sans-serif;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 90px;
+            text-align: center;
+        }
+    }
+    
+    .logout-status {
+        display: flex;
+        justify-content: center;
+        // width: 50vw;
+        p {
+            text-align: left;
+            // margin-top: -250px;
+            // margin-left: 350px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+    
+        .orders p{
+            // float: left;
+            display: block;
+            font-size: 0.875em;
+            line-height: 1.7;
+            // margin-top: -310px;
+            // margin-left: 300px;
+            margin-right: 300px;
+        }
+    
+        .default {
+            // float: right;
+            display: block;
+            // width: 31.76157%;
+            background-color: white;
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 50px 50px;
+            font-size: 0.875em;
+            line-height: 1.7;
+            margin-left: 300px;
+            // margin-top: -310px;
+            // text-transform: uppercase;
+           
+    
+            name {
+                font-size: 1.125em;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+    
+            address-body {
+                margin-bottom: 55px;
+            }
+    
+            email {
+                word-wrap: break-word;
+            }
+    
+            a {
+                color: #333;
+                font-size: 0.75em;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,146 @@
+.footer {
+    width:100%;
+    height:100px;
+    position: relative;
+    bottom:0;
+    left:0;
+    background-color: #212a2f;
+}
+.footer-container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid lightgray;
+    width: 100%;
+    background-color: #212a2f;
+    z-index: 0;
+}
+
+.footer-container-flex-left {
+    display: flex;
+    justify-content: flex-start;
+     flex-direction: row;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+
+    input {
+
+        box-sizing: border-box;
+       // min-height: 10px;
+        min-width: 200px;
+        padding: 0px 10px 20px 0px;
+        border: 1px solid #E6E5E5;
+        margin-top: -12px;
+        margin-left: 10px;
+        font-size: 12px;
+        border-radius: 2px;
+    }
+
+    .submit:hover {
+        cursor: pointer;
+        background-color: #EEE8E6;
+        color: black;
+    }
+
+    .submit{
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+        min-width: 50px;
+        // min-height: 40px;
+        padding: 12px;
+        //margin: 20px;
+        transition: 0.3s;
+        border: 2px solid black;
+    }
+
+}
+
+.email-error {
+    position: absolute;
+    bottom: 20px;
+
+    ul{
+        padding: 0px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.footer-container-flex-right {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.footer-copyright {
+    color: white;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.footer-git {
+    font-weight: 400;
+    margin: 0 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-git:hover {
+    text-decoration: underline;
+}
+
+.footer-linkedin {
+    font-weight: 400;
+    margin: 0 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-linkedin:hover {
+    text-decoration: underline;
+}
+
+.footer-angel {
+    font-weight: 400;
+    margin: 0 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-angel:hover {
+    text-decoration: underline;
+}
+
+.footer-container i {
+  margin: 0px 2px;
+}
+
+.fa-github {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.fa-linkedin {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.fa-angellist {
+    color: white;
+    font-size: 1.5rem;
+}
+
