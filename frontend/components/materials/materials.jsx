@@ -51,8 +51,7 @@ class Materials extends React.Component {
                                 value="Trino™"
                             />
                         </Link>
-                    </div>
-                   
+                    </div>         
         </>
         );
     }
