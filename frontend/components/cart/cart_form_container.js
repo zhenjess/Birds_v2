@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { logout } from '../../actions/session_actions';
-
 import { connect } from 'react-redux';
 
 import CartForm from './cart_form';
@@ -14,10 +12,4 @@ const mapStateToProps = (state) => {
     });
 };
 
-const mapDispatchToProps = dispatch => {
-    return ({
-        logout: () => dispatch(logout()),
-    });
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartForm);
+export default connect(mapStateToProps, null)(CartForm);

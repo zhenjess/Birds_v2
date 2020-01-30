@@ -46,6 +46,17 @@
         display: flex;
         justify-content: center;
     }
+
+    .project-git, .project-linkedin, .project-angel {
+        font-weight: bold;
+        margin: 0 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        color: solid white;
+        text-decoration: none;
+    }
+
+    
 }
 
 
