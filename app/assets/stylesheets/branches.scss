@@ -1,0 +1,153 @@
+.branches-container {
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .sf-branch {
+        display: flex;
+        //margin-top: 10px;
+        //width: 70%;
+        justify-content: space-between;
+        //box-sizing: border-box;
+        height: 455px;
+        //padding-left: 20vw;
+        //padding-right: 20vw;
+        
+        .sf-image {
+            display: flex;
+            background-image: url("https://s26561.pcdn.co/wp-content/uploads/2017/09/Golden-Gate-Bridge-Marin-Headlands-San-Francisco-California-1.jpg");
+            //background-position: 50% 40%;
+            width: 500px;
+            height: auto;
+            flex-direction: column;
+           // margin: -10% -12% -11.1% 50%;
+            // margin: 110px 5px 5px 70px;
+            margin-left: -20px;
+            //margin-top: -50px;
+            //margin-right: 20px;
+            // background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            // min-height: 500px;
+            overflow: hidden;
+        }
+    
+        .sf-text {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            h2 {
+                display: flex;
+                text-align: left;
+                justify-content: center;
+                font-family: 'Merriweather Sans', sans-serif;
+                right: 250px;
+                font-size: 24px;
+                flex-direction: column;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .la-branch {
+        display: flex;
+        //margin-top: 10px;
+        //width: 70%;
+        justify-content: space-between;
+        //box-sizing: border-box;
+        height: 455px;
+        //padding-left: 20vw;
+        //padding-right: 20vw;
+        
+        .la-image {
+            display: flex;
+            background-image: url("https://cdn.getyourguide.com/img/tour_img-1775477-146.jpg");
+            //background-position: 50% 40%;
+            width: 500px;
+            height: auto;
+            flex-direction: column;
+           // margin: -10% -12% -11.1% 50%;
+            // margin: 110px 5px 5px 70px;
+            margin-left: -20px;
+            //margin-top: -50px;
+            //margin-right: 20px;
+            // background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            // min-height: 500px;
+            overflow: hidden;
+        }
+    
+        .la-text {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            h2 {
+                display: flex;
+                text-align: left;
+                justify-content: center;
+                font-family: 'Merriweather Sans', sans-serif;
+                right: 250px;
+                font-size: 24px;
+                flex-direction: column;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .ny-branch {
+        display: flex;
+        //margin-top: 10px;
+        //width: 70%;
+        justify-content: space-between;
+        //box-sizing: border-box;
+        height: 455px;
+        //padding-left: 20vw;
+        //padding-right: 20vw;
+        
+        .ny-image {
+            display: flex;
+            background-image: url("https://www.nyp.org/graphics/pps/banner-pps.jpg");
+            //background-position: 50% 40%;
+            width: 500px;
+            height: auto;
+            flex-direction: column;
+           // margin: -10% -12% -11.1% 50%;
+            // margin: 110px 5px 5px 70px;
+            margin-left: -20px;
+            //margin-top: -50px;
+            //margin-right: 20px;
+            // background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            // min-height: 500px;
+            overflow: hidden;
+        }
+    
+        .ny-text {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            h2 {
+                display: flex;
+                text-align: left;
+                justify-content: center;
+                font-family: 'Merriweather Sans', sans-serif;
+                right: 250px;
+                font-size: 24px;
+                flex-direction: column;
+                font-weight: bold;
+            }
+        }
+    }
+}
