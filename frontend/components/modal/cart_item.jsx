@@ -79,7 +79,7 @@ class CartItem extends React.Component {
         const { quantity } = this.state;
         
         // const { photoUrl, price, size, id, style, deleteCartItem } = this.props;
-        const { style, material, gender, color, photoUrl, price, size, cart, cartItem, currentUser } = this.props;
+        const { style, material, gender, color, photoUrl, price, size, id, deleteCartItem, cartItem, currentUser } = this.props;
         
         // let { shoe } = this.props;//deconstructing not getting shoe as shoe is not in props
         
@@ -90,7 +90,7 @@ class CartItem extends React.Component {
                 </div>
                 <div className="cart-item-info">
                     <div>
-                        <h2>{gender} {material} {style} {color}</h2> 
+                        <h2>{gender} {color} {material} {style}</h2>       
                         <h3>Size : {size}</h3>
                     </div>
                     <div className="quantity-container">
