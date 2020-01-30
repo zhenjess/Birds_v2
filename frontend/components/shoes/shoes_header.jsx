@@ -133,15 +133,6 @@ class ShoesHeader extends React.Component {
                         <ul className="right-bar">
                             <ShoeFilter
                                 handleFilterAttrs={handleFilterAttrs}
-                                title={"Size"}
-                                id={"size"}
-                                filters={["7", "8", "9", "10", "11", "12"]}
-                                whatFilter={this.state.filters.size}
-                                openFilter={this.state.openFilter}
-                                currentOpenFilter={filterTitle}
-                            />
-                            <ShoeFilter
-                                handleFilterAttrs={handleFilterAttrs}
                                 title={"Color"}
                                 id={"color"}
                                 filters={["Black", "Grey", "White", "Red", "Green", "Blue"]}
