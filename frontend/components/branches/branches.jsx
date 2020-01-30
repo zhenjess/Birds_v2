@@ -1,10 +1,10 @@
 import React from 'react';
-                
+
 class Branches extends React.Component {
     constructor(props) {
         super(props);
     }
-        
+
     render() {
         return (
             <div className="branches-container">
@@ -43,5 +43,5 @@ class Branches extends React.Component {
         );
     }
 }
-        
+
 export default Branches;
