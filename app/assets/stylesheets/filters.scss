@@ -77,9 +77,10 @@
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+   // justify-content: center;
     margin-left: 20px;
     font-size: 12px;
+    background-position: top;
 
     &:hover {
         cursor: pointer;
@@ -136,7 +137,7 @@
 #Skippers,
 #Toppers {
     background-size: 40px;
-    background-position: center; 
+    background-position: top; 
     background-repeat: no-repeat;
     margin-left: 40px;
 }
@@ -147,6 +148,7 @@
     border-radius: 100%;
     box-sizing: border-box;
     background-color: beige;
+    background-position: top;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -159,6 +161,7 @@
 
     h4 {
         transform: translateX(40px);
+        background-position: top;
     }
 }
 
