@@ -1,0 +1,122 @@
+.branches-container {
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .sf-branch {
+        display: flex;
+        justify-content: space-between;
+        height: 455px;
+        
+        .sf-image {
+            display: flex;
+            background-image: url("https://s26561.pcdn.co/wp-content/uploads/2017/09/Golden-Gate-Bridge-Marin-Headlands-San-Francisco-California-1.jpg");
+            width: 500px;
+            height: auto;
+            flex-direction: column;
+            margin-left: -20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    
+        .sf-text {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            h2 {
+                display: flex;
+                margin-top: 175px;
+                text-align: center;
+                justify-content: center;
+                font-family: 'Merriweather Sans', sans-serif;
+                right: 250px;
+                font-size: 50px;
+                flex-direction: column;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .la-branch {
+        display: flex;
+        justify-content: space-between;
+        height: 455px;
+        
+        .la-image {
+            display: flex;
+            background-image: url("https://cdn.getyourguide.com/img/tour_img-1775477-146.jpg");
+            width: 518px;
+            height: auto;
+            flex-direction: column;
+            margin-left: -20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    
+        .la-text {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            h2 {
+               display: flex;
+                margin-top: 175px;
+                margin-left: -75px;
+                text-align: center;
+                justify-content: center;
+                font-family: 'Merriweather Sans', sans-serif;
+                right: 100px;
+                font-size: 50px;
+                flex-direction: column;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .ny-branch {
+        display: flex;
+        justify-content: space-between;
+        height: 455px;
+
+        
+        .ny-image {
+            display: flex;
+            background-image: url("https://www.nyp.org/graphics/pps/banner-pps.jpg");
+            width: 500px;
+            height: auto;
+            flex-direction: column;
+            margin-left: -20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    
+        .ny-text {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            h2 {
+               display: flex;
+                margin-top: 175px;
+                text-align: center;
+                justify-content: center;
+                font-family: 'Merriweather Sans', sans-serif;
+                right: 250px;
+                font-size: 50px;
+                flex-direction: column;
+                font-weight: bold;
+            }
+        }
+    }
+}
