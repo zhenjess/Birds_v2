@@ -10,7 +10,7 @@ export const createCartItem = (cartItem) => {//turn shoe into cart item
     // debugger; 
     return $.ajax({
         url: `/api/cart_items`,
-        method: 'POST', 
+        method: 'POST',
         data: { cartItem }
     })
 }
@@ -23,11 +23,19 @@ export const updateCartItem = (cartItem) => {
     })
 }
 
-export const deleteCartItems = (cartItems) => {
+export const deleteCartItems = (cartId) => {
     return $.ajax({
-        url: `/api/cart_items`,
-        method: 'DELETE',
-        data: { cartItems }
+        url: `/api/carts/${cartId}`,
+        method: 'DELETE'
+    })
+}
+
+//allow delete items from users current cart
+export const deleteCartItem = (cartItemId) => {
+    //debugger
+    return $.ajax({
+        url: `/api/cart_items/${cartItemId}`,
+        method: 'DELETE'
     })
 }
 
