@@ -4,6 +4,7 @@ export const RECEIVE_CART = "RECEIVE_CART";
 export const POST_TO_CART = "POST_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
+
 const receiveCart = (payload) => {
     return ({
         type: RECEIVE_CART,
@@ -36,7 +37,6 @@ function receiveCartItems(cartItem) {
     });
 }
 
-
 export const createCart = (user) => dispatch => {
     return APIUtil.createCart(user)
         .then((payload) => dispatch(receiveCart(payload)))
@@ -54,6 +54,7 @@ export const addToCart = (cartItem) => dispatch => {
     }
     return _func(payload);
 };
+
 
 // export const removeFromCart = (cartItemId) => dispatch => {
 //     function _func(cartItemId) {
