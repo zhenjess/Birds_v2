@@ -31,7 +31,18 @@ class Api::CartsController < ApplicationController
             render json: {errors: "Not Available"}, status: 400
         end
     end
+
+    def destroy
+        @cart = Cart.where(id: params[:id]).includes(:cart_items, :items)
+    
+        @cart.cart_items.each do |cartItem|
+            if !cartItem.destroy render json: ['error deleting cart item'], status 404
+        end
+
+        render 'api/cart/show'
+    end
 end
+
 
 # def create
        
