@@ -39,15 +39,6 @@ export const deleteCartItem = (cartItemId) => {
     })
 }
 
-//allow delete items from users current cart
-export const deleteCartItem = (cartItemId) => {
-    //debugger
-    return $.ajax({
-        url: `/api/cart_items/${cartItemId}`,
-        method: 'DELETE'
-    })
-}
-
 // takes in a cart so that we can fetch items in older carts
 // export const fetchCartItems = (user, cart) => {
 
