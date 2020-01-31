@@ -76,11 +76,11 @@ class Api::CartItemsController < ApplicationController
         render 'api/cart_items/show'
     end
 
-    def destroy_all
-        @cart_items = CartItem.where(cart_id: params[:cart_id])
-        @cart_items.destroy_all
-        render 'api/cart_items/index'
-    end 
+    # def destroy_all
+    #     @cart_items = CartItem.where(cart_id: params[:cartId])
+    #     @cart_items.destroy_all
+    #     render 'api/cart_items/index'
+    # end 
 
     private
     def cart_item_params
