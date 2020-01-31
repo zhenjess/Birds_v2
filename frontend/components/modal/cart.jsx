@@ -83,19 +83,18 @@ class Cart extends React.Component {
     
         let totalCount = 0;
     
-        debugger
+        //debugger
         for (let i = 0; i < cartItems.length; i++) {
             totalCount += cartItems[i]["quantity"];
         }
         return totalCount;
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        const { cartItems } = this.props;
+    componentDidUpdate(prevProps) {
         let prevCount = this.quantityCount(prevProps.cartItems); //don't want length of cartItems just entire cartItems
         let currCount = this.quantityCount(this.props.cartItems);
         
-        debugger
+        //debugger
         if (prevCount !== currCount) { //cartItems.length !== prevProps.cartItems.length
             
             // let subtotal = 0;
@@ -114,17 +113,31 @@ class Cart extends React.Component {
         }
     }
 
-    handleCheckout() {
-        return (e) => {
-            e.preventDefault();
+   handleCheckout() {
+       const { currentUser, checkoutItems, deleteCartItems } = this.props;
 
-            if (this.props.currentUser) {
-                debugger
-                this.props.deleteCartItems(this.props.checkoutItems);
-                this.props.openModal("checkout");
-            }
-        }
-    }
+       debugger
+       return (e) => {
+           e.preventDefault();
+
+           debugger
+           if (currentUser) {
+               deleteCartItems(checkoutItems);
+           }
+       }
+   }
+
+    // handleCheckout() {
+    //     return (e) => {
+    //         e.preventDefault();
+
+    //         if (this.props.currentUser) {
+    //             debugger
+    //             this.props.deleteCartItems(this.props.checkoutItems);
+    //             this.props.openModal("checkout");
+    //         }
+    //     }
+    // }
 
     startNotification() {
         this.setState({ animateNotification: true });
@@ -302,7 +315,7 @@ class Cart extends React.Component {
                                 <h3>Shipping</h3>
                                 <h3>FREE</h3>
                             </div>
-                            {/* onClick={this.emptyCart} */}
+                            {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/} 
                             <Link className="checkout" onClick={this.props.closeModal} to={"/cart"}>
                                 <input
                                     type="submit"

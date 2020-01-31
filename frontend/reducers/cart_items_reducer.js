@@ -12,7 +12,7 @@ const cartItemsReducer = (oldState = {}, action) => { //oldState=[]
     switch(action.type) {
         case RECEIVE_CART_ITEMS:
              newState = {};
-             debugger
+            // debugger
             Object.values(action.cartItems.cartItems).forEach(cartItem => {
                 newState[cartItem.id] = cartItem
             }); 
@@ -33,7 +33,7 @@ const cartItemsReducer = (oldState = {}, action) => { //oldState=[]
             newState = Object.assign({}, oldState, action.cartItems);
             return newState;
         case REMOVE_CART_ITEM:
-             //debugger
+             debugger
             newState = Object.assign({}, oldState);
             // delete newState[action.cartItem.id];
             delete newState[action.cartItemId];
