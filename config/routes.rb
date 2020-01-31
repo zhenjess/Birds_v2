@@ -16,7 +16,8 @@ Rails.application.routes.draw do
     resources :materials, only: [:index, :show]
 
     resources :cart_items, only: [:index, :create, :update, :destroy]
-    delete '/cart_items', to: 'cart_items#destroy_all'
+    resources :carts, only: [:destroy]
+    # delete '/cart_items', to: 'cart_items#destroy_all'
 
     resources :users, only: [:create, :update, :show] do
       resources :carts, only: [:create, :index, :show] do
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
   end
   root "static_pages#root"
 end
+
     
     # resources :users, only: [:create, :update, :show]
     # resource :cart, only: [:create, :show]
