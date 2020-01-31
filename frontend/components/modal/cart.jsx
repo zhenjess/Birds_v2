@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import { Link, withRouter } from 'react-router-dom';
@@ -41,9 +42,9 @@ class Cart extends React.Component {
 
     componentDidMount() {
         // this.props.fetchAllShoes();
-        
-        this.props.fetchCartItems(this.props.cart); 
-        
+
+        this.props.fetchCartItems(this.props.cart);
+
         const { cartItems } = this.props;
         if (cartItems.length) {
             this.props.openModal('shoe index', this.props.cart);
@@ -54,7 +55,7 @@ class Cart extends React.Component {
                 subtotal += (95 * items[i]["quantity"]);
                 i++;
             }
-            
+
             this.setState({ subtotal });
         }
         // if (cartItems.length) {
@@ -65,7 +66,7 @@ class Cart extends React.Component {
         //         subtotal
         //     });
 
-        
+
         // }
     }
 
@@ -80,30 +81,29 @@ class Cart extends React.Component {
 
     quantityCount(cartItems) {
         //return total based on pairs of cartItems in cart
-    
+
         let totalCount = 0;
-    
-        debugger
+
+        //debugger
         for (let i = 0; i < cartItems.length; i++) {
             totalCount += cartItems[i]["quantity"];
         }
         return totalCount;
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        const { cartItems } = this.props;
+    componentDidUpdate(prevProps) {
         let prevCount = this.quantityCount(prevProps.cartItems); //don't want length of cartItems just entire cartItems
         let currCount = this.quantityCount(this.props.cartItems);
-        
-        debugger
+
+        //debugger
         if (prevCount !== currCount) { //cartItems.length !== prevProps.cartItems.length
-            
+
             // let subtotal = 0;
 
             // cartItems.forEach(cartItem => {  // pair1->10 pair2->1 pair3->5 ==> 16 pairs of shoes, cartItems => 3 in length 
-               
+
             //    subtotal += (95 * cartItem["quantity"]); //this works if have shoe and accessories items to keep track of the diff pricings
-               
+
             // });
             let subtotal = currCount * 95; //specific to if have only shoe items
             this.setState({ subtotal });
@@ -115,16 +115,30 @@ class Cart extends React.Component {
     }
 
     handleCheckout() {
+        const { currentUser, cartId, deleteCartItems } = this.props;
+
+        debugger
         return (e) => {
             e.preventDefault();
 
-            if (this.props.currentUser) {
-                debugger
-                this.props.deleteCartItems(this.props.checkoutItems);
-                this.props.openModal("checkout");
+            debugger
+            if (currentUser) {
+                deleteCartItems(cartId);
             }
         }
     }
+
+    // handleCheckout() {
+    //     return (e) => {
+    //         e.preventDefault();
+
+    //         if (this.props.currentUser) {
+    //             debugger
+    //             this.props.deleteCartItems(this.props.checkoutItems);
+    //             this.props.openModal("checkout");
+    //         }
+    //     }
+    // }
 
     startNotification() {
         this.setState({ animateNotification: true });
