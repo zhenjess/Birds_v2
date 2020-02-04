@@ -25,16 +25,23 @@ Frontend Redux states are set up in a way such that there are separate reducers 
 In addition to the included packages, [AWS S3](https://aws.amazon.com/) was used for image uploading.
 
 ## Features
-  * Secure frontend to backend user authentication using BCrypt.
-  * Users can view pairs of shoes from the shoe collection.
+* User Authentication (Login / Sign Up)
+Login and Sign Up forms are rendered on same page with secure frontend to backend user authentication using BCrypt. Users can login or sign up to add shoes to his/her shopping cart and checkout.
+
+* Users can view all possible pairs of shoes from the shoe collection.
+Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way. The shoe selection is categorized explicitly through gender, material type, shoe model, and color. Many shoe combinations are possible.
   * Users can learn more about the materials used to produce the pair through material links.
-  * Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way.
-  * Smooth loading and transitions through tabs and pages.
-  * Implemented animations, gifs, and images for improved user experience.
 
-### Shoe Collection
+* Users can add created cart items to shopping cart and checkout.
+Implemented CRUD feature with open and close cart modal and checkout system, which are accessible from every page. Only logged in users are able to create cart items on click of shoe size from the shoe index page, update the quantities of each cart item in the cart, remove each cart item, and checkout cart. I managed React state to render shopping cart when user clicks on the cart button, located in the navigation bar, when user clicks on a shoe size from the shoe index page. I integrated DOM manipulation and implemented animations and images for improved user experience.
 
-The shoe collection displays all available shoes for purchase to the site. The shoe selection is categorized explicitly through gender, material type, shoe model, and color. Many shoe combinations are possible.
+* Users can learn more about the materials used to make the shoe by navigating through material links on click of material in the navigation bar.
+
+* Smooth loading and transitions through tabs and pages.
+
+## Upcoming Features
+  * Navigate to additional information for each shoe item.
+  * Filter shoe index items per specific shoe detail.
 
 ## Project Design
 
@@ -43,7 +50,5 @@ Birds was designed with simplicity and elegance as its primary goals. Based on t
 ## Upcoming features
 
 In the future I would like to add:
-  * Branch pages/birds
-  * Question, Answers, and Reviews pages/birds
-  * Cart 
+  * Filter shoe index items per shoe details (color, material, and style)
 
