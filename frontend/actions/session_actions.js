@@ -45,9 +45,9 @@ export const logout = () => dispatch => {
     );
 };
 
-export const fetchCart = (user) => dispatch => {
+export const fetchCurrentCartID = (user) => dispatch => {
     return (
-        CartApiUtil.fetchCart(user) 
+        CartApiUtil.fetchCurrentCartID(user) 
             .then(currentUser => dispatch(receiveCurrentUser(currentUser)), 
                 errors => dispatch(receiveSessionErrors(errors.responseJSON))
             )

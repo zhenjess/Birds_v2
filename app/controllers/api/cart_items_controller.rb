@@ -1,7 +1,7 @@
 class Api::CartItemsController < ApplicationController
-    #before_action :require_login
+   before_action :require_login
 
-    skip_before_action :verify_authenticity_token
+    #skip_before_action :verify_authenticity_token
 
     def index
         # @cart_items = CartItem.find_by(id: params[:cartItem][:shoe_id])

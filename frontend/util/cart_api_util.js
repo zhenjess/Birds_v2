@@ -1,4 +1,4 @@
-export const fetchCart = (user) => {
+export const fetchCurrentCartID = (user) => {
     return $.ajax({
         url: `/api/users/${user.id}/carts`,
         method: 'GET'
