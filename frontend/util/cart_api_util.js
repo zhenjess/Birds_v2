@@ -1,7 +1,7 @@
-export const fetchCart = (user, cartId) => {
+export const fetchCart = (user) => { //, cartId
     return $.ajax({
-        url: `/api/users/${user.id}/carts/${cartId}`,
-        // url: `/api/users/${user.id}/carts`,
+        // url: `/api/users/${user.id}/carts/${cartId}`,
+        url: `/api/users/${user.id}/carts`,
         method: 'GET'
     })
 }
@@ -20,7 +20,11 @@ export const createCart = (user) => {
     })
 }
 
-
+// export const addToCart = (cartItem) => {
+//     return $.ajax({
+//         url: `api/`
+//     })
+// }
 
 
 // export const fetchCart = () => {

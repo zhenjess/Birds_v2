@@ -1,17 +1,17 @@
 import * as APIUtil from '../util/cart_items_api_util';
 
-export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS';
+// export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS';
 export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM';
 export const RECEIVE_CART_ITEM_ERRORS = 'RECEIVE_CART_ITEM_ERRORS';
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
 export const REMOVE_ALL_CART_ITEMS = 'REMOVE_ALL_CART_ITEMS';
 
-const receiveCartItems = (cartItems) => {
-    return ({
-        type: RECEIVE_CART_ITEMS,
-        cartItems: cartItems
-    })
-}
+// const receiveCartItems = (cartItems) => {
+//     return ({
+//         type: RECEIVE_CART_ITEMS,
+//         cartItems: cartItems
+//     })
+// }
 const receiveCartItem = (cartItem) => {
     // debugger
     return ({
@@ -41,10 +41,10 @@ const removeAllCartItems = () => {
     })
 }
 
-export const fetchCartItems = (cartId) => dispatch => {
-    return APIUtil.fetchCartItems(cartId)
-        .then((cartItems) => dispatch(receiveCartItems(cartItems)))
-};
+// export const fetchCartItems = (cartId) => dispatch => {
+//     return APIUtil.fetchCartItems(cartId)
+//         .then((cartItems) => dispatch(receiveCartItems(cartItems)))
+// };
 
 export const createCartItem = (cartItem) => dispatch => {
     return APIUtil.createCartItem(cartItem)

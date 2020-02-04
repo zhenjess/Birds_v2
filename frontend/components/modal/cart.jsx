@@ -43,7 +43,9 @@ class Cart extends React.Component {
     componentDidMount() {
         // this.props.fetchAllShoes();
 
-        this.props.fetchCartItems(this.props.cart);
+       // this.props.fetchCartItems(this.props.cart);
+       debugger
+       this.props.fetchCart(this.props.currentUser.id);
 
         const { cartItems } = this.props;
         if (cartItems.length) {

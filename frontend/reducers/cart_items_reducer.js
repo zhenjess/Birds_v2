@@ -1,4 +1,4 @@
-import { RECEIVE_CART_ITEM, REMOVE_CART_ITEM, REMOVE_ALL_CART_ITEMS, RECEIVE_CART_ITEMS } from '../actions/cart_items_actions';
+import { RECEIVE_CART_ITEM, REMOVE_CART_ITEM, REMOVE_ALL_CART_ITEMS, RECEIVE_CART_ITEMS } from '../actions/cart_items_actions'; //RECEIVE_CART_ITEMS
 import { RECEIVE_ALL_SHOES } from '../actions/shoes_actions';
 import { RECEIVE_CART } from '../actions/cart_actions';
 import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
@@ -10,16 +10,16 @@ const cartItemsReducer = (oldState = {}, action) => { //oldState=[]
     //let newState = oldState.slice(0);
     let newState;
     switch (action.type) {
-        case RECEIVE_CART_ITEMS:
-            newState = {};
-            // debugger
-            let cartItemsArr = action.cartItems.cartItems ? Object.values(action.cartItems.cartItems) : [];
-            if (cartItemsArr.length === 0) return oldState;
-            cartItemsArr.forEach(cartItem => {
-                newState[cartItem.id] = cartItem
-            });
+        // case RECEIVE_CART_ITEMS:
+        //     newState = {};
+        //     // debugger
+        //     let cartItemsArr = action.cartItems.cartItems ? Object.values(action.cartItems.cartItems) : [];
+        //     if (cartItemsArr.length === 0) return oldState;
+        //     cartItemsArr.forEach(cartItem => {
+        //         newState[cartItem.id] = cartItem
+        //     });
             // return Object.assign({}, oldState, newState); 
-            return newState; //this returns all cartItems
+            // return newState; //this returns all cartItems
 
         case RECEIVE_CART_ITEM:
             // debugger
@@ -35,7 +35,6 @@ const cartItemsReducer = (oldState = {}, action) => { //oldState=[]
             newState = Object.assign({}, oldState, action.cartItems);
             return newState;
         case REMOVE_CART_ITEM:
-            debugger
             newState = Object.assign({}, oldState);
             // delete newState[action.cartItem.id];
             delete newState[action.cartItemId];
