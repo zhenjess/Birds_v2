@@ -18,6 +18,7 @@ Rails was chosen due to ites out-of-the-box support for relational databases and
 ## Frontend
 Frontend Redux states are set up in a way such that there are separate reducers and actions for shoes, materials, users, and errors. This keeps the state normalized, easing the task of keeping things up-to-date with changes in the database.
 
+## API Integration
 In addition to the included packages, [AWS][AWS S3] was used for image uploading.
 
 [AWS]: https://aws.amazon.com/
