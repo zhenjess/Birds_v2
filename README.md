@@ -9,13 +9,13 @@ Birds is an e-commerce shoe web app modelled after [Allbirds](https://www.allbir
 The project was designed and built within a two-week timeframe, though I plan to continue adding improvements over time.
 
 ## Technologies
-#Backend
+##Backend
 Rails was chosen due to ites out-of-the-box support for relational databases and RESTful architecture. Convenience and speed was prioritized over scalability because this project was built in a relatively short amount of time.The chosen technologies (Heroku, Rails, PostgresSQL, React, Redux) were determined to be adequate for the predicted load.
 
 * Ruby on Rails
 * PostgreSQL
 
-#Frontend
+##Frontend
 Frontend Redux states are set up in a way such that there are separate reducers and actions for shoes, materials, users, and errors. This keeps the state normalized, easing the task of keeping things up-to-date with changes in the database.
 
 In addition to the included packages, [AWS][AWS S3] was used for image uploading.
