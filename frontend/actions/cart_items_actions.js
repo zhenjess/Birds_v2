@@ -13,7 +13,7 @@ const receiveCartItems = (cartItems) => {
     })
 }
 const receiveCartItem = (cartItem) => {
-   // debugger
+    // debugger
     return ({
         type: RECEIVE_CART_ITEM,
         cartItem: cartItem
@@ -64,10 +64,11 @@ export const deleteCartItem = (cartItemId) => dispatch => {
         .then((cartItemId) => dispatch(removeCartItem(cartItemId)))
 };
 
-export const deleteCartItems = (cartItems) => dispatch => {
-    return APIUtil.deleteCartItems(cartItems)
+export const deleteCartItems = (cartId) => dispatch => {
+    return APIUtil.deleteCartItems(cartId)
         .then(() => dispatch(removeAllCartItems()))
 };
+
 
 // import * as APIUtil from '../util/cart_items_api_util';
 

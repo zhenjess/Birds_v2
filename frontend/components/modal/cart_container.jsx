@@ -4,7 +4,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import Cart from './cart';
 import { fetchAllShoes } from '../../actions/shoes_actions';
 import { fetchCart } from '../../actions/cart_actions';
-import { fetchCartItems, createCartItem, updateCartItem, deleteCartItem, deleteCartItems } from '../../actions/cart_items_actions'; 
+import { fetchCart, createCartItem, updateCartItem, deleteCartItem, deleteCartItems } from '../../actions/cart_items_actions'; 
 import { fetchCart } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
