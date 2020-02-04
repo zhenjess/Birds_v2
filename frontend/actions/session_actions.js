@@ -45,13 +45,13 @@ export const logout = () => dispatch => {
     );
 };
 
-export const fetchCart = (user) => dispatch => {
-    return (
-        CartApiUtil.fetchCart(user) 
-            .then(currentUser => dispatch(receiveCurrentUser(currentUser)), 
-                errors => dispatch(receiveSessionErrors(errors.responseJSON))
-            )
-    );
-};
+// export const fetchCart = (user, cartId) => dispatch => {
+//     return (
+//         CartApiUtil.fetchCart(user, cartId) 
+//             .then(currentUser => dispatch(receiveCurrentUser(currentUser)), 
+//                 errors => dispatch(receiveSessionErrors(errors.responseJSON))
+//             )
+//     );
+// };
 
 

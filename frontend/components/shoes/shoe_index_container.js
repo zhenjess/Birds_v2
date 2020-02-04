@@ -49,7 +49,7 @@ const mapStateToProps = (state, ownProps) => {
 //shoe_id, cart, quantity = cartItem (this.props)
 
 const mapDispatchToProps = dispatch => ({
-    fetchCart: (user) => dispatch(fetchCart(user)),
+    fetchCart: (user, cartId) => dispatch(fetchCart(user, cartId)),
     fetchAllShoes: () => dispatch(fetchAllShoes()),
     updateCartItem: (shoeId) => dispatch(updateCartItem(shoeId)),
     // fetchShoe: (shoeId) => dispatch(fetchShoe(shoeId)),

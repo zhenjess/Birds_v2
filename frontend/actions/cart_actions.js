@@ -42,18 +42,23 @@ export const createCart = (user) => dispatch => {
         .then((payload) => dispatch(receiveCart(payload)))
 };
 
-export const fetchCart = (user) => dispatch => {
-    return APIUtil.fetchCart(user)
+export const fetchCart = (user, cartId) => dispatch => {
+    return APIUtil.fetchCart(user, cartId)
         .then((payload) => dispatch(receiveCart(payload)))
 }
 
 export const addToCart = (cartItem) => dispatch => {
-    const payload = receiveCartItems(cartItem);
-    function _func(payload) {
-        return dispatch(postToCart(payload));
-    }
-    return _func(payload);
-};
+    return APIUtil.addToCart(cartItem)
+        .then((payload) => dispatch(receiveCartItems(payload)))
+}
+
+// export const addToCart = (cartItem) => dispatch => {
+//     const payload = receiveCartItems(cartItem);
+//     function _func(payload) {
+//         return dispatch(postToCart(payload));
+//     }
+//     return _func(payload);
+// };
 
 
 // export const removeFromCart = (cartItemId) => dispatch => {

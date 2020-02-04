@@ -46,7 +46,8 @@ class ShoeIndex extends React.Component {
         this.props.fetchAllShoes();
 
         if (this.props.currentUser) {
-            this.props.fetchCart(this.props.currentUser).then((cart) => {
+            debugger
+            this.props.fetchCart(this.props.currentUser, this.props.cartId).then((cart) => {
                 this.setState({
                    cart: cart
                 });
