@@ -40,15 +40,13 @@ Implemented CRUD feature with open and close cart modal and checkout system, whi
 * Smooth loading and transitions through tabs and pages.
 
 ## Upcoming Features
+In the future I would like to add:
   * Navigate to additional information for each shoe item.
-  * Filter shoe index items per specific shoe detail.
+  * Filter shoe index items per specific shoe detail (color, material, and style).
 
 ## Project Design
 
 Birds was designed with simplicity and elegance as its primary goals. Based on the two-week time frame, I decided to focus my efforts on completing a core set of features that ran smoothly and is bug-free. Keeping code manageable was prioritized over cloning every major feature of the target app, in the interest of providing a solid codebase to build upon for the future.
 
-## Upcoming features
 
-In the future I would like to add:
-  * Filter shoe index items per shoe details (color, material, and style)
 
