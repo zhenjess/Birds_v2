@@ -22,9 +22,7 @@ Frontend Redux states are set up in a way such that there are separate reducers 
  * Redux
 
 ## API Integration
-In addition to the included packages, [AWS][AWS S3] was used for image uploading.
-
-[AWS]: https://aws.amazon.com/
+In addition to the included packages, [AWS S3](https://aws.amazon.com/) was used for image uploading.
 
 ## Features
   * Secure frontend to backend user authentication using BCrypt.
