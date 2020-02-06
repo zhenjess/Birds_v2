@@ -39,6 +39,7 @@ Shoe catalog dynamically adapts to display the entire shoe collection in an appe
 
 * Users can add created cart items to shopping cart and checkout.
 Implemented CRUD feature with open and close cart modal and checkout system, which are accessible from every page. Only logged in users are able to create cart items on click of shoe size from the shoe index page, update the quantities of each cart item in the cart, remove each cart item, and checkout cart. I managed React state to render shopping cart when user clicks on the cart button, located in the navigation bar, when user clicks on a shoe size from the shoe index page. I integrated DOM manipulation and implemented animations and images for improved user experience.
+![ezgif com-video-to-gif (5)](https://user-images.githubusercontent.com/35883332/73967116-25078700-48cc-11ea-9e44-637e88c4c9af.gif)
 
 * Users can learn more about the materials used to make the pair of shoes by navigating through material links on click of material in the navigation bar.
 ![ezgif com-optimize](https://user-images.githubusercontent.com/35883332/73966688-5df32c00-48cb-11ea-9bf8-7f4329141a07.gif)
