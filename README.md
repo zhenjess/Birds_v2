@@ -30,6 +30,9 @@ In addition to the included packages, [AWS S3](https://aws.amazon.com/) was used
 * User Authentication (Login / Sign Up)
 Login and Sign Up forms are rendered on same page with secure frontend to backend user authentication using BCrypt. Users can login or sign up to add selected shoes to his/her shopping cart and checkout.
 
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/35883332/73965065-4c5c5500-48c8-11ea-8b4a-b82f1d028788.gif)
+
+
 * Users can view all possible pairs of shoes from the shoe collection.
 Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way. The shoe selection is categorized explicitly through gender, and further through material type, shoe style, and shoe color. Many shoe combinations are possible.
   * Users can learn more about the materials used to produce the pair through material links.
