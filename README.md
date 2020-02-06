@@ -150,9 +150,9 @@ Implemented CRUD feature with open and close cart modal and checkout system, whi
         }
       }
 
-* Users can learn more about the materials used to make the pair of shoes by navigating through material links on click of material in the navigation bar.
-![ezgif com-optimize](https://user-images.githubusercontent.com/35883332/73966688-5df32c00-48cb-11ea-9bf8-7f4329141a07.gif)
+* Users can learn more about the materials used to make the pair of shoes by navigating through material links on click of     material in the navigation bar.
 
+![ezgif com-optimize](https://user-images.githubusercontent.com/35883332/73966688-5df32c00-48cb-11ea-9bf8-7f4329141a07.gif)
 
 * Smooth loading and transitions through tabs and pages.
 
