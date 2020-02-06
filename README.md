@@ -36,12 +36,13 @@ Login and Sign Up forms are rendered on same page with secure frontend to backen
 * Users can view all possible pairs of shoes from the shoe collection.
 Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way. The shoe selection is categorized explicitly through gender, and further through material type, shoe style, and shoe color. Many shoe combinations are possible.
 ![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/35883332/73966028-15873e80-48ca-11ea-9ee3-d606e210a717.gif)
-  * Users can learn more about the materials used to produce the pair through material links.
 
 * Users can add created cart items to shopping cart and checkout.
 Implemented CRUD feature with open and close cart modal and checkout system, which are accessible from every page. Only logged in users are able to create cart items on click of shoe size from the shoe index page, update the quantities of each cart item in the cart, remove each cart item, and checkout cart. I managed React state to render shopping cart when user clicks on the cart button, located in the navigation bar, when user clicks on a shoe size from the shoe index page. I integrated DOM manipulation and implemented animations and images for improved user experience.
 
-* Users can learn more about the materials used to make the shoe by navigating through material links on click of material in the navigation bar.
+* Users can learn more about the materials used to make the pair of shoes by navigating through material links on click of material in the navigation bar.
+![ezgif com-optimize](https://user-images.githubusercontent.com/35883332/73966688-5df32c00-48cb-11ea-9bf8-7f4329141a07.gif)
+
 
 * Smooth loading and transitions through tabs and pages.
 
