@@ -41,96 +41,96 @@ Shoe catalog dynamically adapts to display the entire shoe collection in an appe
 Implemented CRUD feature with open and close cart modal and checkout system, which are accessible from every page. Only logged in users are able to create cart items on click of shoe size from the shoe index page, update the quantities of each cart item in the cart, remove each cart item, and checkout cart. I managed React state to render shopping cart when user clicks on the cart button, located in the navigation bar, when user clicks on a shoe size from the shoe index page. I integrated DOM manipulation and implemented animations and images for improved user experience.
 ![ezgif com-video-to-gif (5)](https://user-images.githubusercontent.com/35883332/73967116-25078700-48cc-11ea-9e44-637e88c4c9af.gif)
 
-    class ShoeIndexItem extends React.Component {
-         constructor(props) {
-             super(props);
+     class ShoeIndexItem extends React.Component {
+        constructor(props) {
+            super(props);
 
-        this.handleClick = this.handleClick.bind(this);
-        this.addToCart = this.addToCart.bind(this);
-        this.compareCartItems = this.compareCartItems.bind(this)
+            this.handleClick = this.handleClick.bind(this);
+            this.addToCart = this.addToCart.bind(this);
+            this.compareCartItems = this.compareCartItems.bind(this);
 
-    }
+        }
 
-    addToCart() {
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: 1 };
+        addToCart() {
+            let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: 1 };
 
-        this.props.createCartItem(cartItem) 
-            .then(this.props.startNotification())
-            .then(this.props.openModal())
-    }
+            this.props.createCartItem(cartItem)
+                .then(this.props.startNotification())
+                .then(this.props.openModal())
+        }
 
-    updateCart(quant) {
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1}
-        this.props.updateCartItem(cartItem)
-            .then(this.props.startNotification())
-            .then(this.props.openModal())
-    }
+        updateCart(quant) {
+           
+            let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1}
+            this.props.updateCartItem(cartItem)
+                .then(this.props.startNotification())
+                .then(this.props.openModal())
+        }
 
-    compareCartItems() {
-        let returned = 0;
+        compareCartItems() {
+            let returned = 0;
 
-        if (this.props.cartItem) {
-            Object.values(this.props.cartItem).forEach((el) => {
-                if (el.shoeId === this.props.shoe.id) {
-                    if (el.cartId === this.props.cart.cart.id) { 
-                        returned = el.quantity;
+            if (this.props.cartItem) {
+             
+                Object.values(this.props.cartItem).forEach((el) => {
+                
+                    if (el.shoeId === this.props.shoe.id) {
+                        if (el.cartId === this.props.cart.cart.id) { 
+                            returned = el.quantity;
+                        }
                     }
-                }
-            });
+                });
+            }
+            return returned;
         }
-        return returned;
-    }
 
-    handleClick() { 
-        let quant = this.compareCartItems();
+        handleClick() { 
+            let quant = this.compareCartItems();
 
-        if(quant > 0){
-            //debugger
-            this.updateCart(quant)
-        } else {
-            this.addToCart()
+            if(quant > 0){
+                this.updateCart(quant)
+            } else {
+                this.addToCart()
+            }
+        }
+
+        render() {
+            const { shoe, cartItem, addToCart, currentUser } = this.props;
+
+            return (
+                <div
+                     className={this.props.animateItems ? "item fadeInUp" : "item"}>
+
+                    <li className="shoe-index-item">
+                        <div className="shoe-image">
+                            <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt="" />
+                        </div>
+                        <Link to={`/shoes/${shoe.gender}`}>
+                            <div className="shoe-item-color">
+                                <h3>{shoe.color}</h3>
+                                <br />
+                            </div>
+                            <div className="shoe-item-content">
+                                <h3>{"$95 "}</h3>
+                                <h3>{shoe.gender + " "}</h3>
+                                <h3>{shoe.material + " "}</h3>
+                                <h3>{shoe.style}</h3>
+                                <br />
+                            </div>
+                            <ol className="size-selections-container">
+                                <li onClick={this.handleClick} className="size"><h4>7</h4></li>
+                                <li onClick={this.handleClick} className="size"><h4>8</h4></li>
+                                <li onClick={this.handleClick} className="size"><h4>9</h4></li>
+                                <li onClick={this.handleClick} className="size"><h4>10</h4></li>
+                                <li onClick={this.handleClick} className="size"><h4>11</h4></li>
+                                <li onClick={this.handleClick} className="size"><h4>12</h4></li>
+                            </ol>
+                        </Link>
+                    </li>
+                </div>
+            );
         }
     }
-
-    render() {
-        const { shoe, cartItem, addToCart, currentUser } = this.props;
-
-        return (
-            <div
-                 className={this.props.animateItems ? "item fadeInUp" : "item"}>
-
-                <li className="shoe-index-item">
-                    <div className="shoe-image">
-                        <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt="" />
-                    </div>
-                    <Link to={`/shoes/${shoe.gender}`}>
-                        <div className="shoe-item-color">
-                            <h3>{shoe.color}</h3>
-                            <br />
-                        </div>
-                        <div className="shoe-item-content">
-                            <h3>{"$95 "}</h3>
-                            <h3>{shoe.gender + " "}</h3>
-                            <h3>{shoe.material + " "}</h3>
-                            <h3>{shoe.style}</h3>
-                            <br />
-                            {/* <h3>{shoe.size}</h3> */}
-                        </div>
-                        <ol className="size-selections-container">
-                            {/* <li onClick={this.handleClick} className="size"><h4>7</h4></li> */}
-                            <li onClick={this.handleClick} className="size"><h4>7</h4></li>
-                            <li onClick={this.handleClick} className="size"><h4>8</h4></li>
-                            <li onClick={this.handleClick} className="size"><h4>9</h4></li>
-                            <li onClick={this.handleClick} className="size"><h4>10</h4></li>
-                            <li onClick={this.handleClick} className="size"><h4>11</h4></li>
-                            <li onClick={this.handleClick} className="size"><h4>12</h4></li>
-                        </ol>
-                    </Link>
-                </li>
-            </div>
-        );
-    }
-}
 
 * Users can learn more about the materials used to make the pair of shoes by navigating through material links on click of material in the navigation bar.
 ![ezgif com-optimize](https://user-images.githubusercontent.com/35883332/73966688-5df32c00-48cb-11ea-9bf8-7f4329141a07.gif)
