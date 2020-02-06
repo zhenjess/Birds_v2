@@ -35,6 +35,7 @@ Login and Sign Up forms are rendered on same page with secure frontend to backen
 
 * Users can view all possible pairs of shoes from the shoe collection.
 Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way. The shoe selection is categorized explicitly through gender, and further through material type, shoe style, and shoe color. Many shoe combinations are possible.
+![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/35883332/73966028-15873e80-48ca-11ea-9ee3-d606e210a717.gif)
   * Users can learn more about the materials used to produce the pair through material links.
 
 * Users can add created cart items to shopping cart and checkout.
