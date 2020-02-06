@@ -4,6 +4,8 @@
 
 [heroku]: https://allbirdsclone.herokuapp.com/
 
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/35883332/73964650-76614780-48c7-11ea-9884-aad4805e97c3.gif)
+
 Birds is an e-commerce shoe web app modelled after [Allbirds](https://www.allbirds.com/). It makes use of a Rails/PostgreSQL backend and makes use of both React.js and Redux on the frontend.
 
 The project was designed and built within a two-week timeframe, though I plan to continue adding improvements over time.
