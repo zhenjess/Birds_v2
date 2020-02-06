@@ -32,6 +32,24 @@ Login and Sign Up forms are rendered on same page with secure frontend to backen
 
 ![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/35883332/73965065-4c5c5500-48c8-11ea-8b4a-b82f1d028788.gif)
 
+      class AccountForms extends React.Component {
+          renderForm() {
+              if (this.props.currentUser) {
+                  return <LogoutFormContainer />
+              }
+              return (
+                  <div className="account-page">         
+                      <LoginFormContainer />
+                      <SignupFormContainer />           
+                  </div>
+              );
+          }
+          render() {
+              return (
+                  this.renderForm()
+              );
+          }
+      }
 
 * Users can view all possible pairs of shoes from the shoe collection.
 Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way. The shoe selection is categorized explicitly through gender, and further through material type, shoe style, and shoe color. Many shoe combinations are possible.
