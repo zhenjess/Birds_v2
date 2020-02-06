@@ -10,7 +10,7 @@ The project was designed and built within a two-week timeframe, though I plan to
 
 ## Technologies
 ## Backend
-Rails was chosen due to ites out-of-the-box support for relational databases and RESTful architecture. Convenience and speed was prioritized over scalability because this project was built in a relatively short amount of time.The chosen technologies (Heroku, Rails, PostgresSQL, React, Redux) were determined to be adequate for the predicted load.
+Rails was chosen due to its out-of-the-box support for relational databases and RESTful architecture. Convenience and speed was prioritized over scalability because this project was built in a relatively short amount of time.The chosen technologies (Heroku, Rails, PostgresSQL, React, Redux) were determined to be adequate for the predicted load.
 
 * Ruby on Rails
 * PostgreSQL
@@ -26,10 +26,10 @@ In addition to the included packages, [AWS S3](https://aws.amazon.com/) was used
 
 ## Features
 * User Authentication (Login / Sign Up)
-Login and Sign Up forms are rendered on same page with secure frontend to backend user authentication using BCrypt. Users can login or sign up to add shoes to his/her shopping cart and checkout.
+Login and Sign Up forms are rendered on same page with secure frontend to backend user authentication using BCrypt. Users can login or sign up to add selected shoes to his/her shopping cart and checkout.
 
 * Users can view all possible pairs of shoes from the shoe collection.
-Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way. The shoe selection is categorized explicitly through gender, material type, shoe model, and color. Many shoe combinations are possible.
+Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way. The shoe selection is categorized explicitly through gender, and further through material type, shoe style, and shoe color. Many shoe combinations are possible.
   * Users can learn more about the materials used to produce the pair through material links.
 
 * Users can add created cart items to shopping cart and checkout.
