@@ -71,8 +71,15 @@ class Api::CartItemsController < ApplicationController
     end
 
      def destroy
+        # debugger;
+        puts "Hello?"
         # @cart_items = CartItem.where(cart_id: params[:cart_id])
-        @cart_item = CartItem.find_by(id: params[:id]).destroy
+        
+        @cart_item = CartItem.find_by(id: params[:id])
+        puts @cart_item
+        if @cart_item
+            @cart_item.destroy
+        end
         render 'api/cart_items/show'
     end
 

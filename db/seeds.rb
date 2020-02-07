@@ -21,6 +21,7 @@ demoLogin = User.create!(first_name: "all", last_name: "birds", email: 'allbirds
 
 demoCart = Cart.create!(user_id: demoLogin.id, status: "checked in")
 
+demoLogin.cart_id = demoCart.id
 
 wool = Material.create!(material: 'Wool')
 tree = Material.create!(material: 'Tree')

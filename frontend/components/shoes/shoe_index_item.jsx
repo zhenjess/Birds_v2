@@ -14,16 +14,16 @@ class ShoeIndexItem extends React.Component {
 
     }
 
-    // addToCart(shoe) {
+    addToCart() {
+
+            // addToCart(shoe) {
     //     debugger
     //     let cartItem = { shoe_id: shoe.id, cart_id: this.props.cart.cart.id, quantity: 1};
     //     this.props.createCartItem(this.props.currentUser, cartItem);
     // }
-
-    addToCart() {
-        // debugger
+       
         let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: 1 };
-       // debugger
+
         this.props.createCartItem(cartItem) //this.props.currentUser, 
             .then(this.props.startNotification())
             .then(this.props.openModal())
@@ -51,7 +51,7 @@ class ShoeIndexItem extends React.Component {
 
         if (this.props.cartItem) {
            // debugger
-            debugger
+           // debugger
             Object.values(this.props.cartItem).forEach((el) => {
             //    debugger
                 if (el.shoeId === this.props.shoe.id) {
@@ -116,6 +116,11 @@ class ShoeIndexItem extends React.Component {
                         <ol className="size-selections-container">
                             {/* <li onClick={this.handleClick} className="size"><h4>7</h4></li> */}
                             <li onClick={this.handleClick} className="size"><h4>7</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>8</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>9</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>10</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>11</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>12</h4></li>
                             {/* <li onClick={currentUser ? () => this.handleClick(shoe) : () => <Link to={"/account"}></Link>} className="size"><h4>7</h4></li> */}
                             {/* <li onClick={() => this.handleClick(shoe)} className="size"><h4>7</h4></li>
                             <li onClick={() => this.handleClick(shoe)} className="size"><h4>8</h4></li>
@@ -131,6 +136,7 @@ class ShoeIndexItem extends React.Component {
     }
 }
 export default withRouter(ShoeIndexItem);
+
 
 
 // import React from 'react';

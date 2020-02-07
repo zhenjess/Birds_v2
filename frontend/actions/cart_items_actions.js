@@ -65,8 +65,15 @@ export const deleteCartItem = (cartItemId) => dispatch => {
 };
 
 export const deleteCartItems = (cartId) => dispatch => {
-    return APIUtil.deleteCartItems(cartId)
-        .then(() => dispatch(removeAllCartItems()))
+    debugger
+    return APIUtil.deleteCartItems(cartId) 
+        .then((res) => { // BUG: Not working here
+            debugger
+            dispatch(removeAllCartItems())
+        }, (err) => {
+            console.log("Testing 123");
+            console.log(err);
+        }  )
 };
 
 

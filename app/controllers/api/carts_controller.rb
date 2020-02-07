@@ -2,8 +2,9 @@ class Api::CartsController < ApplicationController
     #before_action :require_login
     
     def index
-        @cart = Cart.find_by(user_id: params[:user_id])
         
+        @cart = Cart.find_by(user_id: params[:user_id])
+        #debugger
         render 'api/cart/index'
     end
 
@@ -24,6 +25,7 @@ class Api::CartsController < ApplicationController
     def show
         @cart = Cart.where(id: params[:id]).where(user_id: params[:user_id]).includes(:cart_items, :items)
         @cart = @cart[0]
+        #debugger
 
         if @cart
             render 'api/cart/show'
@@ -32,11 +34,23 @@ class Api::CartsController < ApplicationController
         end
     end
 
-    def destroy
+    def destroy # BUG: Triggered, butstops before debugger?
         @cart = Cart.where(id: params[:id]).includes(:cart_items, :items)
-    
+        debugger;
+        # @cart.cart_items.destroy_all
+        puts "Hello In carts_controller"
+        puts @cart
+        debugger;
+        # cart_items is undefined? model cart.rb has this association though....
         @cart.cart_items.each do |cartItem|
-            if !cartItem.destroy render json: ['error deleting cart item'], status 404
+            
+            cartItem.destroy
+            # if !cartItem.destroy 
+            #     render json: ['error deleting cart item'], status: 404
+            # else 
+            #     cartItem.destroy
+            #     debugger
+            # end
         end
 
         render 'api/cart/show'

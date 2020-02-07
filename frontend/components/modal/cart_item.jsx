@@ -4,7 +4,7 @@ class CartItem extends React.Component {
     constructor(props) {
         super(props);
 
-       debugger
+      // debugger
         this.state = {
            // cartItem: this.props.id,
             cart_id: this.props.cartId,
@@ -25,7 +25,7 @@ class CartItem extends React.Component {
         // });
 
         this.setState({ quantity: this.state.quantity + 1}, function () {
-            debugger
+           // debugger
             this.props.updateCartItem(this.state);
         });
 
@@ -44,7 +44,7 @@ class CartItem extends React.Component {
         // this.props.updateQuantity(quantity); //this.props.index
         
         this.setState({ quantity: this.state.quantity - 1 }, function () {
-            debugger
+           // debugger
             this.props.updateCartItem(this.state);
         });
     }

@@ -49,7 +49,8 @@ class Cart extends React.Component {
 
         const { cartItems } = this.props;
         if (cartItems.length) {
-            this.props.openModal('shoe index', this.props.cart);
+            // this.props.openModal('shoe index', this.props.cart);
+            this.props.openModal();
             let subtotal = 0;
             let items = Object.values(cartItems);
             let i = 0;
@@ -116,19 +117,37 @@ class Cart extends React.Component {
         }
     }
 
-    handleCheckout() {
-        const { currentUser, cartId, deleteCartItems } = this.props;
-
+    handleCheckout(e) {
         debugger
-        return (e) => {
-            e.preventDefault();
+        // const { currentUser, cartId, deleteCartItems } = this.props;
+        const { currentUser, checkoutItems, deleteCartItem, deleteCartItems, closeModal } = this.props;
 
-            debugger
-            if (currentUser) {
-                deleteCartItems(cartId);
-            }
-        }
+       // debugger
+        // return (e) => {
+        e.preventDefault();
+
+        this.emptyCart();
+        closeModal();
+        this.props.history.push('/cart');
     }
+        // debugger
+  
+            // deleteCartItems(cartId);
+            // pass in props for deleteCartItem (as in cart_item.jsx)
+            // loop through currentUser.cartId items, then trigger deleteCartItem for each individual item
+            // And if this doesn't reRender, set State again somehow.
+            
+
+
+            // deleteCartItem(cartItem)
+            
+            // deleteCartItems(currentUser.cartId)
+            //     .then(() => {
+            //         debugger
+            //         closeModal()
+            //     });
+        
+        // }
 
     // handleCheckout() {
     //     return (e) => {
@@ -169,8 +188,11 @@ class Cart extends React.Component {
     }
 
     emptyCart() {
+
+        debugger
         const { currentUser, cartItems, deleteCartItem } = this.props;
-        cartItems.forEach(cartItem => deleteCartItem(currentUser, cartItem.id, this.props.cart.cart.id));
+        cartItems.forEach(cartItem => deleteCartItem(cartItem.id));
+        // cartItems.forEach(cartItem => deleteCartItem(currentUser, cartItem.id, this.props.currentUser.cartId));
         if (cartItems.length) {
             this.startNotification();
         }
@@ -319,7 +341,7 @@ class Cart extends React.Component {
                                 <h3>FREE</h3>
                             </div>
                             {/* onClick={this.emptyCart} */}
-                            <Link className="checkout" onClick={this.handleCheckout} to={"/cart"}>
+                            <Link className="checkout" onClick={this.handleCheckout}>                                
                                 <input
                                     type="submit"
                                     className="submit"

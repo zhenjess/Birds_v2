@@ -7,7 +7,7 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
 
 const receiveCart = (payload) => {
-    debugger
+    //debugger
     return ({
         type: RECEIVE_CART,
         cart: payload,
@@ -52,7 +52,7 @@ export const fetchCart = (user) => dispatch => { //, cartId
 export const addToCart = (cartItem) => dispatch => {
     return CartItemAPIUtil.createCartItem(cartItem)
         .then((payload) => {
-            debugger
+           // debugger
             dispatch(receiveCartItems(payload))
         })
 }

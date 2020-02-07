@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
     const userId = state.session.id;
     const currentUser = state.entities.users[state.session.id];
     const errors = state.errors.session;     
-    const cart = state.entities.carts.id;
+    // const cart = state.entities.carts.id;
     let cartItems = Object.values(state.entities.cartItems);
     let shoes = Object.values(state.entities.shoes);
     let users = Object.values(state.entities.users);
@@ -20,7 +20,7 @@ const mapStateToProps = (state, ownProps) => {
         userId: userId,
         currentUser: currentUser,
         errors: errors,
-        cart: cart,
+        // cart: cart,
         cartItems: cartItems,
         shoes: shoes,
         checkoutItems: state.entities.cartItems,
@@ -36,13 +36,13 @@ const mapDispatchToProps = dispatch => ({
     createCartItem: (cartItem) => dispatch(createCartItem(cartItem)),
     updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
     deleteCartItem: (cartItem) => dispatch(deleteCartItem(cartItem)),
-    deleteCartItems: () => dispatch(deleteCartItems()),
+    deleteCartItems: (cartId) => dispatch(deleteCartItems(cartId)),
     fetchCart: (user) => dispatch(fetchCart(user)), //, cartId
     openModal: () => dispatch(openModal()),
     closeModal: () => dispatch(closeModal()),
     processForm: (user) => dispatch(login(user)),
         otherForm: (
-            <button onClick={() => dispatch(openModal('Cart'))}>
+            <button onClick={() => dispatch(openModal())}>
                 Cart
             </button>
         ),
