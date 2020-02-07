@@ -113,19 +113,23 @@ class Cart extends React.Component {
         }
     }
 
-   handleCheckout() {
-       const { currentUser, checkoutItems, deleteCartItems } = this.props;
-
-       debugger
-       return (e) => {
-           e.preventDefault();
-
-           debugger
-           if (currentUser) {
-               deleteCartItems(checkoutItems);
-           }
-       }
-   }
+    handleCheckout(e) {
+        const { closeModal } = this.props;
+        e.preventDefault();
+        this.emptyCart();
+        closeModal();
+        this.props.history.push('/cart');
+    }
+    //    const { currentUser, checkoutItems, deleteCartItems } = this.props;
+    //    debugger
+    //    return (e) => {
+    //        e.preventDefault();
+    //        debugger
+    //        if (currentUser) {
+    //            deleteCartItems(checkoutItems);
+    //        }
+    //    }
+   
 
     // handleCheckout() {
     //     return (e) => {
