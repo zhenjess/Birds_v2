@@ -79,11 +79,11 @@ const App = () => (
             <Route exact path={"/"} component={Main} />
             <Route exact path={"/account/login"} component={AccountFormsContainer} />
             <Route exact path={"/account"} component={LogoutFormContainer} />
+            <Route exact path={"/shoes/:gender"} component={ShoeIndexContainer} />
             <Route exact path={"/materials"} component={Materials} />
             <Route exact path={"/materials/tree"} component={Tree} />
             <Route exact path={"/materials/sugar"} component={Sugar} />
             <Route exact path={"/materials/trino"} component={Trino} />
-            <Route exact path={"/shoes/:gender"} component={ShoeIndexContainer} />
             <Route exact path={"/cart"} component={CartFormContainer} />
             {/* <Redirect to="/account" /> */}
         </Switch>

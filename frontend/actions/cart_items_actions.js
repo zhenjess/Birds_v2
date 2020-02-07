@@ -65,7 +65,7 @@ export const deleteCartItem = (cartItemId) => dispatch => {
 };
 
 export const deleteCartItems = (cartId) => dispatch => {
-    debugger
+    
     return APIUtil.deleteCartItems(cartId) 
         .then((res) => { // BUG: Not working here
             debugger

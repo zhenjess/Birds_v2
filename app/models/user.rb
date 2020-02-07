@@ -7,6 +7,7 @@ class User < ApplicationRecord
     attr_reader :password
 
     after_initialize :ensure_session_token
+    # before_validation :ensure_session_token
 
     # belongs_to :cart, 
     #     primary_key: :id, 

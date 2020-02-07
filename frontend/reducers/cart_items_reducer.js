@@ -40,8 +40,6 @@ const cartItemsReducer = (oldState = {}, action) => { //oldState=[]
             delete newState[action.cartItemId];
             return newState;
         case REMOVE_ALL_CART_ITEMS:
-            debugger;
-            console.log("Removing All Cart Items in Reducer");
             return {};
         case LOGOUT_CURRENT_USER:
             return {};

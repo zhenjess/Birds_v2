@@ -40,27 +40,31 @@ class Cart extends React.Component {
         this.setState({ processed: true });
     }
 
+
     componentDidMount() {
+        debugger
         // this.props.fetchAllShoes();
 
        // this.props.fetchCartItems(this.props.cart);
-       debugger
-       this.props.fetchCart(this.props.currentUser.id);
-
-        const { cartItems } = this.props;
-        if (cartItems.length) {
-            // this.props.openModal('shoe index', this.props.cart);
-            this.props.openModal();
-            let subtotal = 0;
-            let items = Object.values(cartItems);
-            let i = 0;
-            while (i < items.length) {
-                subtotal += (95 * items[i]["quantity"]);
-                i++;
+       if (currentUser) {
+           this.props.fetchCart(this.props.currentUser.id);
+    
+            const { cartItems } = this.props;
+            if (cartItems.length) {
+                // this.props.openModal('shoe index', this.props.cart);
+                this.props.openModal();
+                let subtotal = 0;
+                let items = Object.values(cartItems);
+                let i = 0;
+                while (i < items.length) {
+                    subtotal += (95 * items[i]["quantity"]);
+                    i++;
+                }
+    
+                this.setState({ subtotal });
             }
-
-            this.setState({ subtotal });
-        }
+       }
+    }
         // if (cartItems.length) {
         //     this.props.openModal('shoe index', this.props.cart);
         //     //set default value of reduce to 0 to not add the first obj ele which is an obj
@@ -71,7 +75,7 @@ class Cart extends React.Component {
 
 
         // }
-    }
+    
 
     getCartItems() {
         const { cartItems, shoes } = this.props;
@@ -118,7 +122,6 @@ class Cart extends React.Component {
     }
 
     handleCheckout(e) {
-        debugger
         // const { currentUser, cartId, deleteCartItems } = this.props;
         const { currentUser, checkoutItems, deleteCartItem, deleteCartItems, closeModal } = this.props;
 
@@ -188,8 +191,6 @@ class Cart extends React.Component {
     }
 
     emptyCart() {
-
-        debugger
         const { currentUser, cartItems, deleteCartItem } = this.props;
         cartItems.forEach(cartItem => deleteCartItem(cartItem.id));
         // cartItems.forEach(cartItem => deleteCartItem(currentUser, cartItem.id, this.props.currentUser.cartId));

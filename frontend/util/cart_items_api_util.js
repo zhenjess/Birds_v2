@@ -24,11 +24,8 @@ export const updateCartItem = (cartItem) => {
 }
 
 export const deleteCartItems = (cartId) => {
-    debugger
-    console.log("cart_items_api_util.js\ncartId:");
-    console.log(cartId);
     return $.ajax({ // BUG: CSRF failure somewhere so we patchwith below
-        beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
+        // beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
         url: `/api/carts/${cartId}`,
         method: 'DELETE'
     })

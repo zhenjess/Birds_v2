@@ -36,11 +36,10 @@ class Api::CartsController < ApplicationController
 
     def destroy # BUG: Triggered, butstops before debugger?
         @cart = Cart.where(id: params[:id]).includes(:cart_items, :items)
-        debugger;
+       
         # @cart.cart_items.destroy_all
-        puts "Hello In carts_controller"
         puts @cart
-        debugger;
+        
         # cart_items is undefined? model cart.rb has this association though....
         @cart.cart_items.each do |cartItem|
             

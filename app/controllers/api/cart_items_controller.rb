@@ -1,5 +1,5 @@
 class Api::CartItemsController < ApplicationController
-    #before_action :require_login
+    # before_action :require_login
 
     skip_before_action :verify_authenticity_token
 
@@ -72,11 +72,9 @@ class Api::CartItemsController < ApplicationController
 
      def destroy
         # debugger;
-        puts "Hello?"
         # @cart_items = CartItem.where(cart_id: params[:cart_id])
         
         @cart_item = CartItem.find_by(id: params[:id])
-        puts @cart_item
         if @cart_item
             @cart_item.destroy
         end

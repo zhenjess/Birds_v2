@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from './store/store';
 import Root from './components/root';
-import * as sessionActions from './actions/session_actions';
-import * as shoesActions from './actions/shoes_actions';
-import * as cartItemsActions from './actions/cart_items_actions';
-import * as cartActions from './actions/cart_actions';
+// import * as sessionActions from './actions/session_actions';
+// import * as shoesActions from './actions/shoes_actions';
+// import * as cartItemsActions from './actions/cart_items_actions';
+// import * as cartActions from './actions/cart_actions';
 
 // import * as APIUtil from './util/session_api_util';
 //Components
@@ -31,19 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.store = store;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-
-    window.fetchAllShoes = shoesActions.fetchAllShoes;
-    window.fetchShoe = shoesActions.fetchShoe;
-
-    // window.fetchCartItems = cartItemsActions.fetchCartItems;
-    window.createCartItem = cartItemsActions.createCartItem;
-
-    window.fetchCart = cartActions.fetchCart;
-    window.createCart = cartActions.createCart;
-
-    window.signup = sessionActions.signup;
-    window.login = sessionActions.login;
-    window.logout = sessionActions.logout;
 
     ReactDOM.render(<Root store={store} />, root); 
 
@@ -71,3 +58,19 @@ document.addEventListener("DOMContentLoaded", () => {
 //     ReactDOM.render(<Root store={store}/>, root); 
 // });
 
+// window.store = store;
+// window.getState = store.getState;
+// window.dispatch = store.dispatch;
+
+// window.fetchAllShoes = shoesActions.fetchAllShoes;
+// window.fetchShoe = shoesActions.fetchShoe;
+
+// // window.fetchCartItems = cartItemsActions.fetchCartItems;
+// window.createCartItem = cartItemsActions.createCartItem;
+
+// window.fetchCart = cartActions.fetchCart;
+// window.createCart = cartActions.createCart;
+
+// window.signup = sessionActions.signup;
+// window.login = sessionActions.login;
+// window.logout = sessionActions.logout;
