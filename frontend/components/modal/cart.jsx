@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import { Link, withRouter } from 'react-router-dom';
@@ -40,31 +39,25 @@ class Cart extends React.Component {
         this.setState({ processed: true });
     }
 
-
     componentDidMount() {
-        debugger
         // this.props.fetchAllShoes();
-
-       // this.props.fetchCartItems(this.props.cart);
-       if (currentUser) {
-           this.props.fetchCart(this.props.currentUser.id);
-    
-            const { cartItems } = this.props;
-            if (cartItems.length) {
-                // this.props.openModal('shoe index', this.props.cart);
-                this.props.openModal();
-                let subtotal = 0;
-                let items = Object.values(cartItems);
-                let i = 0;
-                while (i < items.length) {
-                    subtotal += (95 * items[i]["quantity"]);
-                    i++;
-                }
-    
-                this.setState({ subtotal });
+        
+        //this.props.fetchCartItems(this.props.cart); 
+        this.props.fetchCart(this.props.currentUser.id);
+        debugger
+        const { cartItems } = this.props;
+        if (cartItems.length) {
+            this.props.openModal('shoe index', this.props.cart);
+            let subtotal = 0;
+            let items = Object.values(cartItems);
+            let i = 0;
+            while (i < items.length) {
+                subtotal += (95 * items[i]["quantity"]);
+                i++;
             }
-       }
-    }
+            
+            this.setState({ subtotal });
+        }
         // if (cartItems.length) {
         //     this.props.openModal('shoe index', this.props.cart);
         //     //set default value of reduce to 0 to not add the first obj ele which is an obj
@@ -73,9 +66,9 @@ class Cart extends React.Component {
         //         subtotal
         //     });
 
-
+        
         // }
-    
+    }
 
     getCartItems() {
         const { cartItems, shoes } = this.props;
@@ -88,9 +81,9 @@ class Cart extends React.Component {
 
     quantityCount(cartItems) {
         //return total based on pairs of cartItems in cart
-
+    
         let totalCount = 0;
-
+    
         //debugger
         for (let i = 0; i < cartItems.length; i++) {
             totalCount += cartItems[i]["quantity"];
@@ -101,16 +94,16 @@ class Cart extends React.Component {
     componentDidUpdate(prevProps) {
         let prevCount = this.quantityCount(prevProps.cartItems); //don't want length of cartItems just entire cartItems
         let currCount = this.quantityCount(this.props.cartItems);
-
+        
         //debugger
         if (prevCount !== currCount) { //cartItems.length !== prevProps.cartItems.length
-
+            
             // let subtotal = 0;
 
             // cartItems.forEach(cartItem => {  // pair1->10 pair2->1 pair3->5 ==> 16 pairs of shoes, cartItems => 3 in length 
-
+               
             //    subtotal += (95 * cartItem["quantity"]); //this works if have shoe and accessories items to keep track of the diff pricings
-
+               
             // });
             let subtotal = currCount * 95; //specific to if have only shoe items
             this.setState({ subtotal });
@@ -122,35 +115,23 @@ class Cart extends React.Component {
     }
 
     handleCheckout(e) {
-        // const { currentUser, cartId, deleteCartItems } = this.props;
-        const { currentUser, checkoutItems, deleteCartItem, deleteCartItems, closeModal } = this.props;
-
-       // debugger
-        // return (e) => {
+        const { closeModal } = this.props;
         e.preventDefault();
-
         this.emptyCart();
+        debugger
         closeModal();
         this.props.history.push('/cart');
     }
-        // debugger
-  
-            // deleteCartItems(cartId);
-            // pass in props for deleteCartItem (as in cart_item.jsx)
-            // loop through currentUser.cartId items, then trigger deleteCartItem for each individual item
-            // And if this doesn't reRender, set State again somehow.
-            
-
-
-            // deleteCartItem(cartItem)
-            
-            // deleteCartItems(currentUser.cartId)
-            //     .then(() => {
-            //         debugger
-            //         closeModal()
-            //     });
-        
-        // }
+    //    const { currentUser, checkoutItems, deleteCartItems } = this.props;
+    //    debugger
+    //    return (e) => {
+    //        e.preventDefault();
+    //        debugger
+    //        if (currentUser) {
+    //            deleteCartItems(checkoutItems);
+    //        }
+    //    }
+   
 
     // handleCheckout() {
     //     return (e) => {
@@ -192,8 +173,8 @@ class Cart extends React.Component {
 
     emptyCart() {
         const { currentUser, cartItems, deleteCartItem } = this.props;
-        cartItems.forEach(cartItem => deleteCartItem(cartItem.id));
-        // cartItems.forEach(cartItem => deleteCartItem(currentUser, cartItem.id, this.props.currentUser.cartId));
+        cartItems.forEach(cartItem => deleteCartItem(cartItem.id)); //this.props.cart.cart.id, this.props.currentUser.cartId
+        debugger
         if (cartItems.length) {
             this.startNotification();
         }
@@ -341,8 +322,8 @@ class Cart extends React.Component {
                                 <h3>Shipping</h3>
                                 <h3>FREE</h3>
                             </div>
-                            {/* onClick={this.emptyCart} */}
-                            <Link className="checkout" onClick={this.handleCheckout}>                                
+                            {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/} 
+                            <Link className="checkout" onClick={this.handleCheckout}>
                                 <input
                                     type="submit"
                                     className="submit"

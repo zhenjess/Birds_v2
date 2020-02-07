@@ -23,15 +23,15 @@ export const updateCartItem = (cartItem) => {
     })
 }
 
-export const deleteCartItems = (cartId) => {
-    return $.ajax({ // BUG: CSRF failure somewhere so we patchwith below
-        // beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
-        url: `/api/carts/${cartId}`,
-        method: 'DELETE'
-    })
+// export const deleteCartItems = (cartId) => {
+//     return $.ajax({ // BUG: CSRF failure somewhere so we patchwith below
+//         // beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
+//         url: `/api/carts/${cartId}`,
+//         method: 'DELETE'
+//     })
     
-    // .then( (res) => {console.log("success", res)}, (err) => {console.log("fail", err)})
-}
+//     // .then( (res) => {console.log("success", res)}, (err) => {console.log("fail", err)})
+// }
 
 //allow delete items from users current cart
 export const deleteCartItem = (cartItemId) => {

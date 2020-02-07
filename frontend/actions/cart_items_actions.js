@@ -64,17 +64,17 @@ export const deleteCartItem = (cartItemId) => dispatch => {
         .then((cartItemId) => dispatch(removeCartItem(cartItemId)))
 };
 
-export const deleteCartItems = (cartId) => dispatch => {
+// export const deleteCartItems = (cartId) => dispatch => {
     
-    return APIUtil.deleteCartItems(cartId) 
-        .then((res) => { // BUG: Not working here
-            debugger
-            dispatch(removeAllCartItems())
-        }, (err) => {
-            console.log("Testing 123");
-            console.log(err);
-        }  )
-};
+//     return APIUtil.deleteCartItems(cartId) 
+//         .then((res) => { // BUG: Not working here
+//             debugger
+//             dispatch(removeAllCartItems())
+//         }, (err) => {
+//             console.log("Testing 123");
+//             console.log(err);
+//         }  )
+// };
 
 
 // import * as APIUtil from '../util/cart_items_api_util';

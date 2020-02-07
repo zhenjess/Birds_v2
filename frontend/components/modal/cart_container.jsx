@@ -4,7 +4,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import Cart from './cart';
 import { fetchAllShoes } from '../../actions/shoes_actions';
 import { fetchCart } from '../../actions/cart_actions';
-import { createCartItem, updateCartItem, deleteCartItem, deleteCartItems } from '../../actions/cart_items_actions'; //fetchCartItems,
+import { createCartItem, updateCartItem, deleteCartItem } from '../../actions/cart_items_actions'; //fetchCartItems,deleteCartItems
 // import { fetchCart } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
@@ -36,7 +36,7 @@ const mapDispatchToProps = dispatch => ({
     createCartItem: (cartItem) => dispatch(createCartItem(cartItem)),
     updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
     deleteCartItem: (cartItem) => dispatch(deleteCartItem(cartItem)),
-    deleteCartItems: (cartId) => dispatch(deleteCartItems(cartId)),
+    // deleteCartItems: (cartId) => dispatch(deleteCartItems(cartId)),
     fetchCart: (user) => dispatch(fetchCart(user)), //, cartId
     openModal: () => dispatch(openModal()),
     closeModal: () => dispatch(closeModal()),
