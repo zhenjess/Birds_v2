@@ -326,14 +326,7 @@ class Cart extends React.Component {
                                 <h3>FREE</h3>
                             </div>
                             {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/} 
-                            <Link className="checkout" onClick={this.handleCheckout}>
-                                <input
-                                    type="submit"
-                                    className="submit"
-                                    value="CHECKOUT"
-                                />
-                            </Link>
-
+                            <button className="checkout" onClick={this.handleCheckout}>CHECKOUT</button> 
                         </div>
                         <div className="cart-footer">
                             <p>Looking for more shoes?</p>

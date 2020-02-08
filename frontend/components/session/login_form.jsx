@@ -152,14 +152,14 @@ class LoginForm extends React.Component {
                         <h2>LOGIN</h2>
 
                         {this.renderErrors()}
-                        <style>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
-                        </style>
+                        </style> */}
 
-                        <label>EMAIL</label>
-                        <style>
+                        <label className="email-label">EMAIL</label>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-                        </style>
+                        </style> */}
                         <input
                             id="email"
                             type="text"
@@ -168,9 +168,9 @@ class LoginForm extends React.Component {
                         />
 
                         <label>PASSWORD</label>
-                        <style>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-                        </style>
+                        </style> */}
                         <input
                             id="password"
                             type="password"
