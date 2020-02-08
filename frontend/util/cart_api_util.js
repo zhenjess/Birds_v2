@@ -1,4 +1,4 @@
-export const fetchCurrentCartID = (user) => {
+export const fetchCart = (id) => { //, cartId
     return $.ajax({
         // url: `/api/users/${user.id}/carts/${cartId}`,
         url: `/api/users/${id}/carts`,
@@ -6,12 +6,12 @@ export const fetchCurrentCartID = (user) => {
     })
 }
 
-export const fetchCart = (user) => {
-    return $.ajax({
-        url: `/api/users/${user.id}`, 
-        method: 'GET'
-    })
-}
+// export const fetchCart = (user) => {
+//     return $.ajax({
+//         url: `/api/users/${user.id}`, 
+//         method: 'GET'
+//     })
+// }
 
 export const createCart = (user) => {
     return $.ajax({

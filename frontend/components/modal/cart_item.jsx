@@ -25,11 +25,7 @@ class CartItem extends React.Component {
         // });
 
         this.setState({ quantity: this.state.quantity + 1}, function () {
-<<<<<<< HEAD
            // debugger
-=======
-            //debugger
->>>>>>> master
             this.props.updateCartItem(this.state);
         });
 

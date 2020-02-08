@@ -41,13 +41,13 @@ class Cart extends React.Component {
 
     componentDidMount() {
         // this.props.fetchAllShoes();
-        
+
         //this.props.fetchCartItems(this.props.cart); 
         if (!this.props.currentUser) {
             this.props.openModal();
         } else {
             this.props.fetchCart(this.props.currentUser.id);
-            debugger
+            //debugger
             const { cartItems } = this.props;
             if (cartItems.length) {
                 this.props.openModal(); //'shoe index', this.props.cart
@@ -57,7 +57,7 @@ class Cart extends React.Component {
                 while (i < items.length) {
                     subtotal += (95 * items[i]["quantity"]);
                     i++;
-                }  
+                }
                 this.setState({ subtotal });
             }
         }
@@ -69,7 +69,7 @@ class Cart extends React.Component {
         //         subtotal
         //     });
 
-        
+
         // }
     }
 
@@ -84,9 +84,9 @@ class Cart extends React.Component {
 
     quantityCount(cartItems) {
         //return total based on pairs of cartItems in cart
-    
+
         let totalCount = 0;
-    
+
         //debugger
         for (let i = 0; i < cartItems.length; i++) {
             totalCount += cartItems[i]["quantity"];
@@ -97,16 +97,16 @@ class Cart extends React.Component {
     componentDidUpdate(prevProps) {
         let prevCount = this.quantityCount(prevProps.cartItems); //don't want length of cartItems just entire cartItems
         let currCount = this.quantityCount(this.props.cartItems);
-        
+
         //debugger
         if (prevCount !== currCount) { //cartItems.length !== prevProps.cartItems.length
-            
+
             // let subtotal = 0;
 
             // cartItems.forEach(cartItem => {  // pair1->10 pair2->1 pair3->5 ==> 16 pairs of shoes, cartItems => 3 in length 
-               
+
             //    subtotal += (95 * cartItem["quantity"]); //this works if have shoe and accessories items to keep track of the diff pricings
-               
+
             // });
             let subtotal = currCount * 95; //specific to if have only shoe items
             this.setState({ subtotal });
@@ -121,10 +121,7 @@ class Cart extends React.Component {
         const { closeModal } = this.props;
         e.preventDefault();
         this.emptyCart();
-<<<<<<< HEAD
         debugger
-=======
->>>>>>> master
         closeModal();
         this.props.history.push('/cart');
     }
@@ -137,7 +134,7 @@ class Cart extends React.Component {
     //            deleteCartItems(checkoutItems);
     //        }
     //    }
-   
+
 
     // handleCheckout() {
     //     return (e) => {
@@ -166,7 +163,7 @@ class Cart extends React.Component {
         this.setState(() => ({ quantity }));
 
         const { cartItems } = this.props;
-       // debugger
+        // debugger
         let subtotal = 0;
         let numItems = 0;
         cartItems.forEach((cartItem) => {
@@ -180,7 +177,7 @@ class Cart extends React.Component {
     emptyCart() {
         const { currentUser, cartItems, deleteCartItem } = this.props;
         cartItems.forEach(cartItem => deleteCartItem(cartItem.id)); //this.props.cart.cart.id, this.props.currentUser.cartId
-        debugger
+       // debugger
         if (cartItems.length) {
             this.startNotification();
         }
@@ -217,7 +214,7 @@ class Cart extends React.Component {
         const { subtotal } = this.state;
 
         cartItems.map((cartItem, i) => {
-           // debugger
+            // debugger
             return <CartItem
                 cartId={cartItem.cartId}
                 shoeId={cartItem.shoeId}
@@ -238,40 +235,40 @@ class Cart extends React.Component {
             />
         });
 
-            if (cartItems.length === 0) {
-                return (
-                    <div className="cart-form">
-                        <div className="shop-links">
-                            <div className="cart-text">
-                                <div className="cart-img"><i className="fas fa-shopping-cart"></i></div>
-                                <p>You're $50 away from free shipping</p>
-                            </div>
-                            <br />
-                            <p>Your Cart is Empty</p>
-                            <style>
-                                @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
+        if (cartItems.length === 0) {
+            return (
+                <div className="cart-form">
+                    <div className="shop-links">
+                        <div className="cart-text">
+                            <div className="cart-img"><i className="fas fa-shopping-cart"></i></div>
+                            <p>You're $50 away from free shipping</p>
+                        </div>
+                        <br />
+                        <p>Your Cart is Empty</p>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                             </style>
-                            <div onClick={this.handleMenModalClick} className="shop-link" >
-                                <input
-                                    type="submit"
-                                    className="submit"
-                                    value="SHOP MEN"
-                                />
-                            </div>
-                            <div onClick={this.handleWomenModalClick} className="shop-link">
-                                <input
-                                    type="submit"
-                                    className="submit"
-                                    value="SHOP WOMEN"
-                                />
-                            </div>
-
+                        <div onClick={this.handleMenModalClick} className="shop-link" >
+                            <input
+                                type="submit"
+                                className="submit"
+                                value="SHOP MEN"
+                            />
+                        </div>
+                        <div onClick={this.handleWomenModalClick} className="shop-link">
+                            <input
+                                type="submit"
+                                className="submit"
+                                value="SHOP WOMEN"
+                            />
                         </div>
 
                     </div>
 
-                );
-            } else {
+                </div>
+
+            );
+        } else {
             // debugger
             return (
                 <div>
@@ -328,16 +325,8 @@ class Cart extends React.Component {
                                 <h3>Shipping</h3>
                                 <h3>FREE</h3>
                             </div>
-                            {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/} 
-                            {/* <button className="checkout" onClick={this.handleCheckout}>CHECKOUT</button>  */}
-                            <Link className="checkout" onClick={this.props.closeModal} to={"/cart"}>
-                                <input
-                                    type="submit"
-                                    className="submit"
-                                    value="CHECKOUT"
-                                />
-                            </Link>
-
+                            {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/}
+                            <button className="checkout" onClick={this.handleCheckout}>CHECKOUT</button>
                         </div>
                         <div className="cart-footer">
                             <p>Looking for more shoes?</p>
@@ -437,7 +426,7 @@ export default withRouter(Cart);
     //             )
     //         }
     //     }
-        
+
     //     let subTotal = 0;
     //     let numCartItems = 0;
 
