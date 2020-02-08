@@ -43,20 +43,23 @@ class Cart extends React.Component {
         // this.props.fetchAllShoes();
         
         //this.props.fetchCartItems(this.props.cart); 
-        this.props.fetchCart(this.props.currentUser.id);
-        debugger
-        const { cartItems } = this.props;
-        if (cartItems.length) {
-            this.props.openModal('shoe index', this.props.cart);
-            let subtotal = 0;
-            let items = Object.values(cartItems);
-            let i = 0;
-            while (i < items.length) {
-                subtotal += (95 * items[i]["quantity"]);
-                i++;
+        if (!this.props.currentUser) {
+            this.props.openModal();
+        } else {
+            this.props.fetchCart(this.props.currentUser.id);
+            debugger
+            const { cartItems } = this.props;
+            if (cartItems.length) {
+                this.props.openModal(); //'shoe index', this.props.cart
+                let subtotal = 0;
+                let items = Object.values(cartItems);
+                let i = 0;
+                while (i < items.length) {
+                    subtotal += (95 * items[i]["quantity"]);
+                    i++;
+                }  
+                this.setState({ subtotal });
             }
-            
-            this.setState({ subtotal });
         }
         // if (cartItems.length) {
         //     this.props.openModal('shoe index', this.props.cart);
