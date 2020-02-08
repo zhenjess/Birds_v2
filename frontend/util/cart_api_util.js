@@ -1,16 +1,17 @@
-export const fetchCurrentCartID = (user) => {
+export const fetchCart = (id) => { //, cartId
     return $.ajax({
-        url: `/api/users/${user.id}/carts`,
+        // url: `/api/users/${user.id}/carts/${cartId}`,
+        url: `/api/users/${id}/carts`,
         method: 'GET'
     })
 }
 
-export const fetchCart = (user) => {
-    return $.ajax({
-        url: `/api/users/${user.id}`, 
-        method: 'GET'
-    })
-}
+// export const fetchCart = (user) => {
+//     return $.ajax({
+//         url: `/api/users/${user.id}`, 
+//         method: 'GET'
+//     })
+// }
 
 export const createCart = (user) => {
     return $.ajax({
@@ -19,7 +20,11 @@ export const createCart = (user) => {
     })
 }
 
-
+// export const addToCart = (cartItem) => {
+//     return $.ajax({
+//         url: `api/`
+//     })
+// }
 
 
 // export const fetchCart = () => {

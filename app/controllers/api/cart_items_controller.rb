@@ -1,7 +1,7 @@
 class Api::CartItemsController < ApplicationController
-   before_action :require_login
+   #before_action :require_login
 
-    #skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token
 
     def index
         # @cart_items = CartItem.find_by(id: params[:cartItem][:shoe_id])
@@ -71,16 +71,21 @@ class Api::CartItemsController < ApplicationController
     end
 
      def destroy
+        # debugger;
         # @cart_items = CartItem.where(cart_id: params[:cart_id])
-        @cart_item = CartItem.find_by(id: params[:id]).destroy
+        
+        @cart_item = CartItem.find_by(id: params[:id])
+        if @cart_item
+            @cart_item.destroy
+        end
         render 'api/cart_items/show'
     end
 
-    def destroy_all
-        @cart_items = CartItem.where(cart_id: params[:cartId])
-        @cart_items.destroy_all
-        render 'api/cart_items/index'
-    end 
+    # def destroy_all
+    #     @cart_items = CartItem.where(cart_id: params[:cartId])
+    #     @cart_items.destroy_all
+    #     render 'api/cart_items/index'
+    # end 
 
     private
     def cart_item_params

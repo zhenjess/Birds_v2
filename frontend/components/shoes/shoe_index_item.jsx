@@ -14,16 +14,16 @@ class ShoeIndexItem extends React.Component {
 
     }
 
-    // addToCart(shoe) {
-    //     debugger
-    //     let cartItem = { shoe_id: shoe.id, cart_id: this.props.cart.cart.id, quantity: 1};
-    //     this.props.createCartItem(this.props.currentUser, cartItem);
-    // }
-
     addToCart() {
-        // debugger
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: 1 };
-       // debugger
+
+        // addToCart(shoe) {
+        //     debugger
+        //     let cartItem = { shoe_id: shoe.id, cart_id: this.props.cart.cart.id, quantity: 1};
+        //     this.props.createCartItem(this.props.currentUser, cartItem);
+        // }
+
+        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.currentUser.cartId, quantity: 1 };
+
         this.props.createCartItem(cartItem) //this.props.currentUser, 
             .then(this.props.startNotification())
             .then(this.props.openModal())
@@ -35,10 +35,10 @@ class ShoeIndexItem extends React.Component {
         // if (cartItem) {
         //     quantity += 1;
         // } else {
-            
+
         // }
 
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1}
+        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1 }
         this.props.updateCartItem(cartItem)
             .then(this.props.startNotification())
             .then(this.props.openModal())
@@ -50,10 +50,10 @@ class ShoeIndexItem extends React.Component {
         let returned = 0;
 
         if (this.props.cartItem) {
-           // debugger
-            debugger
+            // debugger
+            // debugger
             Object.values(this.props.cartItem).forEach((el) => {
-            //    debugger
+                //    debugger
                 if (el.shoeId === this.props.shoe.id) {
                     if (el.cartId === this.props.cart.cart.id) { //this.props.currentUser.cartId should not matching with user's id, but with user's cart id
                         returned = el.quantity;
@@ -73,8 +73,8 @@ class ShoeIndexItem extends React.Component {
         //     // debugger
         //     <Redirect to={"/account/login"}></Redirect>
         // }
-        
-        if(quant > 0){
+
+        if (quant > 0) {
             //debugger
             this.updateCart(quant)
         } else {
@@ -94,7 +94,7 @@ class ShoeIndexItem extends React.Component {
         return (
             // <div onAnimationEnd={this.state.clearGlobalAnimations}
             <div
-                 className={this.props.animateItems ? "item fadeInUp" : "item"}>
+                className={this.props.animateItems ? "item fadeInUp" : "item"}>
 
                 <li className="shoe-index-item">
                     <div className="shoe-image">
@@ -116,6 +116,11 @@ class ShoeIndexItem extends React.Component {
                         <ol className="size-selections-container">
                             {/* <li onClick={this.handleClick} className="size"><h4>7</h4></li> */}
                             <li onClick={this.handleClick} className="size"><h4>7</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>8</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>9</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>10</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>11</h4></li>
+                            <li onClick={this.handleClick} className="size"><h4>12</h4></li>
                             {/* <li onClick={currentUser ? () => this.handleClick(shoe) : () => <Link to={"/account"}></Link>} className="size"><h4>7</h4></li> */}
                             {/* <li onClick={() => this.handleClick(shoe)} className="size"><h4>7</h4></li>
                             <li onClick={() => this.handleClick(shoe)} className="size"><h4>8</h4></li>
@@ -131,6 +136,7 @@ class ShoeIndexItem extends React.Component {
     }
 }
 export default withRouter(ShoeIndexItem);
+
 
 
 // import React from 'react';
@@ -222,7 +228,7 @@ export default withRouter(ShoeIndexItem);
 // class ShoeIndexItem extends React.Component {
 //     constructor(props) {
 //         super(props);
-        
+
 //         this.handleClick = this.handleClick.bind(this);
 //         this.addToCart = this.addToCart.bind(this);
 
@@ -291,11 +297,11 @@ export default withRouter(ShoeIndexItem);
 // export default ShoeIndexItem;
 
 // const ShoeIndexItem = ({ shoe }) => (
-    
+
 //     <li className="shoe-index-item">
 //         <div className="shoe-image"> 
 //                 <img id="1" className="grey-shoe" src={shoe.photoUrl} alt=""/>
-       
+
 //                 {/* <img id="2" className="black-shoe" src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Men_s_Wool_Runners_-_Natural_Black__Black_Sole__-_imageLeft.png?v=1571655678" alt="" /> */}
 
 //             {/* <div className="shoe-image-2">
@@ -318,7 +324,7 @@ export default withRouter(ShoeIndexItem);
 //                 <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_FY19_August_PDP_WL_RN_Savanna_Night_LAT_9dbb2f9d-8a67-4fcc-a0fe-1bcc2a28e2eb.png?v=1571655947" alt="" />
 //             </div> */}
 //         </div>
-        
+
 //         <Link to={`/shoe/${shoe.id}`}>
 //             {/* <span>{shoe.id}</span>  */}
 //             <span>{shoe.color}</span>

@@ -4,14 +4,14 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import Cart from './cart';
 import { fetchAllShoes } from '../../actions/shoes_actions';
 import { fetchCart } from '../../actions/cart_actions';
-import { fetchCartItems, createCartItem, updateCartItem, deleteCartItem, deleteCartItems } from '../../actions/cart_items_actions'; 
-import { fetchCurrentCartID } from '../../actions/session_actions';
+import { createCartItem, updateCartItem, deleteCartItem } from '../../actions/cart_items_actions'; //fetchCartItems,deleteCartItems
+// import { fetchCart } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const userId = state.session.id;
     const currentUser = state.entities.users[state.session.id];
     const errors = state.errors.session;     
-    const cart = state.entities.carts.id;
+    // const cart = state.entities.carts.id;
     let cartItems = Object.values(state.entities.cartItems);
     let shoes = Object.values(state.entities.shoes);
     let users = Object.values(state.entities.users);
@@ -20,7 +20,7 @@ const mapStateToProps = (state, ownProps) => {
         userId: userId,
         currentUser: currentUser,
         errors: errors,
-        cart: cart,
+        // cart: cart,
         cartItems: cartItems,
         shoes: shoes,
         checkoutItems: state.entities.cartItems,
@@ -32,18 +32,17 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
     fetchAllShoes: () => dispatch(fetchAllShoes()),
-    fetchCurrentCartID: (user) => dispatch(fetchCurrentCartID(user)),
-    fetchCartItems: (cart) => dispatch(fetchCartItems(cart)),
+    // fetchCartItems: (cart) => dispatch(fetchCartItems(cart)),
     createCartItem: (cartItem) => dispatch(createCartItem(cartItem)),
     updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
     deleteCartItem: (cartItem) => dispatch(deleteCartItem(cartItem)),
-    deleteCartItems: () => dispatch(deleteCartItems()),
-    fetchCart: (user) => dispatch(fetchCart(user)),
+    // deleteCartItems: (cartId) => dispatch(deleteCartItems(cartId)),
+    fetchCart: (user) => dispatch(fetchCart(user)), //, cartId
     openModal: () => dispatch(openModal()),
     closeModal: () => dispatch(closeModal()),
     processForm: (user) => dispatch(login(user)),
         otherForm: (
-            <button onClick={() => dispatch(openModal('Cart'))}>
+            <button onClick={() => dispatch(openModal())}>
                 Cart
             </button>
         ),
