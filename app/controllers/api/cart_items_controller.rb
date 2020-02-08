@@ -1,5 +1,5 @@
 class Api::CartItemsController < ApplicationController
-    # before_action :require_login
+   #before_action :require_login
 
     skip_before_action :verify_authenticity_token
 
@@ -81,11 +81,19 @@ class Api::CartItemsController < ApplicationController
         render 'api/cart_items/show'
     end
 
+<<<<<<< HEAD
     # def destroy_all
     #     @cart_items = CartItem.where(cart_id: params[:cartId])
     #     @cart_items.destroy_all
     #     render 'api/cart_items/index'
     # end 
+=======
+    def destroy_all
+        @cart_items = CartItem.where(cart_id: params[:cartId])
+        @cart_items.destroy_all
+        render 'api/cart_items/index'
+    end 
+>>>>>>> master
 
     private
     def cart_item_params

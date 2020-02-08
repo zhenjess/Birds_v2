@@ -64,6 +64,7 @@ export const deleteCartItem = (cartItemId) => dispatch => {
         .then((cartItemId) => dispatch(removeCartItem(cartItemId)))
 };
 
+<<<<<<< HEAD
 // export const deleteCartItems = (cartId) => dispatch => {
     
 //     return APIUtil.deleteCartItems(cartId) 
@@ -75,6 +76,13 @@ export const deleteCartItem = (cartItemId) => dispatch => {
 //             console.log(err);
 //         }  )
 // };
+
+=======
+export const deleteCartItems = (cartId) => dispatch => {
+    return APIUtil.deleteCartItems(cartId)
+        .then(() => dispatch(removeAllCartItems()))
+};
+>>>>>>> master
 
 
 // import * as APIUtil from '../util/cart_items_api_util';

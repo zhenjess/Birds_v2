@@ -121,7 +121,10 @@ class Cart extends React.Component {
         const { closeModal } = this.props;
         e.preventDefault();
         this.emptyCart();
+<<<<<<< HEAD
         debugger
+=======
+>>>>>>> master
         closeModal();
         this.props.history.push('/cart');
     }
@@ -326,7 +329,15 @@ class Cart extends React.Component {
                                 <h3>FREE</h3>
                             </div>
                             {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/} 
-                            <button className="checkout" onClick={this.handleCheckout}>CHECKOUT</button> 
+                            {/* <button className="checkout" onClick={this.handleCheckout}>CHECKOUT</button>  */}
+                            <Link className="checkout" onClick={this.props.closeModal} to={"/cart"}>
+                                <input
+                                    type="submit"
+                                    className="submit"
+                                    value="CHECKOUT"
+                                />
+                            </Link>
+
                         </div>
                         <div className="cart-footer">
                             <p>Looking for more shoes?</p>

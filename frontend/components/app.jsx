@@ -58,6 +58,8 @@ import AboutTrinoSub from './materials/trino/about_trino_sub';
 
 import MoreTrinoMain from './materials/trino/more_trino_main';
 
+import Branches from './branches/branches';
+
 import ShoeIndexContainer from './shoes/shoe_index_container';
 
 import CartFormContainer from './cart/cart_form_container';
@@ -84,6 +86,11 @@ const App = () => (
             <Route exact path={"/materials/tree"} component={Tree} />
             <Route exact path={"/materials/sugar"} component={Sugar} />
             <Route exact path={"/materials/trino"} component={Trino} />
+<<<<<<< HEAD
+=======
+            <Route exact path={"/branches"} component={Branches} />
+            <Route exact path={"/shoes/:gender"} component={ShoeIndexContainer} />
+>>>>>>> master
             <Route exact path={"/cart"} component={CartFormContainer} />
             {/* <Redirect to="/account" /> */}
         </Switch>
