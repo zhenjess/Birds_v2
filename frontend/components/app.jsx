@@ -86,11 +86,8 @@ const App = () => (
             <Route exact path={"/materials/tree"} component={Tree} />
             <Route exact path={"/materials/sugar"} component={Sugar} />
             <Route exact path={"/materials/trino"} component={Trino} />
-<<<<<<< HEAD
-=======
             <Route exact path={"/branches"} component={Branches} />
             <Route exact path={"/shoes/:gender"} component={ShoeIndexContainer} />
->>>>>>> master
             <Route exact path={"/cart"} component={CartFormContainer} />
             {/* <Redirect to="/account" /> */}
         </Switch>
