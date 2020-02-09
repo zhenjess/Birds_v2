@@ -1,5 +1,5 @@
 class Api::SessionsController < ApplicationController 
-    skip_before_action :verify_authenticity_token
+   # skip_before_action :verify_authenticity_token
 
     def create
        # debugger
@@ -19,7 +19,7 @@ class Api::SessionsController < ApplicationController
             logout
             render "api/users/show"
         else 
-            render json: ["No current user"], status: 404
+            render json: ["You are not Signed In"], status: 404
         end
     end
 end
