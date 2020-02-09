@@ -245,8 +245,11 @@ class Cart extends React.Component {
                         </div>
                         <br />
                         <p>Your Cart is Empty</p>
-                        
-                        <style>
+
+                        <button className="shop-link" onClick={this.handleMenModalClick}>SHOP MEN</button>
+                        <button className="shop-link" onClick={this.handleWomenModalClick}>SHOP WOMEN</button>
+
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                             </style>
                         <div onClick={this.handleMenModalClick} className="shop-link" >
@@ -262,8 +265,7 @@ class Cart extends React.Component {
                                 className="submit"
                                 value="SHOP WOMEN"
                             />
-                        </div>
-
+                        </div> */}
                     </div>
 
                 </div>
@@ -334,13 +336,15 @@ class Cart extends React.Component {
                             &nbsp;
                             &nbsp;
                             <div className="footer-links">
-                                <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleWomenModalClick} to={'/shoes/women'}>Women</Link></p>
+                                <p>Shop&nbsp;<a className="shopping-link" onClick={this.handleWomenModalClick} href="#shoes/women">Women</a></p>
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
-                                <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleMenModalClick} to={'/shoes/men'}>Men</Link></p>
+                                <p>Shop&nbsp;<a className="shopping-link" onClick={this.handleMenModalClick} href="#shoes/men">Men</a></p>
+                                {/* <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleWomenModalClick} to={'/shoes/women'}>Women</Link></p> */}   
+                                {/* <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleMenModalClick} to={'/shoes/men'}>Men</Link></p> */}
                             </div>
                         </div>
                     </div>
