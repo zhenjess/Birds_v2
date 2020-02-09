@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { logout } from '../../actions/session_actions';
+import { logout, clearErrors } from '../../actions/session_actions';
 
 import { connect } from 'react-redux';
 
@@ -16,6 +16,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return ({
         logout: () => dispatch(logout()),
+        clearErrors: () => dispatch(clearErrors())
     });
 };
 

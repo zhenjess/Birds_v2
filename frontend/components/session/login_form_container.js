@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { login } from '../../actions/session_actions';
+import { login, clearErrors } from '../../actions/session_actions';
 
 import { connect } from 'react-redux';
 
@@ -17,7 +17,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return ({
         login: user => dispatch(login(user)),
-        typeWriter: user => dispatch(typeWriter(user))
+        typeWriter: user => dispatch(typeWriter(user)),
+        clearErrors: () => dispatch(clearErrors())
     });
 };
 
