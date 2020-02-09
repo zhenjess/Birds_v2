@@ -100,7 +100,8 @@ class ShoeIndexItem extends React.Component {
                     <div className="shoe-image">
                         <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt="" />
                     </div>
-                    <Link to={`/shoes/${shoe.gender}`}>
+                    {/* <Link to={`/shoes/${shoe.gender}`}> */}
+                    <a href={`/shoes/${shoe.gender.toLowerCase()}`}>
                         <div className="shoe-item-color">
                             <h3>{shoe.color}</h3>
                             <br />
@@ -129,7 +130,8 @@ class ShoeIndexItem extends React.Component {
                             <li onClick={() => this.handleClick(shoe)} className="size"><h4>11</h4></li>
                             <li onClick={() => this.handleClick(shoe)} className="size"><h4>12</h4></li> */}
                         </ol>
-                    </Link>
+                    </a>
+                    {/* </Link> */}
                 </li>
             </div>
         );

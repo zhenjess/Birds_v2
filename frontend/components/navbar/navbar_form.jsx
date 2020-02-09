@@ -136,11 +136,12 @@ class NavbarForm extends React.Component {
                                 <a href="#branches">BRANCHES</a>
                             </div>
                         </div>
-                        <button></button>
+                        <a href="#account/login" className="icon-button cart-button"><i className="far fa-user icon"></i></a>
+                        <a href="#" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a>
+                        <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button>
                         {/* <Link className="icon-button cart-button" to="/account/login"><i className="far fa-user icon"></i></Link> */}
                         {/* <a href="#account" className="icon-button cart-button" ><i className="far fa-user icon"></i></a> */}
-                        <a href="?" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a>
-                        <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button>
+                        {/* <a href="?" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a> */}
                         {/* <div onClick={this.handleOpenCart} className={(activeHeader ?
                             "a-header-button cart-header-button" :
                             "u-header-button cart-header-button") + " nav-link"}>

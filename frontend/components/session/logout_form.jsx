@@ -33,12 +33,14 @@ class LogoutForm extends React.Component {
                 <div className="logout-form-container">
                     <form>
                         <h2>MY ACCOUNT</h2>
-                        <style>
+                        <br/>
+                        <a href="#" className="logout-link" onClick={this.handleSubmit}>LOGOUT</a>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
                         </style>
                         <br/>
-                        {/* <input type="submit" className="submit" value="LOGOUT"/>   */}
-                        <Link className="logout-link" onClick={this.handleSubmit} to="/">LOGOUT</Link> 
+                         <input type="submit" className="submit" value="LOGOUT"/>   
+                        <Link className="logout-link" onClick={this.handleSubmit} to="/">LOGOUT</Link>  */}
                     </form>
                 </div>
                 <div className="logout-status">
@@ -51,7 +53,7 @@ class LogoutForm extends React.Component {
                         <div className="address-body">
                             <div className="email">allbirds@gmail.com</div>
                             <p>YOU HAVEN'T ADDED AN ADDRESS YET.</p>
-                            <a href="/">Add an Address</a>
+                            <a href="#">Add an Address</a>
                         </div>
                     </div>
                 </div>
