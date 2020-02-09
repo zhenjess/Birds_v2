@@ -20,11 +20,13 @@ class MaterialsMain extends React.Component {
                                 <p>Durable &amp; Flexible</p>
                                 <div className="left-links">
                                     <div className="left-link-text">
-                                        <Link className="left-link" to="/shoes/women">WOMEN BIRDS</Link>
+                                        {/* <Link className="left-link" to="/shoes/women">WOMEN BIRDS</Link> */}
+                                        <a href="#shoes/women">WOMEN BIRDS</a>
                                     </div>
 
                                     <div className="left-link-text">
-                                        <Link className="left-link" to="/shoes/men">MEN BIRDS</Link>
+                                        {/* <Link className="left-link" to="/shoes/men">MEN BIRDS</Link> */}
+                                        <a href="#shoes/men">MEN BIRDS</a>
                                     </div>
                                 </div>
                             </div>
@@ -33,9 +35,9 @@ class MaterialsMain extends React.Component {
                         <div className="left-gif"></div>
                         <div className='left-small-image'></div>
 
-                        <style>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
-                        </style>
+                        </style> */}
 
                     </div>
 
@@ -50,20 +52,22 @@ class MaterialsMain extends React.Component {
                                 <p>Light &amp; Breezy</p>
                                 <div className="right-links">
                                     <div className="right-link-text">
-                                        <Link className="right-link" to="/shoes/women">WOMEN BIRDS</Link>
+                                        {/* <Link className="right-link" to="/shoes/women">WOMEN BIRDS</Link> */}
+                                        <a href="#shoes/women">WOMEN BIRDS</a>
                                     </div>
 
                                     <div className="right-link-text">
-                                        <Link className="right-link" to="/shoes/men">MEN BIRDS</Link>
+                                        {/* <Link className="right-link" to="/shoes/men">MEN BIRDS</Link> */}
+                                        <a href="#shoes/men">MEN BIRDS</a>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
 
-                        <style>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
-                        </style>
+                        </style> */}
 
                     </div>
 

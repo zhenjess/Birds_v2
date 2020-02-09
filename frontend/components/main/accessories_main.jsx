@@ -13,16 +13,17 @@ class AccessoriesMain extends React.Component {
         return (
             <div className="accessories-main-image">
                 <div className="accessories-text">
-                    <style>
+                    {/* <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                    </style>
+                    </style> */}
                     <h2>Trino™ Socks</h2>
                     <h3>WARM &amp; COZY</h3>
                 </div>
 
                 <div className="link">
                     <div className="link-text">
-                        <Link className="shoe-link" to="/shoes/women">SHOP ACCESSORIES</Link>
+                        {/* <Link className="shoe-link" to="/shoes/women">SHOP ACCESSORIES</Link> */}
+                        <a href="#shoes/women">SHOP ACCESSORIES</a>
                     </div>
                 </div>
             </div>

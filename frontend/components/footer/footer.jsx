@@ -58,7 +58,7 @@ class Footer extends React.Component {
                     <input type="submit" onClick={this.handleSubmit} className="submit" value="SIGN UP" />
                 </div>
                 <div className="footer-container-flex-right">
-                    <div className="footer-copyright">&copy; 2019 Birds, Inc.</div>
+                    <div className="footer-copyright">&copy; 2020 Birds, Inc.</div>
                     <a className="footer-git" href="https://github.com/zhenjess"><i className="fab fa-github" /></a>
                     <a className="footer-linkedin" href="https://www.linkedin.com/in/jessica-zhen-b2272a122/"><i className="fab fa-linkedin" /></a>
                     <a className="footer-angel" href="https://angel.co/jessica-zhen"><i className="fab fa-angellist" /></a>
