@@ -15,16 +15,16 @@ class AboutMaterialsSub extends React.Component {
 
                 {/* <div className="about-materials-sub"> */}
                     <div className="head-text">
-                        <style>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                        </style>
+                        </style> */}
                         <h2>Inspired by the Flock</h2>
                     </div>
 
                     <div className="sub-text">
-                        <style>
+                        {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
-                        </style>
+                        </style> */}
                         <p>Did you know in New Zealand, sheep outnumber humans about 6: 1?</p>
                         <p>Thanks to their wool, our process uses 60% LESS energy than materials used in 
                             typical synthetic shoes.

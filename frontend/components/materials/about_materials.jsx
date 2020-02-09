@@ -20,18 +20,18 @@ class AboutMaterials extends React.Component {
     
                     <div className="text">
                         <div className="about-main-text">
-                            <style>
+                            {/* <style>
                                 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                            </style>
+                            </style> */}
                             <p>Mother Nature is our muse. We responsibly source from the finest material resources SHE provides
                                 to produce the most sustainable and aesthetically appealing birds for your comfort. 
                                 Like wool from merino sheep, who have the best hair in nature.
                             </p>
                         </div>
                         <div className="about-sub-text">
-                            <style>
+                            {/* <style>
                                 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
-                            </style>
+                            </style> */}
                             <p>Merino wool from fresh off the sheep! It's breathable, temperature-regulating, 
                                 and moisture-wicking, all without that irritating scratchiness!
                                 We partner with organizations like ZQ Merino to ensure that we're sourcing wool from those who 
