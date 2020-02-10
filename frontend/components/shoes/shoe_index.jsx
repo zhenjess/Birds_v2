@@ -27,6 +27,11 @@ class ShoeIndex extends React.Component {
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
     }
+
+    componentWillUnmount() {
+        window.scrollTo(0, 0);
+    }
+    
     componentDidMount() {
         // debugger
         const id = this.props.match.params.id;

@@ -87,9 +87,8 @@ const App = () => (
             <Route exact path={"/materials/sugar"} component={Sugar} />
             <Route exact path={"/materials/trino"} component={Trino} />
             <Route exact path={"/branches"} component={Branches} />
-            <Route exact path={"/shoes/:gender"} component={ShoeIndexContainer} />
             <Route exact path={"/cart"} component={CartFormContainer} />
-            {/* <Redirect to="/account" /> */}
+            <Redirect to={"/"} />
         </Switch>
 
         <Route exact path={"/"} component={AboutMain} />
