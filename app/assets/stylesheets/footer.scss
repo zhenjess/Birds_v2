@@ -25,15 +25,24 @@
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     margin-left: 5px;
+    margin-top: 18px;
+
+    input {
+        height: 30px;
+        width: 250px;
+        margin-top: -10px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
 
     button {
-
         box-sizing: border-box;
-       // min-height: 10px;
+        min-height: 30px;
         min-width: 200px;
         padding: 0px 10px 20px 0px;
         border: 1px solid #E6E5E5;
-        margin-top: -12px;
+        margin-top: -10px;
+        margin-bottom: 8px;
         margin-left: 10px;
         font-size: 12px;
         border-radius: 2px;
@@ -51,7 +60,7 @@
         box-sizing: border-box;
         min-width: 50px;
         // min-height: 40px;
-        padding: 12px;
+        padding: 10px;
         //margin: 20px;
         transition: 0.3s;
         border: 2px solid black;
