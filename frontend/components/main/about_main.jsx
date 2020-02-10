@@ -23,6 +23,8 @@ class AboutMain extends React.Component {
                     Designed practically and made from sustainable resources.
                     Closing the loop with ZEROING waste because we care about OUR planet.
                     That sounds better, right?</p>
+
+                    <Link className="about-main-link" to={"/materials"}><button className="submit">LEARN MORE ABOUT OUR MATERIALS</button></Link>
                     {/* <Link className="about-main-link" to={"/materials"}>
                         <input 
                             type="submit"
@@ -30,11 +32,12 @@ class AboutMain extends React.Component {
                             value="LEARN MORE ABOUT OUR MATERIALS"
                         />
                     </Link> */}
-                    <button className="about-main-link" onClick={ () => this.props.history.push("/materials") }>LEARN MORE ABOUT OUR MATERIALS</button>
+                    {/* <button className="about-main-link" onClick={ () => this.props.history.push("/materials") }>LEARN MORE ABOUT OUR MATERIALS</button> */}
+                    {/* <a href="#materials" className="about-main-link">LEARN MORE ABOUT OUR MATERIALS</a> */}
                 </div>
             </div>
         );
     }
 }
 
-export default withRouter(AboutMain);
+export default AboutMain; //withRouter(

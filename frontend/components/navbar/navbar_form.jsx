@@ -118,7 +118,7 @@ class NavbarForm extends React.Component {
                         />
                     </div>
                     <div className="navbar" id="nav-center">
-                        <a className="logo" href="#">birds</a>
+                        <a className="logo" href="/">birds</a>
                     </div>
                         {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400i&display=swap');
@@ -137,7 +137,7 @@ class NavbarForm extends React.Component {
                             </div>
                         </div>
                         <a href="#account/login" className="icon-button cart-button"><i className="far fa-user icon"></i></a>
-                        <a href="#" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a>
+                        <a href="/" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a>
                         <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button>
                         {/* <Link className="icon-button cart-button" to="/account/login"><i className="far fa-user icon"></i></Link> */}
                         {/* <a href="#account" className="icon-button cart-button" ><i className="far fa-user icon"></i></a> */}
