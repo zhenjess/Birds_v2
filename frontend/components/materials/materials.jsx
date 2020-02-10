@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class Materials extends React.Component {
@@ -30,7 +30,7 @@ class Materials extends React.Component {
 
 }
 
-export default withRouter(Materials);
+export default Materials;
                         // {/* <style>
                         //     @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                         // </style>

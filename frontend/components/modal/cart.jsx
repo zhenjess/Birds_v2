@@ -24,8 +24,8 @@ class Cart extends React.Component {
             animateNotification: false,
         }
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleMenModalClick = this.handleMenModalClick.bind(this);
-        this.handleWomenModalClick = this.handleWomenModalClick.bind(this);
+        // this.handleMenModalClick = this.handleMenModalClick.bind(this);
+        // this.handleWomenModalClick = this.handleWomenModalClick.bind(this);
         // this.updateQuantity = this.updateQuantity.bind(this);
         this.quantityCount = this.quantityCount.bind(this);
         this.emptyCart = this.emptyCart.bind(this);
@@ -121,7 +121,7 @@ class Cart extends React.Component {
         const { closeModal } = this.props;
         e.preventDefault();
         this.emptyCart();
-        debugger
+        //debugger
         closeModal();
         this.props.history.push('/cart');
     }
@@ -199,15 +199,15 @@ class Cart extends React.Component {
         }
     }
 
-    handleMenModalClick() {
-        this.props.history.push('/shoes/men')
-        this.props.closeModal()
-    }
+    // handleMenModalClick() {
+    //     // this.props.history.push('/shoes/men')
+    //     this.props.closeModal()
+    // }
 
-    handleWomenModalClick() {
-        this.props.history.push('/shoes/women')
-        this.props.closeModal()
-    }
+    // handleWomenModalClick() {
+    //     // this.props.history.push('/shoes/women')
+    //     this.props.closeModal()
+    // }
 
     render() {
         const { open, cartItems, updateCartItem, deleteCartItem } = this.props;
@@ -246,9 +246,13 @@ class Cart extends React.Component {
                         <br />
                         <p>Your Cart is Empty</p>
 
-                        <button className="shop-link" onClick={this.handleMenModalClick}>SHOP MEN</button>
-                        <button className="shop-link" onClick={this.handleWomenModalClick}>SHOP WOMEN</button>
+                        <div>
+                            <Link className="shop-link" to={"/shoes/men"}><button type="button" className="submit" onClick={this.props.closeModal}>SHOP MEN</button></Link>
+                        </div>
 
+                        <div>
+                            <Link className="shop-link" to={"/shoes/women"}><button type="button" className="submit" onClick={this.props.closeModal}>SHOP WOMEN</button></Link>
+                        </div>
                         {/* <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                             </style>
@@ -288,7 +292,8 @@ class Cart extends React.Component {
                             &nbsp;
                             &nbsp;
                             &nbsp;
-                            <div onClick={this.props.closeModal} className="cart-close-button">&#10005;</div>
+                            <button className="cart-close-button" onClick={this.props.closeModal}>&#10005;</button>
+                            {/* <div onClick={this.props.closeModal} className="cart-close-button">&#10005;</div> */}
                         </div>
                         <ul className="cart-items">
                             {/* {cartItems} */}
@@ -336,13 +341,14 @@ class Cart extends React.Component {
                             &nbsp;
                             &nbsp;
                             <div className="footer-links">
+                                <p>Shop&nbsp;<Link className="shopping-link" to={"/shoes/women"}><button type="button" className="shopping-link" onClick={this.props.closeModal}>WOMEN</button></Link></p>
                                 <p>Shop&nbsp;<a className="shopping-link" onClick={this.handleWomenModalClick} href="#shoes/women">Women</a></p>
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
-                                <p>Shop&nbsp;<a className="shopping-link" onClick={this.handleMenModalClick} href="#shoes/men">Men</a></p>
+                                <p>Shop&nbsp;<Link className="shopping-link" to={"/shoes/men"}><button type="button" className="shopping-link" onClick={this.props.closeModal}>MEN</button></Link></p>
                                 {/* <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleWomenModalClick} to={'/shoes/women'}>Women</Link></p> */}   
                                 {/* <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleMenModalClick} to={'/shoes/men'}>Men</Link></p> */}
                             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Tree extends React.Component {
     constructor(props) {
@@ -21,10 +21,10 @@ class Tree extends React.Component {
                 </div>
 
                 <div className="material-types">
-                    <button className="material-link" onClick={() => this.props.history.push("/materials")}>WOOL</button>
-                    <button className="material-link" onClick={() => this.props.history.push("/materials/tree")}>TREE</button>
-                    <button className="material-link" onClick={() => this.props.history.push("/materials/sugar")}>SUGAR</button>
-                    <button className="material-link" onClick={() => this.props.history.push("/materials/trino")}>TRINO™</button>
+                    <Link className="material-link" to={"/materials"}><button type="button" className="submit">WOOL</button></Link>
+                    <Link className="material-link" to={"/materials/tree"}><button type="button" className="submit">TREE</button></Link>
+                    <Link className="material-link" to={"/materials/sugar"}><button type="button" className="submit">SUGAR</button></Link>
+                    <Link className="material-link" to={"/materials/trino"}><button type="button" className="submit">TRINO™</button></Link>
                 </div>
 
             </div>
@@ -33,7 +33,7 @@ class Tree extends React.Component {
 
 }
 
-export default withRouter(Tree);
+export default Tree;
                 // <div className="material-types">
                 //     <style>
                 //         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
