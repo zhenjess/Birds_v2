@@ -31,7 +31,7 @@ class ShoeIndex extends React.Component {
     componentWillUnmount() {
         window.scrollTo(0, 0);
     }
-    
+
     componentDidMount() {
         // debugger
         const id = this.props.match.params.id;

@@ -37,7 +37,11 @@ class LogoutForm extends React.Component {
                     <form>
                         <h2>MY ACCOUNT</h2>
                         <br />
-                        <button className="logout-link" onClick={this.handleSubmit}>LOGOUT</button>           
+                        {/* <Link className="logout-link" to="/">
+                            <button type="submit" onClick={this.handleSubmit}>LOGOUT</button>
+                        </Link> */}
+
+                        <Link type="submit" className="logout-link" onClick={this.handleSubmit} to="/">LOGOUT</Link> 
                     </form>
                 </div>
                 <div className="logout-status">
@@ -50,7 +54,7 @@ class LogoutForm extends React.Component {
                         <div className="address-body">
                             <div className="email">allbirds@gmail.com</div>
                             <p>YOU HAVEN'T ADDED AN ADDRESS YET.</p>
-                            <button className="logout-link" onClick={this.handleSubmit}>Add an Address</button>  
+                            <Link to="/">Add an Address</Link>  
                         </div>
                     </div>
                 </div>
