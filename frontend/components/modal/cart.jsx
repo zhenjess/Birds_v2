@@ -334,21 +334,20 @@ class Cart extends React.Component {
                                 <h3>FREE</h3>
                             </div>
                             {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/}
-                            <Link className="checkout" to={"/cart"}><button className="checkout" onClick={this.handleCheckout}>CHECKOUT</button></Link>
+                            <Link className="checkout" to={"/cart"}><button className="submit" onClick={this.handleCheckout}>CHECKOUT</button></Link>
                         </div>
                         <div className="cart-footer">
                             <p>Looking for more shoes?</p>
                             &nbsp;
                             &nbsp;
                             <div className="footer-links">
-                                <p>Shop&nbsp;<Link className="shopping-link" to={"/shoes/women"}><button type="button" className="shopping-link" onClick={this.props.closeModal}>WOMEN</button></Link></p>
-                                <p>Shop&nbsp;<a className="shopping-link" onClick={this.handleWomenModalClick} href="#shoes/women">Women</a></p>
+                                <p>Shop&nbsp;<Link className="shopping-link" to={"/shoes/women"} onClick={this.props.closeModal}>Women</Link></p>
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
-                                <p>Shop&nbsp;<Link className="shopping-link" to={"/shoes/men"}><button type="button" className="shopping-link" onClick={this.props.closeModal}>MEN</button></Link></p>
+                                <p>Shop&nbsp;<Link className="shopping-link" to={"/shoes/men"} onClick={this.props.closeModal}>Men</Link></p>
                                 {/* <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleWomenModalClick} to={'/shoes/women'}>Women</Link></p> */}   
                                 {/* <p>Shop&nbsp;<Link className="shopping-link" onClick={this.handleMenModalClick} to={'/shoes/men'}>Men</Link></p> */}
                             </div>
