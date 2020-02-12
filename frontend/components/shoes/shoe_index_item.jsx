@@ -80,7 +80,7 @@ class ShoeIndexItem extends React.Component {
         //     // debugger
         //     <Redirect to={"/account/login"}></Redirect>
         // }
-        debugger
+        //debugger
         if (quant > 0) {
             //debugger
             this.updateCart(quant)
@@ -95,7 +95,7 @@ class ShoeIndexItem extends React.Component {
 
     handleLogin(e) {
         e.preventDefault();
-        debugger
+        //debugger
         this.props.history.push('/account/login');
     }
 
