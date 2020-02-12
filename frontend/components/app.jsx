@@ -88,7 +88,7 @@ const App = () => (
             <Route exact path={"/materials/trino"} component={Trino} />
             <Route exact path={"/branches"} component={Branches} />
             <Route exact path={"/cart"} component={CartFormContainer} />
-            <Redirect to={"/"} /> 
+            {/* <Redirect to={"/"} />  */}
         </Switch>
 
         <Route exact path={"/"} component={AboutMain} />

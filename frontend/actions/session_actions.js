@@ -46,11 +46,11 @@ export const logout = () => dispatch => {
     );
 };
 
-export const clearErrors = () => (
-    ({
-        type: CLEAR_ERRORS
-    })
-);
+// export const clearErrors = () => (
+//     ({
+//         type: CLEAR_ERRORS
+//     })
+// );
 
 // export const fetchCart = (user, cartId) => dispatch => {
 //     return (

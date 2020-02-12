@@ -2,6 +2,8 @@ import React from 'react';
 
 import ShoesHeader from './shoes_header';
 
+import { hashHistory } from 'react-router';
+
 import { Link, Redirect, withRouter } from 'react-router-dom';
 
 class ShoeIndexItem extends React.Component {
@@ -15,9 +17,9 @@ class ShoeIndexItem extends React.Component {
 
     }
 
-    componentWillUnmount() {
-        window.scrollTo(0, 0);
-    }
+    // componentWillUnmount() {
+    //     window.scrollTo(0, 0);
+    // }
 
     addToCart() {
 
@@ -78,7 +80,7 @@ class ShoeIndexItem extends React.Component {
         //     // debugger
         //     <Redirect to={"/account/login"}></Redirect>
         // }
-
+        debugger
         if (quant > 0) {
             //debugger
             this.updateCart(quant)
@@ -91,11 +93,10 @@ class ShoeIndexItem extends React.Component {
         // this.props.addToCart(id, size);
     }
 
-    handleLogin() {
-        return (e) => {
-            e.preventDefault();
-            this.props.history.push('/account/login');
-        }
+    handleLogin(e) {
+        e.preventDefault();
+        debugger
+        this.props.history.push('/account/login');
     }
 
     render() {
@@ -112,8 +113,7 @@ class ShoeIndexItem extends React.Component {
                     <div className="shoe-image">
                         <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt="" />
                     </div>
-                    {/* <Link to={`/shoes/${shoe.gender}`}> */}
-                    <a href={`/shoes/${shoe.gender.toLowerCase()}`}>
+                    <Link to={`/shoes/${shoe.gender.toLowerCase()}`}>
                         <div className="shoe-item-color">
                             <h3>{shoe.color}</h3>
                             <br />
@@ -134,12 +134,12 @@ class ShoeIndexItem extends React.Component {
                             <li onClick={this.handleClick} className="size"><h4>10</h4></li>
                             <li onClick={this.handleClick} className="size"><h4>11</h4></li>
                             <li onClick={this.handleClick} className="size"><h4>12</h4></li> */}
-                            <li className="size" onClick={ this.props.currentUser ? this.handleClick() : this.handleLogin() }><h4>7</h4></li>
-                            <li className="size" onClick={this.props.currentUser ? this.handleClick() : this.handleLogin()}><h4>8</h4></li>
-                            <li className="size" onClick={this.props.currentUser ? this.handleClick() : this.handleLogin()}><h4>9</h4></li>
-                            <li className="size" onClick={this.props.currentUser ? this.handleClick() : this.handleLogin()}><h4>10</h4></li>
-                            <li className="size" onClick={this.props.currentUser ? this.handleClick() : this.handleLogin()}><h4>11</h4></li>
-                            <li className="size" onClick={this.props.currentUser ? this.handleClick() : this.handleLogin()}><h4>12</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>7</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>8</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>9</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>10</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>11</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>12</h4></li>
                           
                             {/* <li onClick={currentUser ? () => this.handleClick(shoe) : () => <Link to={"/account"}></Link>} className="size"><h4>7</h4></li> */}
                             {/* <li onClick={() => this.handleClick(shoe)} className="size"><h4>7</h4></li>
@@ -149,8 +149,7 @@ class ShoeIndexItem extends React.Component {
                             <li onClick={() => this.handleClick(shoe)} className="size"><h4>11</h4></li>
                             <li onClick={() => this.handleClick(shoe)} className="size"><h4>12</h4></li> */}
                         </ol>
-                    </a>
-                    {/* </Link> */}
+                    </Link>
                 </li>
             </div>
         );

@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => {
     return ({
         login: user => dispatch(login(user)),
         typeWriter: user => dispatch(typeWriter(user)),
-        clearErrors: () => dispatch(clearErrors())
+        // clearErrors: () => dispatch(clearErrors())
     });
 };
 

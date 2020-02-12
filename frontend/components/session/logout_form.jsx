@@ -11,9 +11,9 @@ class LogoutForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentWillUnmount() {
-        this.props.clearErrors();
-    }
+    // componentWillUnmount() {
+    //     this.props.clearErrors();
+    // }
 
     update(field) {
         return (e) => {
@@ -54,7 +54,7 @@ class LogoutForm extends React.Component {
                         <div className="address-body">
                             <div className="email">allbirds@gmail.com</div>
                             <p>YOU HAVEN'T ADDED AN ADDRESS YET.</p>
-                            <Link to="/">Add an Address</Link>  
+                            <Link to="/">Add an Address</Link>
                         </div>
                     </div>
                 </div>

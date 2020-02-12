@@ -1,7 +1,7 @@
 class Api::CartItemsController < ApplicationController
-    #before_action :require_login
+    before_action :require_login
 
-    skip_before_action :verify_authenticity_token
+    #skip_before_action :verify_authenticity_token
 
     def index
         # @cart_items = CartItem.find_by(id: params[:cartItem][:shoe_id])
@@ -28,6 +28,7 @@ class Api::CartItemsController < ApplicationController
         else 
             render json: @cart_item.errors.full_messages 
         end
+    end
 
         #test
 
@@ -53,7 +54,7 @@ class Api::CartItemsController < ApplicationController
                     #         render json: @cart_item.errors.full_messages
                     #     end
                     # end
-    end
+    
 
     def update
         # @cart_items = CartItem.where(cart_id: params[:cart_id])

@@ -28,9 +28,9 @@ class ShoeIndex extends React.Component {
         this.endNotification = this.endNotification.bind(this);
     }
 
-    componentWillUnmount() {
-        window.scrollTo(0, 0);
-    }
+    // componentWillUnmount() {
+    //     window.scrollTo(0, 0);
+    // }
 
     componentDidMount() {
         // debugger

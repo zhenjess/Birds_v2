@@ -182,7 +182,8 @@ ul {
 .checkout {
     // position: relative;
     // left: 1230px;
-       margin-left: 150px;
+    button {
+        margin-left: 150px;
         box-sizing: border-box;
         min-height: 40px;
         min-width: 300px;
@@ -194,7 +195,7 @@ ul {
         font-size: 13px;
         border-radius: 2px;
         text-align: center;
-
+    }
 
     .submit:hover {
         cursor: pointer;

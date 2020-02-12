@@ -293,7 +293,7 @@ class Cart extends React.Component {
                             &nbsp;
                             &nbsp;
                             {/* <button className="cart-close-button" onClick={this.props.closeModal}>&#10005;</button> */}
-                            <div><button className="cart-close-button" onClick={this.props.closeModal}>&#10005;</button></div>
+                            <div className="cart-close-button" onClick={this.props.closeModal}>&#10005;</div>
                         </div>
                         <ul className="cart-items">
                             {/* {cartItems} */}
@@ -334,7 +334,7 @@ class Cart extends React.Component {
                                 <h3>FREE</h3>
                             </div>
                             {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/}
-                            <Link className="checkout" to={"/cart"}><button className="submit" onClick={this.handleCheckout}>CHECKOUT</button></Link>
+                            <Link className="checkout" to={"/cart"}><button className="checkout" onClick={this.handleCheckout}>CHECKOUT</button></Link>
                         </div>
                         <div className="cart-footer">
                             <p>Looking for more shoes?</p>
