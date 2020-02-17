@@ -17,7 +17,7 @@ Style.destroy_all
 Size.destroy_all
 CartItem.destroy_all
 
-demoLogin = User.create!(first_name: "all", last_name: "birds", email: 'allbirds@gmail.com', password: "password")
+demoLogin = User.create!(first_name: "all", last_name: "birds", email: "allbirds@gmail.com", password: "password")
 
 demoCart = Cart.create!(user_id: demoLogin.id, status: "checked in")
 
