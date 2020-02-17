@@ -42,12 +42,12 @@ skippers = Style.create!(style: 'Skippers')
 toppers = Style.create!(style: 'Toppers')
 breezers = Style.create!(style: 'Breezers')
 
-seven = Size.create!(size: 7)
-eight = Size.create!(size: 8)
-nine = Size.create!(size: 9)
-ten = Size.create!(size: 10)
-eleven = Size.create!(size: 11)
-twelve = Size.create!(size: 12)
+size = Size.create!(size: [7,8,9,10,11,12])
+# eight = Size.create!(size: 8)
+# nine = Size.create!(size: 9)
+# ten = Size.create!(size: 10)
+# eleven = Size.create!(size: 11)
+# twelve = Size.create!(size: 12)
 
 # all_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
 
@@ -60,11 +60,11 @@ shoe_1_colors = [grey, black, white, red, green, blue]
 shoe_1_materials = [wool] #,tree
 shoe_1_genders = [men]
 shoe_1_styles = [runners]
-shoe_1_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_1_sizes = size.size
 
 # shoe_1_sizes.each do |size|
     shoe_1_colors.each do |color|
-            shoe_1 = Shoe.create!(color_id: color.id, material_id: shoe_1_materials[0].id, gender_id: shoe_1_genders[0].id, style_id: shoe_1_styles[0].id, size_id: shoe_1_sizes[0].id)
+            shoe_1 = Shoe.create!(color_id: color.id, material_id: shoe_1_materials[0].id, gender_id: shoe_1_genders[0].id, style_id: shoe_1_styles[0].id, size_id: size.id)
             #item = CartItem.create!(shoe_id: shoe_1.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_1.gender.gender.downcase}_#{color.color.downcase}_#{shoe_1_materials[0].material.downcase}_#{shoe_1.style.style.downcase}.webp"
             #p filename
@@ -74,16 +74,17 @@ shoe_1_sizes = [seven, eight, nine, ten, eleven, twelve]
     end
 # end
 
+# shoe_1 = Shoe.create!(color_id: "grey", material_id: "wool", gender_id: "women", style_id: "runners", size_id: 7)
 
 shoe_2_colors = [grey, black, white, red, green, blue]
 shoe_2_materials = [tree] #,tree
 shoe_2_genders = [men]
 shoe_2_styles = [runners]
-shoe_2_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_2_sizes = size.size
 
 # shoe_2_sizes.each do |size|
     shoe_2_colors.each do |color|
-            shoe_2 = Shoe.create!(color_id: color.id, material_id: shoe_2_materials[0].id, gender_id: shoe_2_genders[0].id, style_id: shoe_2_styles[0].id, size_id: shoe_2_sizes[0].id)
+            shoe_2 = Shoe.create!(color_id: color.id, material_id: shoe_2_materials[0].id, gender_id: shoe_2_genders[0].id, style_id: shoe_2_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_2.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_2.gender.gender.downcase}_#{color.color.downcase}_#{shoe_2_materials[0].material.downcase}_#{shoe_2.style.style.downcase}.webp"
             #p filename
@@ -98,11 +99,11 @@ shoe_3_colors = [grey, black, red, blue]
 shoe_3_materials = [wool] #,tree
 shoe_3_genders = [men]
 shoe_3_styles = [loungers]
-shoe_3_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_3_sizes = size.size
 
 # shoe_3_sizes.each do |size|
     shoe_3_colors.each do |color|
-            shoe_3 = Shoe.create!(color_id: color.id, material_id: shoe_3_materials[0].id, gender_id: shoe_3_genders[0].id, style_id: shoe_3_styles[0].id, size_id: shoe_3_sizes[0].id)
+            shoe_3 = Shoe.create!(color_id: color.id, material_id: shoe_3_materials[0].id, gender_id: shoe_3_genders[0].id, style_id: shoe_3_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_3.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_3.gender.gender.downcase}_#{color.color.downcase}_#{shoe_3_materials[0].material.downcase}_#{shoe_3.style.style.downcase}.webp"
             #p filename
@@ -116,11 +117,11 @@ shoe_4_colors = [grey, black, white, red, green, blue]
 shoe_4_materials = [tree] #,tree
 shoe_4_genders = [men]
 shoe_4_styles = [loungers]
-shoe_4_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_4_sizes = size.size
 
 # shoe_4_sizes.each do |size|
     shoe_4_colors.each do |color|
-            shoe_4 = Shoe.create!(color_id: color.id, material_id: shoe_4_materials[0].id, gender_id: shoe_4_genders[0].id, style_id: shoe_4_styles[0].id, size_id: shoe_4_sizes[0].id)
+            shoe_4 = Shoe.create!(color_id: color.id, material_id: shoe_4_materials[0].id, gender_id: shoe_4_genders[0].id, style_id: shoe_4_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_4.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_4.gender.gender.downcase}_#{color.color.downcase}_#{shoe_4_materials[0].material.downcase}_#{shoe_4.style.style.downcase}.webp"
             #p filename
@@ -134,11 +135,11 @@ shoe_5_colors = [grey, black, white, red, green, blue]
 shoe_5_materials = [tree] #,tree
 shoe_5_genders = [men]
 shoe_5_styles = [skippers]
-shoe_5_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_5_sizes = size.size
 
 # shoe_5_sizes.each do |size|
     shoe_5_colors.each do |color|
-            shoe_5 = Shoe.create!(color_id: color.id, material_id: shoe_5_materials[0].id, gender_id: shoe_5_genders[0].id, style_id: shoe_5_styles[0].id, size_id: shoe_5_sizes[0].id)
+            shoe_5 = Shoe.create!(color_id: color.id, material_id: shoe_5_materials[0].id, gender_id: shoe_5_genders[0].id, style_id: shoe_5_styles[0].id, size_id: size.id)
             #item = CartItem.create!(shoe_id: shoe_5.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_5.gender.gender.downcase}_#{color.color.downcase}_#{shoe_5_materials[0].material.downcase}_#{shoe_5.style.style.downcase}.webp"
             #p filename
@@ -152,11 +153,11 @@ shoe_6_colors = [grey, black, white, red, green, blue]
 shoe_6_materials = [tree] #,tree
 shoe_6_genders = [men]
 shoe_6_styles = [toppers]
-shoe_6_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_6_sizes = size.size
 
 # shoe_6_sizes.each do |size|
     shoe_6_colors.each do |color|
-            shoe_6 = Shoe.create!(color_id: color.id, material_id: shoe_6_materials[0].id, gender_id: shoe_6_genders[0].id, style_id: shoe_6_styles[0].id, size_id: shoe_6_sizes[0].id)
+            shoe_6 = Shoe.create!(color_id: color.id, material_id: shoe_6_materials[0].id, gender_id: shoe_6_genders[0].id, style_id: shoe_6_styles[0].id, size_id: size.id)
             #item = CartItem.create!(shoe_id: shoe_6.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_6.gender.gender.downcase}_#{color.color.downcase}_#{shoe_6_materials[0].material.downcase}_#{shoe_6.style.style.downcase}.webp"
             #p filename
@@ -170,11 +171,11 @@ shoe_7_colors = [grey, black, white, red, green, blue]
 shoe_7_materials = [wool] #,tree
 shoe_7_genders = [women]
 shoe_7_styles = [runners]
-shoe_7_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_7_sizes = size.size
 
 # shoe_7_sizes.each do |size|
     shoe_7_colors.each do |color|
-            shoe_7 = Shoe.create!(color_id: color.id, material_id: shoe_7_materials[0].id, gender_id: shoe_7_genders[0].id, style_id: shoe_7_styles[0].id, size_id: shoe_7_sizes[0].id)
+            shoe_7 = Shoe.create!(color_id: color.id, material_id: shoe_7_materials[0].id, gender_id: shoe_7_genders[0].id, style_id: shoe_7_styles[0].id, size_id: size.id)
             #item = CartItem.create!(shoe_id: shoe_7.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_7.gender.gender.downcase}_#{color.color.downcase}_#{shoe_7_materials[0].material.downcase}_#{shoe_7.style.style.downcase}.webp"
             #p filename
@@ -188,11 +189,11 @@ shoe_8_colors = [grey, black, white, red, green, blue]
 shoe_8_materials = [tree] #,tree
 shoe_8_genders = [women]
 shoe_8_styles = [runners]
-shoe_8_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_8_sizes = size.size
 
 # shoe_8_sizes.each do |size|
     shoe_8_colors.each do |color|
-            shoe_8 = Shoe.create!(color_id: color.id, material_id: shoe_8_materials[0].id, gender_id: shoe_8_genders[0].id, style_id: shoe_8_styles[0].id, size_id: shoe_8_sizes[0].id)
+            shoe_8 = Shoe.create!(color_id: color.id, material_id: shoe_8_materials[0].id, gender_id: shoe_8_genders[0].id, style_id: shoe_8_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_8.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_8.gender.gender.downcase}_#{color.color.downcase}_#{shoe_8_materials[0].material.downcase}_#{shoe_8.style.style.downcase}.webp"
             #p filename
@@ -206,11 +207,11 @@ shoe_9_colors = [grey, black, white, red, blue]
 shoe_9_materials = [wool] #,tree
 shoe_9_genders = [women]
 shoe_9_styles = [loungers]
-shoe_9_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_9_sizes = size.size
 
 # shoe_9_sizes.each do |size|
     shoe_9_colors.each do |color|
-            shoe_9 = Shoe.create!(color_id: color.id, material_id: shoe_9_materials[0].id, gender_id: shoe_9_genders[0].id, style_id: shoe_9_styles[0].id, size_id: shoe_9_sizes[0].id)
+            shoe_9 = Shoe.create!(color_id: color.id, material_id: shoe_9_materials[0].id, gender_id: shoe_9_genders[0].id, style_id: shoe_9_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_9.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_9.gender.gender.downcase}_#{color.color.downcase}_#{shoe_9_materials[0].material.downcase}_#{shoe_9.style.style.downcase}.webp"
             #p filename
@@ -224,11 +225,11 @@ shoe_10_colors = [grey, black, white, red, green, blue]
 shoe_10_materials = [tree] #,tree
 shoe_10_genders = [women]
 shoe_10_styles = [loungers]
-shoe_10_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_10_sizes = size.size
 
 # shoe_10_sizes.each do |size|
     shoe_10_colors.each do |color|
-            shoe_10 = Shoe.create!(color_id: color.id, material_id: shoe_10_materials[0].id, gender_id: shoe_10_genders[0].id, style_id: shoe_10_styles[0].id, size_id: shoe_10_sizes[0].id)
+            shoe_10 = Shoe.create!(color_id: color.id, material_id: shoe_10_materials[0].id, gender_id: shoe_10_genders[0].id, style_id: shoe_10_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_10.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_10.gender.gender.downcase}_#{color.color.downcase}_#{shoe_10_materials[0].material.downcase}_#{shoe_10.style.style.downcase}.webp"
             #p filename
@@ -242,11 +243,11 @@ shoe_11_colors = [grey, black, white, red, green, blue]
 shoe_11_materials = [tree] #,tree
 shoe_11_genders = [women]
 shoe_11_styles = [skippers]
-shoe_11_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_11_sizes = size.size
 
 # shoe_11_sizes.each do |size|
     shoe_11_colors.each do |color|
-            shoe_11 = Shoe.create!(color_id: color.id, material_id: shoe_11_materials[0].id, gender_id: shoe_11_genders[0].id, style_id: shoe_11_styles[0].id, size_id: shoe_11_sizes[0].id)
+            shoe_11 = Shoe.create!(color_id: color.id, material_id: shoe_11_materials[0].id, gender_id: shoe_11_genders[0].id, style_id: shoe_11_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_11.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_11.gender.gender.downcase}_#{color.color.downcase}_#{shoe_11_materials[0].material.downcase}_#{shoe_11.style.style.downcase}.webp"
             #p filename
@@ -261,11 +262,11 @@ shoe_12_colors = [grey, black, white, red, green, blue]
 shoe_12_materials = [tree] #,tree
 shoe_12_genders = [women]
 shoe_12_styles = [toppers]
-shoe_12_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_12_sizes = size.size
 
 # shoe_12_sizes.each do |size|
     shoe_12_colors.each do |color|
-            shoe_12 = Shoe.create!(color_id: color.id, material_id: shoe_12_materials[0].id, gender_id: shoe_12_genders[0].id, style_id: shoe_12_styles[0].id, size_id: shoe_12_sizes[0].id)
+            shoe_12 = Shoe.create!(color_id: color.id, material_id: shoe_12_materials[0].id, gender_id: shoe_12_genders[0].id, style_id: shoe_12_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_12.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_12.gender.gender.downcase}_#{color.color.downcase}_#{shoe_12_materials[0].material.downcase}_#{shoe_12.style.style.downcase}.webp"
             #p filename
@@ -279,11 +280,11 @@ shoe_13_colors = [grey, black, white, red, green, blue]
 shoe_13_materials = [tree] #,tree
 shoe_13_genders = [women]
 shoe_13_styles = [breezers]
-shoe_13_sizes = [seven, eight, nine, ten, eleven, twelve]
+shoe_13_sizes = size.size
 
 # shoe_13_sizes.each do |size|
     shoe_13_colors.each do |color|
-            shoe_13 = Shoe.create!(color_id: color.id, material_id: shoe_13_materials[0].id, gender_id: shoe_13_genders[0].id, style_id: shoe_13_styles[0].id, size_id: shoe_13_sizes[0].id)
+            shoe_13 = Shoe.create!(color_id: color.id, material_id: shoe_13_materials[0].id, gender_id: shoe_13_genders[0].id, style_id: shoe_13_styles[0].id, size_id: size.id)
            # item = CartItem.create!(shoe_id: shoe_13.id, quantity: 0, cart_id: demoCart.id)
             filename = "#{shoe_13.gender.gender.downcase}_#{color.color.downcase}_#{shoe_13_materials[0].material.downcase}_#{shoe_13.style.style.downcase}.webp"
             #p filename

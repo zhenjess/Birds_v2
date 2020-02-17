@@ -7,6 +7,7 @@ class Api::SessionsController < ApplicationController
         
         if @user    
             login(@user)
+            # ensure_cart
             render "api/users/show"
         else
             render json: ["Invalid email/password combination"], status: 401

@@ -28,8 +28,8 @@ class ShoeIndexItem extends React.Component {
         //     let cartItem = { shoe_id: shoe.id, cart_id: this.props.cart.cart.id, quantity: 1};
         //     this.props.createCartItem(this.props.currentUser, cartItem);
         // }
-
         let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.currentUser.cartId, quantity: 1 };
+        debugger
 
         this.props.createCartItem(cartItem) //this.props.currentUser, 
             .then(this.props.startNotification())

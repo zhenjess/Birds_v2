@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
         if @user.save
             login(@user)
            # debugger
-            ensure_cart
+            # ensure_cart
             render :show
         else 
             render json: @user.errors.full_messages, status: 422
@@ -43,12 +43,7 @@ class Api::UsersController < ApplicationController
         params.require(:user).permit(:email, :first_name, :last_name, :password, :confirm_password)
     end
 
-    def ensure_cart
-        #debugger
-        @cart = Cart.create(user_id: @user.id).id
-        # @user[cart_id] = @user.cart_id || Cart.create(user_id: @user.id).id)
-        @user.update(cart_id: (@user.cart_id || @cart))
-    end
+    
    
 end
 

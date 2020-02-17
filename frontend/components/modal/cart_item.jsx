@@ -91,7 +91,8 @@ class CartItem extends React.Component {
                 <div className="cart-item-info">
                     <div>
                         <h2>{gender} {color} {material} {style}</h2>       
-                        <h3>Size : {size}</h3>
+                        {/* <h3>Size : {size}</h3> */}
+                        Size: 8
                     </div>
                     <div className="quantity-container">
                         <div className="quantity-buttons">

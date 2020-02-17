@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
     end
 
     def login(user)
+        ensure_cart
         user.reset_session_token!
         session[:session_token] = user.reset_session_token!
         @current_user = user
@@ -29,5 +30,12 @@ class ApplicationController < ActionController::Base
         current_user.reset_session_token!
         session[:session_token] = nil
         @current_user = nil
+    end
+
+    def ensure_cart
+        @cart = Cart.create(user_id: @user.id, status:'checked-in').id
+        # debugger
+        # @user[cart_id] = @user.cart_id || Cart.create(user_id: @user.id).id)
+        @user.update(cart_id: (@user.cart_id || @cart))
     end
 end

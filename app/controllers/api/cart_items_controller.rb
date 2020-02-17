@@ -10,17 +10,17 @@ class Api::CartItemsController < ApplicationController
     end
     
     def create 
-        # debugger
         @cart_item = CartItem.includes(:shoe).find_by_cart_id_and_shoe_id(current_user.cart.id, params[:cartItem][:shoe_id])
-
+        
         #we need to check Cart Item table
         #if current params[:shoe_id] && params[:cartId]
         #call update and increment quantity else save new row item
-
+        
         #test
-
+        
         # @testing = CartItem.where(shoe_id: params[:shoe_id]).where(cart_id: params[:cart_id])
         # debugger
+       # debugger
         @cart_item = CartItem.new(cart_item_params)
 
         if(@cart_item.save)
