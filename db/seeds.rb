@@ -74,8 +74,6 @@ shoe_1_sizes = size.size
     end
 # end
 
-# shoe_1 = Shoe.create!(color_id: "grey", material_id: "wool", gender_id: "women", style_id: "runners", size_id: 7)
-
 shoe_2_colors = [grey, black, white, red, green, blue]
 shoe_2_materials = [tree] #,tree
 shoe_2_genders = [men]
