@@ -21,14 +21,14 @@ class ShoeIndexItem extends React.Component {
     //     window.scrollTo(0, 0);
     // }
 
-    addToCart() {
+    addToCart() { // addToCart(idx)
 
         // addToCart(shoe) {
         //     debugger
         //     let cartItem = { shoe_id: shoe.id, cart_id: this.props.cart.cart.id, quantity: 1};
         //     this.props.createCartItem(this.props.currentUser, cartItem);
         // }
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.currentUser.cartId, quantity: 1 };
+        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.currentUser.cartId, quantity: 1 }; // shoeIdx: idx
         debugger
 
         this.props.createCartItem(cartItem) //this.props.currentUser, 
@@ -71,8 +71,8 @@ class ShoeIndexItem extends React.Component {
         return returned;
     }
 
-    handleClick() { //cart item should exist and be passed in
-        //debugger
+    handleClick(idx) { //cart item should exist and be passed in
+        debugger
         let quant = this.compareCartItems();
 
         // if (currentUser) {
@@ -85,7 +85,7 @@ class ShoeIndexItem extends React.Component {
             //debugger
             this.updateCart(quant)
         } else {
-            this.addToCart()
+            this.addToCart()// this.addToCart(idx)
         }
 
         // this.props.startNotification();
@@ -134,12 +134,12 @@ class ShoeIndexItem extends React.Component {
                             <li onClick={this.handleClick} className="size"><h4>10</h4></li>
                             <li onClick={this.handleClick} className="size"><h4>11</h4></li>
                             <li onClick={this.handleClick} className="size"><h4>12</h4></li> */}
-                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>7</h4></li>
-                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>8</h4></li>
-                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>9</h4></li>
-                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>10</h4></li>
-                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>11</h4></li>
-                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick() : this.handleLogin(e)}><h4>12</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick(0) : this.handleLogin(e)}><h4>7</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick(1) : this.handleLogin(e)}><h4>8</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick(2) : this.handleLogin(e)}><h4>9</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick(3) : this.handleLogin(e)}><h4>10</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick(4) : this.handleLogin(e)}><h4>11</h4></li>
+                            <li className="size" onClick={(e) => this.props.currentUser ? this.handleClick(5) : this.handleLogin(e)}><h4>12</h4></li>
                           
                             {/* <li onClick={currentUser ? () => this.handleClick(shoe) : () => <Link to={"/account"}></Link>} className="size"><h4>7</h4></li> */}
                             {/* <li onClick={() => this.handleClick(shoe)} className="size"><h4>7</h4></li>

@@ -3,3 +3,4 @@ json.extract! cart_item,
     :shoe_id, 
     :cart_id, 
     :quantity
+    # :shoeIdx

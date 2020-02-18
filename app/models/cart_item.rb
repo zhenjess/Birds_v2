@@ -1,5 +1,5 @@
 class CartItem < ApplicationRecord
-    validates :cart_id, :shoe_id, :quantity, presence: true
+    validates :cart_id, :shoe_id, :quantity, presence: true # sizeIdx
 
     belongs_to :shoe
 

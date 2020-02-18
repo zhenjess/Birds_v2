@@ -1,10 +1,10 @@
 
-json.extract! @cart_item, :id, :quantity, :cart_id, :shoe_id
+json.extract! @cart_item, :id, :quantity, :cart_id, :shoe_id # sizeIdx
 json.style @cart_item.shoe.style
 json.gender @cart_item.shoe.gender
 json.material @cart_item.shoe.material
 json.color @cart_item.shoe.color
-json.size @cart_item.shoe.size
+json.size @cart_item.shoe.size # @cart_item.shoe.size[@cart_item.sizeIdx]
 
 # json.photoUrl url_for(CartItems[cart_item.shoe_id].photo)
 json.photoUrl url_for(@cart_item.shoe.photo)

@@ -4,7 +4,7 @@ class Shoe < ApplicationRecord
     belongs_to :style
     belongs_to :color
     belongs_to :material
-    belongs_to :size
+    belongs_to :size # array of sizes
 
     has_many :cart_items
 
