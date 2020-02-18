@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    validates :email, :password_digest, :session_token, presence: true #:session_token,
+    validates :email, :password_digest, :session_token, presence: true
     validates :email, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
     validates :cart_id, uniqueness: true, allow_nil: true
@@ -7,12 +7,6 @@ class User < ApplicationRecord
     attr_reader :password
 
     after_initialize :ensure_session_token
-    # before_validation :ensure_session_token
-
-    # belongs_to :cart, 
-    #     primary_key: :id, 
-    #     foreign_key: :cart_id,
-    #     optional: true
 
     has_one :cart
 
