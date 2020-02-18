@@ -60,7 +60,6 @@ class ShoesHeader extends React.Component {
                     <div className="shoe-header">
 
                         <div className="women-shoe-image">
-                                <img src="images/women.png" alt=""/>
                             <div className="shoe-header-text">
                                 <p className="shoe-header-title">Women Shoes</p>
                                 <p className="shoe-header-texts">The world's most comfortable shoes for life’s every day adventures.</p>

@@ -214,7 +214,7 @@ class Cart extends React.Component {
         const { subtotal } = this.state;
 
         cartItems.map((cartItem, i) => {
-            // debugger
+            debugger
             return <CartItem
                 cartId={cartItem.cartId}
                 shoeId={cartItem.shoeId}
@@ -225,9 +225,9 @@ class Cart extends React.Component {
                 color={cartItem.color.color}
                 photoUrl={cartItem.photoUrl}
                 price={95}
-                size={cartItem.size.size}
+                size={cartItem.size}
                 id={cartItem.id}
-                key={`${cartItem.id}-${cartItem.size.size}`}
+                key={`${cartItem.id}-${cartItem.size}`}
                 index={i}
                 // updateQuantity={this.updateQuantity}
                 updateCartItem={updateCartItem}
@@ -298,7 +298,7 @@ class Cart extends React.Component {
                         <ul className="cart-items">
                             {/* {cartItems} */}
                             {this.props.cartItems.map((cartItem, i) => {
-                                // debugger
+                                debugger
                                 // const {id, quantity, cart_id, photoUrl, shoe_id} = item;
                                 return (
                                     <CartItem
@@ -311,9 +311,9 @@ class Cart extends React.Component {
                                         color={cartItem.color.color}
                                         photoUrl={cartItem.photoUrl}
                                         price={95}
-                                        size={cartItem.size.size}
+                                        size={cartItem.size}
                                         id={cartItem.id}
-                                        key={`${cartItem.id}-${cartItem.size.size}`}
+                                        key={`${cartItem.id}-${cartItem.size}`}
                                         index={i}
                                         // updateQuantity={this.updateQuantity}
                                         updateCartItem={updateCartItem}
@@ -334,7 +334,7 @@ class Cart extends React.Component {
                                 <h3>FREE</h3>
                             </div>
                             {/* onClick={this.emptyCart} onClick={this.handleCheckout()} this.props.closeModal*/}
-                            <Link className="checkout"><button className="submit" onClick={this.handleCheckout}>CHECKOUT</button></Link>
+                            <a className="checkout" href=""><button className="submit" onClick={this.handleCheckout}>CHECKOUT</button></a>
                         </div>
                         <div className="cart-footer">
                             <p>Looking for more shoes?</p>

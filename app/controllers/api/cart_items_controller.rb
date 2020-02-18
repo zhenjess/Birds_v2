@@ -21,7 +21,7 @@ class Api::CartItemsController < ApplicationController
         # @testing = CartItem.where(shoe_id: params[:shoe_id]).where(cart_id: params[:cart_id])
         # debugger
        # debugger
-        @cart_item = CartItem.new(cart_item_params)
+        @cart_item = @cart_item ||= CartItem.new(cart_item_params)
 
         if(@cart_item.save)
             render :show 
@@ -90,7 +90,7 @@ class Api::CartItemsController < ApplicationController
 
     private
     def cart_item_params
-        params.require(:cartItem).permit(:quantity, :shoe_id, :cart_id)
+        params.require(:cartItem).permit(:quantity, :shoe_id, :cart_id, :size_idx)
     end
 end
 

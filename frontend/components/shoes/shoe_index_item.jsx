@@ -21,15 +21,14 @@ class ShoeIndexItem extends React.Component {
     //     window.scrollTo(0, 0);
     // }
 
-    addToCart() { // addToCart(idx)
+    addToCart(idx) { // addToCart(idx)
 
         // addToCart(shoe) {
         //     debugger
         //     let cartItem = { shoe_id: shoe.id, cart_id: this.props.cart.cart.id, quantity: 1};
         //     this.props.createCartItem(this.props.currentUser, cartItem);
         // }
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.currentUser.cartId, quantity: 1 }; // shoeIdx: idx
-        debugger
+        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.currentUser.cartId, quantity: 1, size_idx: idx }; // shoeIdx: idx
 
         this.props.createCartItem(cartItem) //this.props.currentUser, 
             .then(this.props.startNotification())
@@ -45,7 +44,7 @@ class ShoeIndexItem extends React.Component {
 
         // }
 
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1 }
+        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1, size_idx: idx }
         this.props.updateCartItem(cartItem)
             .then(this.props.startNotification())
             .then(this.props.openModal())
@@ -83,9 +82,9 @@ class ShoeIndexItem extends React.Component {
         //debugger
         if (quant > 0) {
             //debugger
-            this.updateCart(quant)
+            this.updateCart(quant, idx)
         } else {
-            this.addToCart()// this.addToCart(idx)
+            this.addToCart(idx)// this.addToCart(idx)
         }
 
         // this.props.startNotification();

@@ -7,7 +7,6 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
 
 const receiveCart = (payload) => {
-    //debugger
     return ({
         type: RECEIVE_CART,
         cart: payload,
