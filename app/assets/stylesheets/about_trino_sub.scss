@@ -8,8 +8,8 @@ body, html {
       // background-position: bottom;
     display: flex;
       /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1Ae0EfgtV4rv1OV1-WWCDJIOEki7prlxlgJJMv95NSr5udFER");
-    
+    //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1Ae0EfgtV4rv1OV1-WWCDJIOEki7prlxlgJJMv95NSr5udFER");
+    background-image: url("about_trino_sub.png");
       /* Set a specific height */
     //height: 50vh;
     width: 100%;
