@@ -14,7 +14,7 @@
         .sf-image {
             display: flex;
             // background-image: url("https://s26561.pcdn.co/wp-content/uploads/2017/09/Golden-Gate-Bridge-Marin-Headlands-San-Francisco-California-1.jpg");
-            background-image: url("sf.png");
+            background-image: image-url("sf.png");
             width: 500px;
             height: auto;
             flex-direction: column;
@@ -53,7 +53,7 @@
         .la-image {
             display: flex;
             // background-image: url("https://cdn.getyourguide.com/img/tour_img-1775477-146.jpg");
-            background-image: url("la.png");
+            background-image: image-url("la.png");
             width: 518px;
             height: auto;
             flex-direction: column;
@@ -93,7 +93,7 @@
         .ny-image {
             display: flex;
             // background-image: url("https://www.nyp.org/graphics/pps/banner-pps.jpg");
-            background-image: url("ny.png");
+            background-image: image-url("ny.png");
             width: 500px;
             height: auto;
             flex-direction: column;

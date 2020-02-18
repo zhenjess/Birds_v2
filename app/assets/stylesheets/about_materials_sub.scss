@@ -9,7 +9,7 @@ body, html {
     display: flex;
       /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/68988308_2866010516749339_5194930559905693696_o.jpg?_nc_cat=106&_nc_oc=AQnMrg1fL6qD5uE8dFMwUUJ-Otgyo9YeOMuTp0ceaOwKiuTyeysI686SpYNedk9o78PMD0Gs7_itGc_EwxXQI5vc&_nc_ht=scontent-sjc3-1.xx&oh=4af4087eb909a13a75d20172ca193147&oe=5E4386E4");
-    background-image: url("flock.png");
+    background-image: image-url("flock.png");
       /* Set a specific height */
     // height: 50vh;
     width: 100%;

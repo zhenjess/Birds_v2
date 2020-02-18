@@ -13,7 +13,7 @@ a:visited {
   display: flex;
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("main.png"); //url("https://pbs.twimg.com/media/EE3MgbTUcAAzFa7.jpg")
-  background-image: url("main.png");
+  background-image: image-url("main.png");
   /* Set a specific height */
   height: 90vh;
   width: 100vw;
