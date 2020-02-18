@@ -1,127 +1,6 @@
-// .navbar {
-//   height: 75px;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   z-index: 0;
-// }
-
-// .nav-left {
-//   display: flex;
-//   justify-content: space-between;
-//   font-weight: bold;
-//   font-family: 'Roboto', sans-serif;
-//   font-size: 14px;
-//   position: relative;
-//   width: 130px;
-//   left: 1%;
-// }
-
-// .dropdown-women:hover {
-//   border-bottom: 2px solid black;
-// }
-
-// .dropdown-men:hover {
-//   border-bottom: 2px solid black;
-// }
-
-// .logo {
-//   height: 60px;
-//   top: 8px;
-//   position: relative;
-//   transform: translateX(-50%);
-//   font-family: 'Lobster Two', cursive;
-//   font-size: 36px;
-//   justify-content: center;
-//   margin-left: 280px;
-// }
-
-// // .nav-right {
-// //   display: flex;
-// //   justify-content: space-between;
-// //   font-weight: bold;
-// //   font-family: 'Roboto', sans-serif;
-// //   font-size: 14px;
-// //   position: relative;
-// //   right: 1%;
-// // }
-
-
-// .nav-right {
-//   font-weight: bold;
-//   font-family: 'Roboto', sans-serif;
-//   font-size: 14px;
-//   margin-top: 4vh;
-//   justify-content: space-between;
-//   display: flex;
-//   position: relative;
-//   flex-direction: row;
-//   width: 150vw;  
-// }
-
-// .nav-materials a:hover {
-//   border-bottom: 2px solid black;
-// }
-
-// .nav-branches a:hover {
-//   border-bottom: 2px solid black;
-// }
-
-// .nav-icons {
-//   font-size: 22px;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   font-family: 'Roboto', sans-serif;
-//   width: 400px;
-// }
-
-
-
-// .icon-button {
-//   display: flex;
-//   flex-flow: column wrap;
-//   color: black;
-//   font-size: 12px;
-//   align-items: center;
-//   border: 0px;
-// }
-
-// .icon-button:hover {
-//   color: black;
-//   cursor: pointer;
-// }
-
-// .icon-button:focus {
-//   outline: none;
-// }
-
-// .icon-button > i {
-//   font-size: 22px;
-//   margin-bottom: 4px;
-// }
-
-// .cart-button {
-//   padding-top: 5px;
-//   padding-bottom: 15px;
-// }
-
 @import 'utils';
 
 #header {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
-    // align-items: center;
-    // position: fixed;
-    // padding-top: 15px; 
-    // top: 0;
-    // width: 100%;
-    // min-width: 800px;
-    // height: 100px;
-    // z-index: 3;
-    // transition: all ease-out .2s;
   height: 72px;
   width: 100%;
   display: flex;
@@ -137,8 +16,6 @@
 
 .active-header {
     display: flex;
-    // background-color:#fafafa;
-    // box-shadow: 0 0 10px 0 rgba(109, 109, 109, 0.3);
 }
 
 .active-header.with-dropdown {
@@ -168,12 +45,10 @@ h2.nav-link {
 }
 
 .u-header-button {
-    // color: white;
     color: black;
 }
 
 .u-header-button:hover {
-    // color: white;
     border-bottom: 2px solid black;
 }
 
@@ -188,15 +63,6 @@ h2.nav-link {
     font-size: 14px;
     left: 2%;
     margin-top: 0.5vh;
-
-
-
-//   justify-content: space-between;
-//   font-weight: bold;
-
-
-//   width: 130px;
-//   left: 1%;
 }
 
 .nav-link {
@@ -240,17 +106,6 @@ h2.nav-link {
   justify-content: center;
   margin-left: 180px;
 }
-
-// .nav-right {
-//   display: flex;
-//   justify-content: space-between;
-//   font-weight: bold;
-//   font-family: 'Roboto', sans-serif;
-//   font-size: 14px;
-//   position: relative;
-//   right: 1%;
-// }
-
 
 .nav-right {
   font-weight: bold;

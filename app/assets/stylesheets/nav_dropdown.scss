@@ -34,13 +34,6 @@
     transition: .2s;
 }
 
-// .nav-dropdown-box {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: space-around;
-
-// }
-
 #nav-dropdown > div > ul {
     display: flex;
     justify-content: space-between;
@@ -102,76 +95,11 @@
     width: 130px;
 }
 
-// #dropdown-attributes-container {
-//     display: flex;
-
-//     .right-arrow {
-//         margin: 0 10px 0 10px;
-//         padding: none;
-//         font-family: 'Roboto', sans-serif;
-//         font-size: 20px;
-//         text-align: center;
-//         color: black;
-//         transform: translateY(-2px);
-//         user-select: none;
-//         &:hover {
-//             cursor: pointer;
-//         }
-//     }
-    
-//     ul {
-//         display: flex;
-//         padding: 12px;
-//         width: 500px;
-//         justify-content: flex-start;
-
-//         li {
-//             display: flex;
-//             flex-direction: column;
-//             padding: 0 15px 0 15px;
-//             margin: 0 15px 0 40px;
-    
-
-//             h3 {
-//                 color: $light-grey;
-//                 margin-bottom: 10px;
-//             }
-
-//             ol {
-//                 display: flex;
-//                 flex-direction: column;
-//                 flex-wrap: wrap;
-//                 max-height: 135px;
-
-//                 .attribute-link {
-//                     margin: 10px 20px 10px 0;
-//                     font-size: 14px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// #dropdown-attributes-container > div {
-//     display: flex;
-//     padding: 15px;
-    
-//     a {
-//         height: 20px;
-//         user-select: none;
-//     }
-
-//     h2 {
-//         font-family: $title-font-1;
-//         font-size: 14px; 
-//         user-select: none;
-//     }
-// }
-
 .close-nav-dropDown {
     display: flex;
     justify-content: center;
     align-content: flex-end;
+    
     .uparrow {
         font-family: 'Roboto', sans-serif;
         position: absolute;

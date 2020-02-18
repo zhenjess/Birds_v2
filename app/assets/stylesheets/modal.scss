@@ -9,16 +9,12 @@
 }
 
 .modal-child {
-  // position: absolute;
   position: fixed;
   top: 50%;
   left: 95%;
   margin-left: -135px;
-
-//   right: 100%;
   transform: translate(-50%, -50%);
-    background: white;
-  // width: 450px;
+  background: white;
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -42,27 +38,15 @@
         display: flex;
         align-items: center;
         z-index: 1;
-        // position: absolute;
         height: 55px;
-        // width: 800px;
         flex-direction: column;
         justify-content: center;
-        // padding: 10px 10px 10px 0px;
-        // margin-top: 460px;
-        // border-bottom: 2px solid lightgray;
     
         .shop-link {
-            // display: flex;
-            // position: relative;
-            // flex-direction: row;
-           
-            // position: relative;
-            // left: 1230px;
-            
             margin: 10px;
+
             button {
                 box-sizing: border-box;
-                // min-height: 40px;
                 min-width: 175px;
                 padding: 0px 60px 0px 60px;
                 border: 1px solid #E6E5E5;
@@ -85,10 +69,7 @@
                 background-color: white;
                 color: black;
                 box-sizing: border-box;
-                //min-width: 390px;
-               // min-height: 40px;
                 padding: 20px;
-                // margin: 20px;
                 transition: 0.3s;
                 border: 2px solid black;
         

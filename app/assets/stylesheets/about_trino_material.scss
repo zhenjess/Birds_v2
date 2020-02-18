@@ -5,35 +5,22 @@
     width: 70%;
     justify-content: center;
     box-sizing: border-box;
+
     .about-trino-material {
-    
         display: flex;
-        //margin-top: 10px;
-        //width: 70%;
         justify-content: space-between;
-        //box-sizing: border-box;
         height: 455px;
-        //padding-left: 20vw;
-        //padding-right: 20vw;
         
         .about-trino-image {
             display: flex;
-           // background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT84Y2mEZPVKhQvcH1sbHuvEK3veaRS7pyX7JEGGWKMBr-vlMES");
-            //background-position: 50% 40%;
             background-image: image-url("about_trino.png");
             width: 500px;
             height: auto;
             flex-direction: column;
-           // margin: -10% -12% -11.1% 50%;
-            // margin: 110px 5px 5px 70px;
             margin-left: -20px;
-            //margin-top: -50px;
-            //margin-right: 20px;
-            // background-color: white;
             background-repeat: no-repeat;
             background-size: cover;
             object-fit: cover;
-            // min-height: 500px;
             overflow: hidden;
         }
     
@@ -41,9 +28,6 @@
             display: flex;
             flex-direction: column;
             width: 500px;
-            //align-items: center;
-            //justify-content: center;
-            //left: 900px;
             
             .about-trino-text {
                 p {
@@ -53,8 +37,6 @@
                     font-family: 'Merriweather Sans', sans-serif;
                     right: 250px;
                     font-size: 24px;
-                    // left: 480px;
-                    // position: relative;
                     flex-direction: column;
                     font-weight: bold;
                 }
@@ -67,8 +49,6 @@
                     font-family: 'Merriweather Sans', sans-serif;
                     right: 250px;
                     font-size: 14px;
-                    // left: 480px;
-                    // position: relative;
                     flex-direction: column;
                  }
             }

@@ -11,14 +11,11 @@
 
 .about-image {
     display: flex;
-    // background-image: url("https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/homepage/en-US/images/21Qx20nUNN1w1t3eQo7lwM/1");
     background-image: image-url("about_main.png");
     background-position: center;
     width: 100vw;
     height: 100vh;
     flex-direction: column;
-    // margin: 100px 75px 5px 70px;
-    // margin-left: 350px;
     background-color: white;
     background-repeat: no-repeat;
     background-size: contain;
@@ -37,9 +34,6 @@
         font-family: 'Merriweather Sans', sans-serif;
         font-size: 25px;
         margin-left: -40px;
-        // margin-bottom: 20px;
-        // margin: -430px -25px 25px 120px;
-        // position: relative;
         flex-direction: column;  
         font-weight: bold;
     }
@@ -49,15 +43,12 @@
         text-align: left;
         font-family: 'Merriweather Sans', sans-serif;
         font-size: 14px;
-        // left: 480px;
-        // position: relative;
         flex-direction: column;
     }
 }
 
 .about-main-link {
-    // position: relative;
-    // left: 1230px;
+
     button {
         box-sizing: border-box;
         min-height: 40px;
@@ -83,10 +74,7 @@
         background-color: white;
         color: black;
         box-sizing: border-box;
-        //min-width: 390px;
-       // min-height: 40px;
         padding: 20px;
-        // margin: 20px;
         transition: 0.3s;
         border: 2px solid black;
 

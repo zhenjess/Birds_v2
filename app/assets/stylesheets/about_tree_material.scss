@@ -15,13 +15,10 @@
 
 .about-tree-image {
     display: flex;
-   // background-image: url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/s960x960/29389145_2040672255949840_8007158562734211072_o.jpg?_nc_cat=103&_nc_oc=AQm7vCVLM7csC-91p7To3b4euSMO7n73BJqckRF2eRNbPktkMCWvBJ_BSUxdvb2xdeX7pi2Gz-VTy4ZjCFlMLUrA&_nc_ht=scontent-sjc3-1.xx&oh=379ea18bfcee9d651bb548b10e87d0ef&oe=5E4299DB");
-   background-image: image-url("sm_bark.png");
+    background-image: image-url("sm_bark.png");
     width: 500px;
     height: auto;
     flex-direction: column;
-    // margin-left: 30px;
-    // background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -53,75 +50,7 @@
             font-family: 'Merriweather Sans', sans-serif;
             right: 250px;
             font-size: 14px;
-            // left: 480px;
-            // position: relative;
             flex-direction: column;
         }
     }
 }
-
-// .about-tree-material {
-
-//     display: flex;
-//     margin-top: 10px;
-//     width: 100%;
-//     justify-content: center;
-//     box-sizing: border-box;
-//     padding-left: 20vw;
-//     padding-right: 20vw;
-    
-//     .about-tree-image {
-//         display: flex;
-//         background-image: url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/s960x960/29389145_2040672255949840_8007158562734211072_o.jpg?_nc_cat=103&_nc_oc=AQm7vCVLM7csC-91p7To3b4euSMO7n73BJqckRF2eRNbPktkMCWvBJ_BSUxdvb2xdeX7pi2Gz-VTy4ZjCFlMLUrA&_nc_ht=scontent-sjc3-1.xx&oh=379ea18bfcee9d651bb548b10e87d0ef&oe=5E4299DB");
-//         background-position: 50% 40%;
-//         width: 140vw;
-//         height: 90vh;
-//         flex-direction: column;
-//         margin: -10% -12% -11.1% 50%;
-//         // margin: 110px 5px 5px 70px;
-//         margin-left: 100px;
-//         margin-top: -50px;
-//         margin-right: 20px;
-//         // background-color: white;
-//         background-repeat: no-repeat;
-//         background-size: contain;
-//         object-fit: cover;
-//         // min-height: 500px;
-//         overflow: hidden;
-//     }
-
-//     .tree-text {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         left: 900px;
-        
-//         .about-tree-text {
-//             p {
-//                 display: flex;
-//                 text-align: center;
-//                 font-family: 'Merriweather Sans', sans-serif;
-//                 right: 250px;
-//                 font-size: 24px;
-//                 // left: 480px;
-//                 // position: relative;
-//                 flex-direction: column;
-//                 font-weight: bold;
-//             }
-//         }
-
-//         .about-tree-sub-text {
-//             p {
-//                 display: flex;
-//                 text-align: center;
-//                 font-family: 'Merriweather Sans', sans-serif;
-//                 right: 250px;
-//                 font-size: 14px;
-//                 // left: 480px;
-//                 // position: relative;
-//                 flex-direction: column;
-//              }
-//         }
-//     }
-// }

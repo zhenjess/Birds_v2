@@ -7,18 +7,11 @@ a:visited {
   color: white;
 }
 
-/* The hero image */
 .main-image {
-  // background-position: bottom;
   display: flex;
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("main.png"); //url("https://pbs.twimg.com/media/EE3MgbTUcAAzFa7.jpg")
   background-image: image-url("main.png");
-  /* Set a specific height */
   height: 90vh;
   width: 100vw;
-
-  /* Position and center the image to scale nicely on all screens */
   background-position: 50% 65%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,15 +22,9 @@ a:visited {
   min-height: 500px;
 }
 
-/* Place text in the middle of the image */
 .header-text {
   margin-top: -160px;
   text-align: center;
-  // position: absolute;
-  //top: 25%;
-  // left: 32%;
-  // bottom: 20%;
-//   transform: translate(-50%, -50%);
   transform: rotate(-6deg);
   color: white;
   font-family: 'Merriweather Sans', sans-serif;
@@ -55,9 +42,6 @@ a:visited {
     z-index: 1;
     flex-direction: row;
     position: absolute;
-    // top: 400px;
-    // left: 35%;
-    // margin-left: -100px;
     bottom: 0px;
     width: 650px;
     justify-content: space-between;
@@ -82,68 +66,3 @@ a:visited {
       color: white;
     }
 }
-//     position: relative;
-//     top: 80.5%;
-//     left: 50%;
-//     bottom: 80%;
-//     transform: translate(-50%, -50%); 
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between; 
-//     width: 300px;
-//     .link-items {
-//         width: 350px;
-//         margin: 0px 0px 20px 0px;
-
-//         // .main-links {
-//         //     display: flex;
-//         //     justify-content: center;
-//         //     padding: 10px 0 px 10px 0 px;
-//         //     border-bottom: 2px solid white;
-//         //     margin: 30px 20px 30px 20px;
-//         //     transition: .2s;
-//         //      .link-box {
-//         //         // display: flex;
-//         //         // justify-content: center;
-//         //         // padding-top: 60%;
-//         //         // width: 800px;
-//         //         // height: 400px;
-//         //         text-align: center;
-//         //         position: relative;
-//         //         top: 80.5%;
-//         //         left: 50%;
-//         //         bottom: 80%;
-//         //         transform: translate(-50%, -50%);
-//         //         width: 300px;
-//         //     }
-//         // }
-//         // .main-link#female-button: hover {
-// //         //      margin: 30px 110px 30px 110px;
-// //         // }
-//     }
-
-// .female-button-text {
-//     text-align: center;
-//     position: relative;
-//     top: 80.5%;
-//     left: 50%;
-//     bottom: 80%;
-//     transform: translate(-50%, -50%); 
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between; 
-//     width: 300px;
-// }
-
-// .male-button-text {
-//     text-align: center;
-//     position: relative;
-//     top: 77%;
-//     left: 70%;
-//     bottom: 80%;
-//     transform: translate(-50%, -50%); 
-//     display: flex;
-//     flex-direction: row;
-//     // justify-content: space-between; 
-//     width: 100px;
-// }
