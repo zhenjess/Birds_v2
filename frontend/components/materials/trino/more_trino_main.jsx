@@ -11,7 +11,6 @@ class MoreTrinoMain extends React.Component {
         return (
             <div className="trino">
                 <div className="more-trino-main-image"></div>
-                {/* <footer></footer> */}
             </div>
         );
     }

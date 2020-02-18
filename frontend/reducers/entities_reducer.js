@@ -14,8 +14,6 @@ import materialsReducer from './materials_reducer';
 
 import colorsReducer from './colors_reducer';
 
-// import shoeOptionsReducer from './shoe_options_reducer';
-
 import cartItemsReducer from './cart_items_reducer';
 
 import cartsReducer from './carts_reducer';
@@ -31,10 +29,5 @@ const entitiesReducer = combineReducers({
     cartItems: cartItemsReducer,
     carts: cartsReducer
 });
-    // shoeOptions: shoeOptionsReducer,
-    // items: itemsReducer, 
-    // carts: cartsReducer
 
-
-export default entitiesReducer; //represents data from db and manages it
-//then delegates tasks to each reducer
+export default entitiesReducer; 

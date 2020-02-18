@@ -12,18 +12,12 @@ class Branches extends React.Component {
                     <div className="sf-image"></div>
 
                     <div className="sf-text">
-                        <style>
-                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                        </style>
                         <h2>SAN FRANCISCO</h2>
                     </div>
                 </div>
 
                 <div className="la-branch">
                     <div className="la-text">
-                        <style>
-                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                        </style>
                         <h2>LOS ANGELES</h2>
                     </div>
                     <div className="la-image"></div>
@@ -33,9 +27,6 @@ class Branches extends React.Component {
                     <div className="ny-image"></div>
 
                     <div className="ny-text">
-                        <style>
-                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                        </style>
                         <h2>NEW YORK</h2>
                     </div>
                 </div>

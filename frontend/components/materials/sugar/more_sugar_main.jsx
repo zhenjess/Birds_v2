@@ -12,7 +12,7 @@ class MoreSugarMain extends React.Component {
             <div className="sugar">
 
                 <div className="more-sugar-main-image"></div>
-                {/* <footer></footer> */}
+
             </div>
         );
     }

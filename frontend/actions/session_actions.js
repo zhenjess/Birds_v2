@@ -45,20 +45,3 @@ export const logout = () => dispatch => {
             .then(() => dispatch(logoutCurrentUser()))
     );
 };
-
-// export const clearErrors = () => (
-//     ({
-//         type: CLEAR_ERRORS
-//     })
-// );
-
-// export const fetchCart = (user, cartId) => dispatch => {
-//     return (
-//         CartApiUtil.fetchCart(user, cartId) 
-//             .then(currentUser => dispatch(receiveCurrentUser(currentUser)), 
-//                 errors => dispatch(receiveSessionErrors(errors.responseJSON))
-//             )
-//     );
-// };
-
-

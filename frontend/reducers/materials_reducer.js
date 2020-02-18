@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_SHOES } from '../actions/shoes_actions'; //import action type
+import { RECEIVE_ALL_SHOES } from '../actions/shoes_actions'; 
 
 const materialsReducer = (state={}, action) => {
     Object.freeze(state);

@@ -6,7 +6,6 @@ class Filter extends React.Component {
     }
 
     render() {
-        // debugger
         const filters = this.props.filters.map( filter => (   
             <li className={`${this.props.id}-dropdown-attributes`}
                 onClick={() => this.props.addFilter(this.props.id, filter)}
@@ -15,7 +14,7 @@ class Filter extends React.Component {
             ><h4>{filter}</h4>
             </li>
         ));
-       // debugger
+  
         return (
             <div className="shoe-bar-filters">
                 <ul className="shoe-bar-filter-container">{filters}</ul>

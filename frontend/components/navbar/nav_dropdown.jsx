@@ -66,12 +66,6 @@ class ShoesDropdown extends React.Component {
                         </Link>   
                 </ul>
                 <div id="dropdown-attributes-container">
-                    {/* <div>
-                        <Link onClick={ () => this.props.showDropDown(this.props.gender)} to={`/shoes/${this.props.genderQuery}`}>
-                            <h2>Shop ALL BIRDS</h2>
-                        </Link>
-                        <div className="right-arrow"><i className="fas fa-angle-right"></i></div>
-                    </div> */}
                 </div>
                 <div className="close-nav-dropDown">
                     <h3 onClick={() => this.props.showDropDown(this.props.gender)} className="uparrow"><i className="fas fa-angle-up"></i></h3>

@@ -11,7 +11,6 @@ class MoreTreeMain extends React.Component {
         return (
             <div className="tree">
                 <div className="more-tree-main-image"></div>
-                {/* <footer></footer> */}
             </div>
         );
     }

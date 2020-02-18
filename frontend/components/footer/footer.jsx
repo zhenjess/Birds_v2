@@ -46,9 +46,6 @@ class Footer extends React.Component {
                 <div className="footer-container-flex-left">
                     <div className="footer-label">Enter your email to stay in touch!</div>
                     <br/>
-                    {/* <style>
-                        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-                    </style> */}
                         <input
                             id="email"
                             type="text"
@@ -56,7 +53,6 @@ class Footer extends React.Component {
                         />
                     {this.renderErrors()}
                     <button type="button" onClick={this.handleSubmit} className="submit">SIGN UP</button>
-                    {/* <input type="submit" onClick={this.handleSubmit} className="submit" value="SIGN UP" /> */}
                 </div>
                 <div className="footer-container-flex-right">
                     <div className="footer-copyright">&copy; 2020 Birds, Inc.</div>

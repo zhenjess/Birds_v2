@@ -11,9 +11,6 @@ class CartForm extends React.Component {
                 <div className="payment-form-container">
                     <form>
                         <h2>Thank you for YOUR Purchase!</h2>
-                        {/* <style>
-                            @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
-                        </style> */}
                     </form>
                 </div>
 

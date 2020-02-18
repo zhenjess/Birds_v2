@@ -13,7 +13,7 @@ class MoreMaterialsMain extends React.Component {
             <div className="material">
 
                 <div className="more-materials-main-image"></div>
-                {/* <footer></footer> */}
+
             </div>         
 
         );

@@ -13,10 +13,4 @@ export const closeModal = () => {
         type: CLOSE_MODAL
     };
 };
-// export const openModal = modal => {
-//     return {
-//         type: OPEN_MODAL,
-//         modal
-//     };
-// };
 

@@ -45,7 +45,7 @@ breezers = Style.create!(style: 'Breezers')
 size = Size.create!(size: [7,8,9,10,11,12])
 
 shoe_1_colors = [grey, black, white, red, green, blue]
-shoe_1_materials = [wool] #,tree
+shoe_1_materials = [wool] 
 shoe_1_genders = [men]
 shoe_1_styles = [runners]
 shoe_1_sizes = size.size
@@ -67,9 +67,7 @@ shoe_2_sizes = size.size
     shoe_2_colors.each do |color|
             shoe_2 = Shoe.create!(color_id: color.id, material_id: shoe_2_materials[0].id, gender_id: shoe_2_genders[0].id, style_id: shoe_2_styles[0].id, size_id: size.id)
             filename = "#{shoe_2.gender.gender.downcase}_#{color.color.downcase}_#{shoe_2_materials[0].material.downcase}_#{shoe_2.style.style.downcase}.webp"
-      
             file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-       
             shoe_2.photo.attach(io: file, filename: filename)
     end
 
