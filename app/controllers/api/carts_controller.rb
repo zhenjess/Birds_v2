@@ -25,7 +25,6 @@ class Api::CartsController < ApplicationController
     def show
         @cart = Cart.where(id: params[:id]).where(user_id: params[:user_id]).includes(:cart_items, :items)
         @cart = @cart[0]
-        #debugger
 
         if @cart
             render 'api/cart/show'

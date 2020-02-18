@@ -1,20 +1,20 @@
-@cart_items = json.cartItems do
-    @cart.cart_items.each do |item|
-        if (@items["#{item.item_id}"])
-            json.set! item.id do 
-                json.extract! item, :id, :cart_id, :shoe_id, :quantity
+# @cart_items = json.cartItems do
+#     @cart.cart_items.each do |item|
+#         if (@items["#{item.item_id}"])
+#             json.set! item.id do 
+#                 json.extract! item, :id, :cart_id, :shoe_id, :quantity, :s
 
-                unitPrice = @items["#{item.item_id}"]['price']
-                itemPrice = (unitPrice * item.quantity)
+#                 unitPrice = @items["#{item.item_id}"]['price']
+#                 itemPrice = (unitPrice * item.quantity)
                 
-                json.itemPrice itemPrice
-                json.unitPrice unitPrice
-            end
-        end
-    end
-end
+#                 json.itemPrice itemPrice
+#                 json.unitPrice unitPrice
+#             end
+#         end
+#     end
+# end
 
-@cart_items ||= {}
+# @cart_items ||= {}
 
 # json.cart do
 #     @cart_items.each do |item|
@@ -30,7 +30,8 @@ json.cartItems do
     @cart.cart_items.each do |item|
         if (@items["#{item.shoe_id}"])
             json.set! item.id do
-                json.extract! item, :id, :quantity, :cart_id, :shoe_id
+                json.extract! item, :id, :quantity, :cart_id, :shoe_id, :size_idx
+                json.size item.shoe.size.size[item.size_idx] 
 
                 unitPrice = @items["#{item.shoe_id}"]["price"]
                 itemPrice = (unitPrice * item.quantity)

@@ -67,12 +67,12 @@ end
 json.cartItems do 
     @cart_items.each do |item|
         json.set! item.id do 
-            json.extract! item, :id, :shoe_id, :cart_id, :quantity
+            json.extract! item, :id, :shoe_id, :cart_id, :quantity, :size_idx
             json.gender item.shoe.gender
             json.material item.shoe.material
             json.color item.shoe.color
             json.style item.shoe.style
-            json.size item.shoe.size
+            json.size item.shoe.size.size[item.size_idx]
             
             if item.shoe.photo.attached? 
                 json.photoUrl url_for(item.shoe.photo)

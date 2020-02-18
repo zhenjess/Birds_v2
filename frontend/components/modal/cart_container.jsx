@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
     let cartItems = Object.values(state.entities.cartItems);
     let shoes = Object.values(state.entities.shoes);
     let users = Object.values(state.entities.users);
-   //debugger
+   debugger
     return ({
         userId: userId,
         currentUser: currentUser,
