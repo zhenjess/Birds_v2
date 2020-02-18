@@ -1,8 +1,6 @@
 class Api::ShoesController < ApplicationController
-    #before_action :require_login
 
     def index 
-        #implicit render index
         @shoes = Shoe.all
         @genders = Gender.all
         @colors = Color.all
@@ -38,12 +36,4 @@ class Api::ShoesController < ApplicationController
     end
 end
 
-    # def new
-    #     @shoes = Shoe.new
-    #     render :new
-    # end
-
-            # @shoe_materials = ShoeMaterial.all
-        # @colors = Color.all
-        # @shoe_colors = ShoeColor.all
-        # @shoe_options = ShoeOption.all
+ 

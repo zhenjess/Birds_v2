@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
     skip_before_action :verify_authenticity_token
-    #protect_from_forgery with: :exception
-    # protect_from_forgery prepend: true
     helper_method :current_user, :logged_in?, :require_login
 
     def current_user
@@ -34,8 +32,6 @@ class ApplicationController < ActionController::Base
 
     def ensure_cart
         @cart = Cart.create(user_id: @user.id, status: "checked in").id
-        # debugger
-        # @user[cart_id] = @user.cart_id || Cart.create(user_id: @user.id).id)
         @user.update(cart_id: (@user.cart_id || @cart))
     end
 end
