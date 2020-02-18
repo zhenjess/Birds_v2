@@ -13,7 +13,8 @@ a:visited {
 
 .women-shoe-image {
     display: flex;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/72719538_2976901318993591_5782509277436444672_n.jpg?_nc_cat=110&_nc_oc=AQmDiU4Y0bQ7DEmDNSE9QEz91KdX6jt0BP7o0HlLOsd1_bbJQGyulESEafY63jWwjKQ&_nc_ht=scontent-sjc3-1.xx&oh=947649aaa10724767f153eb9ba156b80&oe=5E485B0B");
+    //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/72719538_2976901318993591_5782509277436444672_n.jpg?_nc_cat=110&_nc_oc=AQmDiU4Y0bQ7DEmDNSE9QEz91KdX6jt0BP7o0HlLOsd1_bbJQGyulESEafY63jWwjKQ&_nc_ht=scontent-sjc3-1.xx&oh=947649aaa10724767f153eb9ba156b80&oe=5E485B0B");
+    background-image: url("women.png");
     height: 65vh;
     width: 100vw;
 
@@ -169,7 +170,8 @@ a:visited {
 
 .men-shoe-image {
      display: flex;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1549480170%2Fallbirds-new-colorways-ALLBIRDSNEW0219.jpg%3Fitok%3DDbzhFLCb&q=85");
+     background-image: url("men.png");
+    //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1549480170%2Fallbirds-new-colorways-ALLBIRDSNEW0219.jpg%3Fitok%3DDbzhFLCb&q=85");
     height: 65vh;
     width: 100vw;
 
