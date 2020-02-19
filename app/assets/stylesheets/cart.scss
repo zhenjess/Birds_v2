@@ -87,8 +87,9 @@
 }
 
 .cart-upper-conatiner {
-    height: calc(55% - 70px );
-    
+    // height: calc(55% - 70px );
+    height: calc(50% - 90px);
+    margin-top: 15px;
 }
 
 .cart-items {
@@ -212,6 +213,9 @@ ul {
     justify-content: left;
     background-color: $bg-light-green;
     height: 80px;
+    overflow: auto;
+    position: relative;
+    width: 38vw;
 }
 
 .footer-links {
