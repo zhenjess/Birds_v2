@@ -13,7 +13,7 @@ const filterByStyle = payload => ({
 });
 
 const filterByMaterial = payload => ({
-    type: FILTER_BY_Material,
+    type: FILTER_BY_MATERIAL,
     payload
 });
 
