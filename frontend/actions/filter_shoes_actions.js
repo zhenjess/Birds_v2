@@ -18,7 +18,7 @@ const filterByModel = payload => ({
 });
 
 export const filterAllShoesByColor = () => dispatch => (
-    store.filterAllShoesColor()
+    store.filterAllShoesByColor()
         .then(payload => dispatch(filterByColor(payload)))
 );
 
