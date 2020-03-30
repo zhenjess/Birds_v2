@@ -17,17 +17,17 @@ const filterByModel = payload => ({
     payload
 });
 
-export const filterAllShoes = () => dispatch => (
-    store.filterAllShoes()
+export const filterAllShoesByColor = () => dispatch => (
+    store.filterAllShoesColor()
         .then(payload => dispatch(filterByColor(payload)))
 );
 
-export const filterAllShoes = () => dispatch => (
-    store.filterAllShoes()
+export const filterAllShoesByStyle = () => dispatch => (
+    store.filterAllShoesByStyle()
         .then(payload => dispatch(filterByStyle(payload)))
 );
 
-export const filterAllShoes = () => dispatch => (
-    store.filterAllShoes()
+export const filterAllShoesByModel = () => dispatch => (
+    store.filterAllShoesByModel()
         .then(payload => dispatch(filterByModel(payload)))
 );
