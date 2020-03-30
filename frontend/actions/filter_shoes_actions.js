@@ -16,3 +16,18 @@ const filterByModel = payload => ({
     type: FILTER_BY_MODEL,
     payload
 });
+
+export const filterAllShoes = () => dispatch => (
+    store.filterAllShoes()
+        .then(payload => dispatch(filterByColor(payload)))
+);
+
+export const filterAllShoes = () => dispatch => (
+    store.filterAllShoes()
+        .then(payload => dispatch(filterByStyle(payload)))
+);
+
+export const filterAllShoes = () => dispatch => (
+    store.filterAllShoes()
+        .then(payload => dispatch(filterByModel(payload)))
+);
