@@ -1,6 +1,6 @@
 export const FILTER_BY_COLOR = 'FILTER_BY_COLOR';
 export const FILTER_BY_STYLE = 'FILTER_BY_STYLE';
-export const FILTER_BY_MODEL = 'FILTER_BY_MODEL';
+export const FILTER_BY_MATERIAL = 'FILTER_BY_MATERIAL';
 
 const filterByColor = payload => ({
     type: FILTER_BY_COLOR,
@@ -12,8 +12,8 @@ const filterByStyle = payload => ({
     payload
 });
 
-const filterByModel = payload => ({
-    type: FILTER_BY_MODEL,
+const filterByMaterial = payload => ({
+    type: FILTER_BY_Material,
     payload
 });
 
@@ -27,7 +27,7 @@ export const filterAllShoesByStyle = () => dispatch => (
         .then(payload => dispatch(filterByStyle(payload)))
 );
 
-export const filterAllShoesByModel = () => dispatch => (
-    store.filterAllShoesByModel()
-        .then(payload => dispatch(filterByModel(payload)))
+export const filterAllShoesByMaterial = () => dispatch => (
+    store.filterAllShoesByMaterial()
+        .then(payload => dispatch(filterByMaterial(payload)))
 );
