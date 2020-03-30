@@ -21,15 +21,21 @@ class ShoeIndex extends React.Component {
             animateItems: true,
             animateNotification: false,
             cart: {}
+            
         };
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
+        // this.addFilter = this.addFilter.bind(this);
     }
 
     componentDidMount() {
 
         const id = this.props.match.params.id;
+
+        const material = ['Wool', 'Tree'];
+
+        const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
 
         this.props.fetchAllShoes();
 
@@ -39,6 +45,13 @@ class ShoeIndex extends React.Component {
                    cart: cart
                 });
             });
+
+            // this.getShoesByMaterialAndModel(material, style).then((shoe) => {
+            //     this.setState({
+            //         shoe: shoe
+            //     });
+            // });
+
         }
     }
 
@@ -61,8 +74,20 @@ class ShoeIndex extends React.Component {
     }
 
     getShoesByMaterialAndModel(material, style) {
-        let shoesArr = this.props.shoes.filter(shoe => shoe.style.toLowerCase() === style && shoe.material.toLowerCase() === material)
-        
+        for (let i = 0; i < material.length; i++) {
+            let currMaterial = currMaterial[i];
+
+            for (let j = 0; j < style.length; j++) {
+                let currStyle = currStyle[j];
+                let shoesArr = this.props.shoes.filter(
+                    shoe => shoe.style.toLowerCase() === currStyle && 
+                    shoe.material.toLowerCase() === currMaterial)
+                    //set local state
+                    this.setState({
+                        shoesArr: shoesArr
+                    });
+            }
+        }
         return shoesArr;
     }
 
@@ -109,23 +134,43 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                     {
-                                this.getShoesByMaterialAndModel('wool', 'runners').map(shoe => (
-                                    <ShoeIndexItem
-                                        shoe={shoe}
-                                        key={shoe.id}
-                                        cart={this.state.cart}
-                                        currentUser={this.props.currentUser}
-                                        updateCartItem={this.props.updateCartItem}
-                                     
-                                        createCartItem={this.props.createCartItem}
-                                        addToCart={this.props.addToCart}
-                                        startNotification={this.startNotification}
-                                        openModal={this.props.openModal}
-                                        closeModal={this.props.closeModal}
-                                        cartItem={this.props.cartItems}
-                                        history={this.props.history}
-                                    />
-                                ))
+                        //this.state.woolRunners.map
+                                // this.state.woolRunners.map(shoe => (
+                                //     <Filter
+                                //         // <ShoeIndexItem
+                                //         //     shoe={shoe}
+                                //         //     key={shoe.id}
+                                //         //     cart={this.state.cart}
+                                //         //     currentUser={this.props.currentUser}
+                                //         //     updateCartItem={this.props.updateCartItem}
+
+                                //         //     createCartItem={this.props.createCartItem}
+                                //         //     addToCart={this.props.addToCart}
+                                //         //     startNotification={this.startNotification}
+                                //         //     openModal={this.props.openModal}
+                                //         //     closeModal={this.props.closeModal}
+                                //         //     cartItem={this.props.cartItems}
+                                //         //     history={this.props.history}
+                                //         // />
+                                //     />
+                                //     ))
+                                // this.getShoesByMaterialAndModel('wool', 'runners').map(shoe => (
+                                //         <ShoeIndexItem
+                                //             shoe={shoe}
+                                //             key={shoe.id}
+                                //             cart={this.state.cart}
+                                //             currentUser={this.props.currentUser}
+                                //             updateCartItem={this.props.updateCartItem}
+                                         
+                                //             createCartItem={this.props.createCartItem}
+                                //             addToCart={this.props.addToCart}
+                                //             startNotification={this.startNotification}
+                                //             openModal={this.props.openModal}
+                                //             closeModal={this.props.closeModal}
+                                //             cartItem={this.props.cartItems}
+                                //             history={this.props.history}
+                                //         />
+                                // ))
                             }
                         
 

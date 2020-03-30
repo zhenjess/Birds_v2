@@ -18,6 +18,8 @@ import cartItemsReducer from './cart_items_reducer';
 
 import cartsReducer from './carts_reducer';
 
+import filteredShoesReducer from './filtered_shoes_reducer';
+
 const entitiesReducer = combineReducers({
     users: usersReducer, 
     shoes: shoesReducer, 
@@ -27,7 +29,8 @@ const entitiesReducer = combineReducers({
     materials: materialsReducer, 
     colors: colorsReducer,
     cartItems: cartItemsReducer,
-    carts: cartsReducer
+    carts: cartsReducer,
+    filteredShoes: filteredShoesReducer
 });
 
 export default entitiesReducer; 
