@@ -20,12 +20,18 @@ class ShoeIndex extends React.Component {
             shouldAnimate: false,
             animateItems: true,
             animateNotification: false,
-            cart: {}
-            
+            cart: {},
+            woolRunners: [],
+            treeRunners: [],
+            woolLoungers: [],
+            treeLoungers: [],
+            treeSkippers: [],
+            treeToppers: [],
         };
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
+        this.getShoesByMaterialAndModel = this.getShoesByMaterialAndModel.bind(this);
         // this.addFilter = this.addFilter.bind(this);
     }
 
@@ -33,26 +39,25 @@ class ShoeIndex extends React.Component {
 
         const id = this.props.match.params.id;
 
-        const material = ['Wool', 'Tree'];
+        const material = ['wool', 'tree'];
 
         const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
 
-        this.props.fetchAllShoes();
-
-        if (this.props.currentUser) {
-            this.props.fetchCart(this.props.currentUser.id).then((cart) => { 
-                this.setState({
-                   cart: cart
+        //props are passed in by parent component, props are configurations
+        this.props.fetchAllShoes().then(shoes => {
+            if (this.props.currentUser) {
+                this.props.fetchCart(this.props.currentUser.id).then((cart) => { 
+                    this.setState({
+                       cart: cart
+                    });
                 });
-            });
-
-            // this.getShoesByMaterialAndModel(material, style).then((shoe) => {
-            //     this.setState({
-            //         shoe: shoe
-            //     });
-            // });
-
-        }
+    
+            }
+            //invoke/call the function/use here
+            this.getShoesByMaterialAndModel(material, style);
+            console.log(this.state);
+        });
+//set up local state for each category
     }
 
     componentDidUpdate(prevProp) {
@@ -61,9 +66,12 @@ class ShoeIndex extends React.Component {
         }
     }
 
+    //function definitions not yet used
     handleAnimationEnd() {
         this.setState({ shouldAnimate: false });
     }
+
+    //this.handleAnimationEnd() is using the function/invoking on the class
 
     startNotification() {
         this.setState({ animateNotification: true });
@@ -73,22 +81,23 @@ class ShoeIndex extends React.Component {
         this.setState({ animateNotification: false });
     }
 
-    getShoesByMaterialAndModel(material, style) {
+    //this function is not yet used, is just defined
+    getShoesByMaterialAndModel(material, style) { //expecting these args to be passed in when using the function
         for (let i = 0; i < material.length; i++) {
-            let currMaterial = currMaterial[i];
+            let currMaterial = material[i];
 
             for (let j = 0; j < style.length; j++) {
-                let currStyle = currStyle[j];
+                let currStyle = style[j];
+                let key = currMaterial.concat(currStyle);
                 let shoesArr = this.props.shoes.filter(
                     shoe => shoe.style.toLowerCase() === currStyle && 
                     shoe.material.toLowerCase() === currMaterial)
-                    //set local state
-                    this.setState({
-                        shoesArr: shoesArr
-                    });
-            }
+                this.setState({
+                    key: shoesArr
+                });
+                }
+            
         }
-        return shoesArr;
     }
 
     render() {
@@ -119,7 +128,6 @@ class ShoeIndex extends React.Component {
         
         return (
             <div>
-
                 <div className="shoe-index-head">
                     <ShoesHeader
                         cartItems={cartItems}
@@ -181,7 +189,7 @@ class ShoeIndex extends React.Component {
 
                         <h2>Tree Runners</h2>
 
-                        <ul className="shoe-category">
+                        {/* <ul className="shoe-category">
                             {
                                 this.getShoesByMaterialAndModel('tree', 'runners').map(shoe => (
                                     <ShoeIndexItem
@@ -313,7 +321,7 @@ class ShoeIndex extends React.Component {
                                 ))
                             }
 
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
             </div>
