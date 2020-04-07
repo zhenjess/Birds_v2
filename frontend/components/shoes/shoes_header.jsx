@@ -26,6 +26,9 @@ class ShoesHeader extends React.Component {
     }
 
     handleFilterAttrs(title, id, filters) {
+        // we need to dispatch action inside of this function
+
+
         return () => this.setState( ({ openFilter, filterAttributes }) => {
             const newFilterAttrs = {
                 filterTitle: title,

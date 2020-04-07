@@ -90,10 +90,11 @@ class ShoeIndex extends React.Component {
                 let currStyle = style[j];
                 let key = currMaterial.concat(currStyle);
                 let shoesArr = this.props.shoes.filter(
-                    shoe => shoe.style.toLowerCase() === currStyle && 
-                    shoe.material.toLowerCase() === currMaterial)
+                    shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() && 
+                    shoe.material.toLowerCase() === currMaterial.toLowerCase())
+                // debugger
                 this.setState({
-                    key: shoesArr
+                    [key]: shoesArr
                 });
                 }
             
@@ -125,7 +126,13 @@ class ShoeIndex extends React.Component {
         }
 
         const cartItems = Object.keys(this.props.shoes).length;
-        
+        let woolRunners = this.state.woolRunners ? this.state.woolRunners : [];
+        let treeRunners = this.state.treeRunners ? this.state.treeRunners : [];
+        let woolLoungers = this.state.woolLoungers ? this.state.woolLoungers : [];
+        let treeLoungers = this.state.treeLoungers ? this.state.treeLoungers : [];
+        let treeSkippers = this.state.treeSkippers ? this.state.treeSkippers : [];
+        let treeToppers = this.state.treeToppers ? this.state.treeToppers : [];
+
         return (
             <div>
                 <div className="shoe-index-head">
@@ -141,57 +148,9 @@ class ShoeIndex extends React.Component {
                         <h2>Wool Runners</h2>
 
                         <ul className="shoe-category">
-                    {
-                        //this.state.woolRunners.map
-                                // this.state.woolRunners.map(shoe => (
-                                //     <Filter
-                                //         // <ShoeIndexItem
-                                //         //     shoe={shoe}
-                                //         //     key={shoe.id}
-                                //         //     cart={this.state.cart}
-                                //         //     currentUser={this.props.currentUser}
-                                //         //     updateCartItem={this.props.updateCartItem}
-
-                                //         //     createCartItem={this.props.createCartItem}
-                                //         //     addToCart={this.props.addToCart}
-                                //         //     startNotification={this.startNotification}
-                                //         //     openModal={this.props.openModal}
-                                //         //     closeModal={this.props.closeModal}
-                                //         //     cartItem={this.props.cartItems}
-                                //         //     history={this.props.history}
-                                //         // />
-                                //     />
-                                //     ))
-                                // this.getShoesByMaterialAndModel('wool', 'runners').map(shoe => (
-                                //         <ShoeIndexItem
-                                //             shoe={shoe}
-                                //             key={shoe.id}
-                                //             cart={this.state.cart}
-                                //             currentUser={this.props.currentUser}
-                                //             updateCartItem={this.props.updateCartItem}
-                                         
-                                //             createCartItem={this.props.createCartItem}
-                                //             addToCart={this.props.addToCart}
-                                //             startNotification={this.startNotification}
-                                //             openModal={this.props.openModal}
-                                //             closeModal={this.props.closeModal}
-                                //             cartItem={this.props.cartItems}
-                                //             history={this.props.history}
-                                //         />
-                                // ))
-                            }
-                        
-
-                        </ul>
-
-
-                        <br />
-
-                        <h2>Tree Runners</h2>
-
-                        {/* <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndModel('tree', 'runners').map(shoe => (
+                                woolRunners.map(shoe => (
+                                // <Filter>
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -203,52 +162,81 @@ class ShoeIndex extends React.Component {
                                         openModal={this.props.openModal}
                                         closeModal={this.props.closeModal}
                                     />
+                                // </Filter>
                                 ))
                             }
 
                         </ul>
 
+                        <br/>
+
+
+                        <h2>Tree Runners</h2>
+
+                        <ul className="shoe-category">
+                            {
+                                treeRunners.map(shoe => (
+                                    // <Filter>
+                                        <ShoeIndexItem
+                                            shoe={shoe}
+                                            key={shoe.id}
+                                            cart={this.state.cart}
+                                            currentUser={this.props.currentUser}
+                                            createCartItem={this.props.createCartItem}
+                                            addToCart={this.props.addToCart}
+                                            startNotification={this.startNotification}
+                                            openModal={this.props.openModal}
+                                            closeModal={this.props.closeModal}
+                                        />
+                                    // </Filter>
+                                ))
+                            }
+
+                        </ul>
                         <br />
 
                         <h2>Wool Loungers</h2>
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndModel('wool', 'loungers').map(shoe => (
-                                    <ShoeIndexItem
-                                        shoe={shoe}
-                                        key={shoe.id}
-                                        cart={this.state.cart}
-                                        currentUser={this.props.currentUser}
-                                        createCartItem={this.props.createCartItem}
-                                        addToCart={this.props.addToCart}
-                                        startNotification={this.startNotification}
-                                        openModal={this.props.openModal}
-                                        closeModal={this.props.closeModal}
-                                    />
+                                woolLoungers.map(shoe => (
+                                    // <Filter>
+                                        <ShoeIndexItem
+                                            shoe={shoe}
+                                            key={shoe.id}
+                                            cart={this.state.cart}
+                                            currentUser={this.props.currentUser}
+                                            createCartItem={this.props.createCartItem}
+                                            addToCart={this.props.addToCart}
+                                            startNotification={this.startNotification}
+                                            openModal={this.props.openModal}
+                                            closeModal={this.props.closeModal}
+                                        />
+                                    // </Filter>
                                 ))
                             }
 
                         </ul>
-
                         <br />
 
                         <h2>Tree Loungers</h2>
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndModel('tree', 'loungers').map(shoe => (
-                                    <ShoeIndexItem
-                                        shoe={shoe}
-                                        key={shoe.id}
-                                        cart={this.state.cart}
-                                        currentUser={this.props.currentUser}
-                                        createCartItem={this.props.createCartItem}
-                                        addToCart={this.props.addToCart}
-                                        startNotification={this.startNotification}
-                                        openModal={this.props.openModal}
-                                        closeModal={this.props.closeModal}
-                                    />
+                                treeLoungers.map(shoe => (
+                                    // <Filter>
+                                        <ShoeIndexItem
+                                            shoe={shoe}
+                                            key={shoe.id}
+                                            cart={this.state.cart}
+                                            currentUser={this.props.currentUser}
+                                            createCartItem={this.props.createCartItem}
+                                            addToCart={this.props.addToCart}
+                                            startNotification={this.startNotification}
+                                            openModal={this.props.openModal}
+                                            closeModal={this.props.closeModal}
+                                        />
+                                    // </Filter>
                                 ))
                             }
 
@@ -260,68 +248,50 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndModel('tree', 'skippers').map(shoe => (
-                                    <ShoeIndexItem
-                                        shoe={shoe}
-                                        key={shoe.id}
-                                        cart={this.state.cart}
-                                        currentUser={this.props.currentUser}
-                                        createCartItem={this.props.createCartItem}
-                                        addToCart={this.props.addToCart}
-                                        startNotification={this.startNotification}
-                                        openModal={this.props.openModal}
-                                        closeModal={this.props.closeModal}
-                                    />
+                                treeSkippers.map(shoe => (
+                                    // <Filter>
+                                        <ShoeIndexItem
+                                            shoe={shoe}
+                                            key={shoe.id}
+                                            cart={this.state.cart}
+                                            currentUser={this.props.currentUser}
+                                            createCartItem={this.props.createCartItem}
+                                            addToCart={this.props.addToCart}
+                                            startNotification={this.startNotification}
+                                            openModal={this.props.openModal}
+                                            closeModal={this.props.closeModal}
+                                        />
+                                    // </Filter>
                                 ))
                             }
 
                         </ul>
-
                         <br />
 
                         <h2>Tree Toppers</h2>
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndModel('tree', 'toppers').map(shoe => (
-                                    <ShoeIndexItem
-                                        shoe={shoe}
-                                        key={shoe.id}
-                                        cart={this.state.cart}
-                                        currentUser={this.props.currentUser}
-                                        createCartItem={this.props.createCartItem}
-                                        addToCart={this.props.addToCart}
-                                        startNotification={this.startNotification}
-                                        openModal={this.props.openModal}
-                                        closeModal={this.props.closeModal}
-                                    />
+                                treeToppers.map(shoe => (
+                                    // <Filter>
+                                        <ShoeIndexItem
+                                            shoe={shoe}
+                                            key={shoe.id}
+                                            cart={this.state.cart}
+                                            currentUser={this.props.currentUser}
+                                            createCartItem={this.props.createCartItem}
+                                            addToCart={this.props.addToCart}
+                                            startNotification={this.startNotification}
+                                            openModal={this.props.openModal}
+                                            closeModal={this.props.closeModal}
+                                        />
+                                    // </Filter>
                                 ))
                             }
 
                         </ul>
 
                         <br />
-
-                        <h2>Tree Breezers</h2>
-
-                        <ul className="shoe-category">
-                            {
-                                this.getShoesByMaterialAndModel('tree', 'breezers').map(shoe => (
-                                    <ShoeIndexItem
-                                        shoe={shoe}
-                                        key={shoe.id}
-                                        cart={this.state.cart}
-                                        currentUser={this.props.currentUser}
-                                        createCartItem={this.props.createCartItem}
-                                        addToCart={this.props.addToCart}
-                                        startNotification={this.startNotification}
-                                        openModal={this.props.openModal}
-                                        closeModal={this.props.closeModal}
-                                    />
-                                ))
-                            }
-
-                        </ul> */}
                     </div>
                 </div>
             </div>

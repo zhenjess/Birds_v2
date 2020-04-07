@@ -17,6 +17,7 @@ const filterByMaterial = payload => ({
     payload
 });
 
+//continue from here
 export const filterAllShoesByColor = () => dispatch => (
     store.filterAllShoesByColor()
         .then(payload => dispatch(filterByColor(payload)))
