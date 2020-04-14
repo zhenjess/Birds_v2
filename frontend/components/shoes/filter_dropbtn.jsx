@@ -11,20 +11,20 @@ const dropDownBtn = ({ openFilter, currentOpenFilter, title, id, filters, dropDo
             </h5>
         );
     } else if (openFilter && currentOpenFilter === title) {
+        //wrap handler in anonymous fn bc when react loads it invoke
+        //handleFilterAttrs with these params (title, id, filters) were passed in
+        //dont want fn already invoked in cb
+        
+                    // good 
+                    // onClick={() => handleFilterAttrs()}
+                    // onClick={handleFilterAttrs}
+        
+                    // bad 
+                    // onClick={handleFilterAttrs()}
         return (
-            //wrap handler in anonymous fn bc when react loads it invoke
-            //handleFilterAttrs with these params (title, id, filters) were passed in
-            //dont want fn already invoked in cb
             <h5
                 className="minus"
-                onClick={(title, id, filters) => handleFilterAttrs(title, id, filters)}
-
-            // good 
-            // onClick={() => handleFilterAttrs()}
-            // onClick={handleFilterAttrs}
-
-            // bad 
-            // onClick={handleFilterAttrs()}
+                onClick={() => handleFilterAttrs(title, id, filters)}
 
             >&minus;
             </h5>
@@ -33,7 +33,7 @@ const dropDownBtn = ({ openFilter, currentOpenFilter, title, id, filters, dropDo
         return (
             <h5
                 className="drop-down"
-                onClick={(title, id, filters) => handleFilterAttrs(title, id, filters)}
+                onClick={() => handleFilterAttrs(title, id, filters)}
             ><i className="fas fa-angle-down"></i>
             </h5>
         );
