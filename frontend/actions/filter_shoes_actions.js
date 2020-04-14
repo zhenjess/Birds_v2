@@ -18,10 +18,10 @@ const filterByMaterial = payload => ({
 });
 
 //continue from here
-export const filterAllShoesByColor = () => dispatch => (
-    store.filterAllShoesByColor()
-        .then(payload => dispatch(filterByColor(payload)))
-);
+export const filterAllShoesByColor = (payload) => dispatch => {
+    return dispatch(filterByColor(payload));
+}; //currying here fn returning another fn
+
 
 export const filterAllShoesByStyle = () => dispatch => (
     store.filterAllShoesByStyle()
