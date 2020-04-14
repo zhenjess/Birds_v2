@@ -12,6 +12,8 @@ import Filter from './filter';
 
 import ShoeFilter from './shoe_filter';
 
+import { filterAllShoesByColor } from '../../actions/filter_shoes_actions';
+
 class ShoeIndex extends React.Component {
     constructor(props) {
         super(props);
@@ -46,18 +48,18 @@ class ShoeIndex extends React.Component {
         //props are passed in by parent component, props are configurations
         this.props.fetchAllShoes().then(shoes => {
             if (this.props.currentUser) {
-                this.props.fetchCart(this.props.currentUser.id).then((cart) => { 
+                this.props.fetchCart(this.props.currentUser.id).then((cart) => {
                     this.setState({
-                       cart: cart
+                        cart: cart
                     });
                 });
-    
+
             }
             //invoke/call the function/use here
             this.getShoesByMaterialAndModel(material, style);
             console.log(this.state);
         });
-//set up local state for each category
+        //set up local state for each category
     }
 
     componentDidUpdate(prevProp) {
@@ -90,14 +92,14 @@ class ShoeIndex extends React.Component {
                 let currStyle = style[j];
                 let key = currMaterial.concat(currStyle);
                 let shoesArr = this.props.shoes.filter(
-                    shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() && 
-                    shoe.material.toLowerCase() === currMaterial.toLowerCase())
+                    shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() &&
+                        shoe.material.toLowerCase() === currMaterial.toLowerCase())
                 // debugger
                 this.setState({
                     [key]: shoesArr
                 });
-                }
-            
+            }
+
         }
     }
 
@@ -139,6 +141,7 @@ class ShoeIndex extends React.Component {
                     <ShoesHeader
                         cartItems={cartItems}
                         gender={this.props.match.params.gender}
+                        filterAllShoesByColor={this.props.filterAllShoesByColor}
                     />
                 </div>
 
@@ -150,7 +153,7 @@ class ShoeIndex extends React.Component {
                         <ul className="shoe-category">
                             {
                                 woolRunners.map(shoe => (
-                                // <Filter>
+                                    // <Filter>
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -162,13 +165,13 @@ class ShoeIndex extends React.Component {
                                         openModal={this.props.openModal}
                                         closeModal={this.props.closeModal}
                                     />
-                                // </Filter>
+                                    // </Filter>
                                 ))
                             }
 
                         </ul>
 
-                        <br/>
+                        <br />
 
 
                         <h2>Tree Runners</h2>
@@ -177,17 +180,17 @@ class ShoeIndex extends React.Component {
                             {
                                 treeRunners.map(shoe => (
                                     // <Filter>
-                                        <ShoeIndexItem
-                                            shoe={shoe}
-                                            key={shoe.id}
-                                            cart={this.state.cart}
-                                            currentUser={this.props.currentUser}
-                                            createCartItem={this.props.createCartItem}
-                                            addToCart={this.props.addToCart}
-                                            startNotification={this.startNotification}
-                                            openModal={this.props.openModal}
-                                            closeModal={this.props.closeModal}
-                                        />
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                    />
                                     // </Filter>
                                 ))
                             }
@@ -201,17 +204,17 @@ class ShoeIndex extends React.Component {
                             {
                                 woolLoungers.map(shoe => (
                                     // <Filter>
-                                        <ShoeIndexItem
-                                            shoe={shoe}
-                                            key={shoe.id}
-                                            cart={this.state.cart}
-                                            currentUser={this.props.currentUser}
-                                            createCartItem={this.props.createCartItem}
-                                            addToCart={this.props.addToCart}
-                                            startNotification={this.startNotification}
-                                            openModal={this.props.openModal}
-                                            closeModal={this.props.closeModal}
-                                        />
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                    />
                                     // </Filter>
                                 ))
                             }
@@ -225,17 +228,17 @@ class ShoeIndex extends React.Component {
                             {
                                 treeLoungers.map(shoe => (
                                     // <Filter>
-                                        <ShoeIndexItem
-                                            shoe={shoe}
-                                            key={shoe.id}
-                                            cart={this.state.cart}
-                                            currentUser={this.props.currentUser}
-                                            createCartItem={this.props.createCartItem}
-                                            addToCart={this.props.addToCart}
-                                            startNotification={this.startNotification}
-                                            openModal={this.props.openModal}
-                                            closeModal={this.props.closeModal}
-                                        />
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                    />
                                     // </Filter>
                                 ))
                             }
@@ -250,17 +253,17 @@ class ShoeIndex extends React.Component {
                             {
                                 treeSkippers.map(shoe => (
                                     // <Filter>
-                                        <ShoeIndexItem
-                                            shoe={shoe}
-                                            key={shoe.id}
-                                            cart={this.state.cart}
-                                            currentUser={this.props.currentUser}
-                                            createCartItem={this.props.createCartItem}
-                                            addToCart={this.props.addToCart}
-                                            startNotification={this.startNotification}
-                                            openModal={this.props.openModal}
-                                            closeModal={this.props.closeModal}
-                                        />
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                    />
                                     // </Filter>
                                 ))
                             }
@@ -274,17 +277,17 @@ class ShoeIndex extends React.Component {
                             {
                                 treeToppers.map(shoe => (
                                     // <Filter>
-                                        <ShoeIndexItem
-                                            shoe={shoe}
-                                            key={shoe.id}
-                                            cart={this.state.cart}
-                                            currentUser={this.props.currentUser}
-                                            createCartItem={this.props.createCartItem}
-                                            addToCart={this.props.addToCart}
-                                            startNotification={this.startNotification}
-                                            openModal={this.props.openModal}
-                                            closeModal={this.props.closeModal}
-                                        />
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                    />
                                     // </Filter>
                                 ))
                             }

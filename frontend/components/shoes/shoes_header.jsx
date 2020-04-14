@@ -22,7 +22,14 @@ class ShoesHeader extends React.Component {
 
         this.handleFilterAttrs = this.handleFilterAttrs.bind(this);
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
-        // this.addFilter = this.addFilter.bind(this);
+        this.addFilter = this.addFilter.bind(this);
+    }
+
+    addFilter(filter) {
+        debugger
+        if (filter.title === 'Color') {
+            this.props.filterAllShoesByColor(filter.color);
+        }
     }
 
     handleFilterAttrs(title, id, filters) {

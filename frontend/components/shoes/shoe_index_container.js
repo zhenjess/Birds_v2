@@ -8,13 +8,15 @@ import { fetchCartItems } from '../../actions/cart_items_actions';
 
 import { selectAllShoes, filterAllShoesByGender, selectItemsByGender } from '../../reducers/selectors';
 
-import{ addToCart, removeFromCart } from '../../actions/cart_actions';
+import { addToCart, removeFromCart } from '../../actions/cart_actions';
 
 import { fetchCart } from '../../actions/cart_actions';
 
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 import { createCartItem, updateCartItem } from '../../actions/cart_items_actions';
+
+import { filterAllShoesByColor } from '../../actions/filter_shoes_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const shoeId = ownProps.match.params.id;
@@ -34,17 +36,18 @@ const mapStateToProps = (state, ownProps) => {
         users: state.entities.users,
         ownProps
     });
- 
+
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchCart: (user) => dispatch(fetchCart(user)), 
+    fetchCart: (user) => dispatch(fetchCart(user)),
     fetchAllShoes: () => dispatch(fetchAllShoes()),
     updateCartItem: (shoeId) => dispatch(updateCartItem(shoeId)),
     createCartItem: (shoeId) => dispatch(createCartItem(shoeId)),
     addToCart: (cartItem) => dispatch(addToCart(cartItem)),
     openModal: () => dispatch(openModal()),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    filterAllShoesByColor: (color) => dispatch(filterAllShoesByColor(color))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoeIndex);
