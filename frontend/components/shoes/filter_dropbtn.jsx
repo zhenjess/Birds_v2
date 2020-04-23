@@ -30,7 +30,8 @@ const dropDownBtn = ({ openFilter, currentOpenFilter, title, id, filters, dropDo
             </h5>
         );
     } else {
-        return (
+        //in onclick, title: 'Color', id: 'color', filters: array of colors
+        return (         
             <h5
                 className="drop-down"
                 onClick={() => handleFilterAttrs(title, id, filters)}

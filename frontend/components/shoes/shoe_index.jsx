@@ -57,7 +57,7 @@ class ShoeIndex extends React.Component {
             }
             //invoke/call the function/use here
             this.getShoesByMaterialAndModel(material, style);
-            console.log(this.state);
+           // console.log(this.state);
         });
         //set up local state for each category
     }

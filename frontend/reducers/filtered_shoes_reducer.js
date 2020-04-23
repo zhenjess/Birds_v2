@@ -15,7 +15,7 @@ const shoesReducer = (oldState = {}, action) => {
                 let id = shoeColorKeys[i];
                 let shoe = oldState.shoes[id]; //is shoe object
             }
-
+            debugger
             if (shoe.color === action.payload.color) {
                 shoesFilteredByColor.push(shoe);
             }

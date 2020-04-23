@@ -39,7 +39,9 @@ class ShoeFilter extends React.Component {
                 <h2
                     className={this.state.isAnimating ? "swipe-left" : ""}
                     onAnimationEnd={this.handleAnimation}
-                    onClick={(title, id, filters) => handleFilterAttrs(title, id, filters)}
+                    onClick={(title, id, filters) =>  {
+                        debugger
+                        return handleFilterAttrs(title, id, filters)}}
                 >{whatFilter || title}
                 </h2>
                 <DropDownBtn
