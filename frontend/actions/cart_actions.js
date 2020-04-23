@@ -39,11 +39,11 @@ export const createCart = (user) => dispatch => {
 export const fetchCart = (user) => dispatch => { 
     return APIUtil.fetchCart(user)
         .then((payload) => dispatch(receiveCart(payload)))
-}
+};
 
 export const addToCart = (cartItem) => dispatch => {
     return CartItemAPIUtil.createCartItem(cartItem)
         .then((payload) => {
             dispatch(receiveCartItems(payload))
         })
-}
+};

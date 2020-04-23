@@ -26,12 +26,6 @@ const removeCartItem = (cartItem) => {
     })
 }
 
-const removeAllCartItems = () => {
-    return ({
-        type: REMOVE_ALL_CART_ITEMS
-    })
-}
-
 export const createCartItem = (cartItem) => dispatch => {
     return APIUtil.createCartItem(cartItem)
         .then((cartItem) => dispatch(receiveCartItem(cartItem)),
