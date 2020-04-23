@@ -2,13 +2,11 @@ import { connect } from 'react-redux';
 
 import ShoeIndex from './shoe_index';
 
-import { fetchAllShoes, fetchShoe } from '../../actions/shoes_actions';
+import { fetchAllShoes } from '../../actions/shoes_actions';
 
-import { fetchCartItems } from '../../actions/cart_items_actions';
+import { filterAllShoesByGender } from '../../reducers/selectors';
 
-import { selectAllShoes, filterAllShoesByGender, selectItemsByGender } from '../../reducers/selectors';
-
-import { addToCart, removeFromCart } from '../../actions/cart_actions';
+import { addToCart } from '../../actions/cart_actions';
 
 import { fetchCart } from '../../actions/cart_actions';
 
