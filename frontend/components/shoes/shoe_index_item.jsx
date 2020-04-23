@@ -1,10 +1,6 @@
 import React from 'react';
 
-import ShoesHeader from './shoes_header';
-
-import { hashHistory } from 'react-router';
-
-import { Link, Redirect, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class ShoeIndexItem extends React.Component {
     constructor(props) {
@@ -50,11 +46,9 @@ class ShoeIndexItem extends React.Component {
     }
 
     handleClick(idx) { 
-        debugger
         let quant = this.compareCartItems();
 
         if (quant > 0) {
-
             this.updateCart(quant, idx)
         } else {
             this.addToCart(idx)
@@ -68,7 +62,7 @@ class ShoeIndexItem extends React.Component {
 
     render() {
     
-        const { shoe, cartItem, addToCart, currentUser } = this.props;
+        const { shoe } = this.props;
 
         return (
           
