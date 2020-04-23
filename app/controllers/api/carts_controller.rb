@@ -5,7 +5,7 @@ class Api::CartsController < ApplicationController
         render 'api/cart/index'
     end
 
-     def create
+    def create
         @cart = Cart.new(user_id: params[:user_id])
 
         if @cart.save
