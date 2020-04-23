@@ -1,16 +1,10 @@
 import React from "react";
 
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
-import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Modal from './modal/modal';
 
 import Main from './main/main';
-
-import SignupFormContainer from './session/signup_form_container';
-
-import LoginFormContainer from './session/login_form_container';
 
 import LogoutFormContainer from './session/logout_form_container';
 
@@ -18,23 +12,17 @@ import AccountFormsContainer from './session/account_forms_container';
 
 import NavBarContainer from './navbar/navbar_container';
 
-import MainContainer from './main/main_container';
-
 import AboutMain from './main/about_main';
 
 import MaterialsMain from './main/materials_main';
-
-import AccessoriesMain from './main/accessories_main';
 
 import Materials from './materials/materials';
 
 import AboutMaterials from "./materials/about_materials";
 
-
 import Tree from './materials/tree/tree';
 
 import AboutTreeMaterial from './materials/tree/about_tree_material';
-
 
 import Sugar from './materials/sugar/sugar';
 
