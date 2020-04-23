@@ -3,7 +3,7 @@ class Cart < ApplicationRecord
     belongs_to :user
 
     has_many :cart_items,
-        class_name: "CartItems", 
+        class_name: "CartItem", 
         primary_key: :id, 
         foreign_key: :cart_id
     
