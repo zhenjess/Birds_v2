@@ -2,7 +2,7 @@ import React from "react";
 
 import { Provider } from "react-redux";
 
-import { HashRouter, Redirect, Switch } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import App from './app';
 
