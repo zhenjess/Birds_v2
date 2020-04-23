@@ -30,7 +30,7 @@ class Api::CartItemsController < ApplicationController
         end
     end
 
-     def destroy
+    def destroy
         @cart_item = CartItem.find_by(id: params[:id])
         if @cart_item
             @cart_item.destroy
