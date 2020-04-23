@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-
 import AboutMaterialsSub from './about_materials_sub';
 
 import MoreMaterialsMain from './more_materials_main';
