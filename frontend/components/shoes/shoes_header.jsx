@@ -26,7 +26,7 @@ class ShoesHeader extends React.Component {
     }
 
     addFilter(filter) {
-        debugger
+        // debugger
         if (filter === 'Color'.toLowerCase()) {
             this.props.filterAllShoesByColor(); //come back to this
         }
@@ -34,7 +34,7 @@ class ShoesHeader extends React.Component {
 
     handleFilterAttrs(title, id, filters) {
         // we need to dispatch action inside of this function
-        debugger
+        // debugger
        // console.log("Inside of filter attrs: ", title, id, filters)
         //call set state then
         this.setState(({ openFilter, filterAttributes }) => {
@@ -43,7 +43,7 @@ class ShoesHeader extends React.Component {
                 filterId: id,
                 filters: filters
             };
-            debugger
+            // debugger
             if (openFilter && title !== filterAttributes.filterTitle) {
                 return ({ filterAttributes: newFilterAttrs, openFilter: true, shouldAnimate: true });
             } else if (!openFilter) {

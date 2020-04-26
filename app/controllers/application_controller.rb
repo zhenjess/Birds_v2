@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     end
 
     def login(user)
+        # debugger
         ensure_cart
         session[:session_token] = user.reset_session_token!
         @current_user = user
@@ -30,7 +31,13 @@ class ApplicationController < ActionController::Base
     end
 
     def ensure_cart
-        @cart = Cart.create(user_id: @user.id, status: "checked in").id
-        @user.update(cart_id: (@user.cart_id || @cart))
+        @cart = Cart.find_by(user_id: @user.id) #check if cart exist of current user
+        if !@cart 
+            @cart = Cart.create(user_id: @user.id, status: "checked in").id
+        end
     end
+        #debugger
+       # @user.update(cart_id: (@user.cart_id || @cart)) for user had a cart_id in user's table
+       #@cart = Cart.find_by(user_id: @user.id).update(cart_id: @cart.id)
+       #@user.update(cart_id: @cart.id)
 end

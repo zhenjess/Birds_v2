@@ -6,15 +6,18 @@ class ShoeIndexItem extends React.Component {
     constructor(props) {
         super(props);
 
+       // debugger
         this.handleClick = this.handleClick.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
         this.addToCart = this.addToCart.bind(this);
-        this.compareCartItems = this.compareCartItems.bind(this)
-
+        this.compareCartItems = this.compareCartItems.bind(this);
     }
 
+    
+
     addToCart(idx) { 
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.currentUser.cartId, quantity: 1, size_idx: idx };
+        //debugger
+        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.id, quantity: 1, size_idx: idx };
 
         this.props.createCartItem(cartItem) 
             .then(this.props.startNotification())
@@ -22,6 +25,7 @@ class ShoeIndexItem extends React.Component {
     }
 
     updateCart(quant) {
+        //debugger
         let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1, size_idx: idx }
         this.props.updateCartItem(cartItem)
             .then(this.props.startNotification())

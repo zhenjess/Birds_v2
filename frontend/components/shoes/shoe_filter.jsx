@@ -40,7 +40,7 @@ class ShoeFilter extends React.Component {
                     className={this.state.isAnimating ? "swipe-left" : ""}
                     onAnimationEnd={this.handleAnimation}
                     onClick={(title, id, filters) =>  {
-                        debugger
+                        // debugger
                         return handleFilterAttrs(title, id, filters)}}
                 >{whatFilter || title}
                 </h2>

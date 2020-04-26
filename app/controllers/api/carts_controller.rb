@@ -9,9 +9,9 @@ class Api::CartsController < ApplicationController
         @cart = Cart.new(user_id: params[:user_id])
 
         if @cart.save
-            @user = current_user
-            @user.cart_id = @cart.id
-            @user.save
+            # @user = current_user
+            # @user.cart_id = @cart.id
+            # @user.save
             render 'api/cart/show'
         else
             render json: ['Please Sign In'], status: 422

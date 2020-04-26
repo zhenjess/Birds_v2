@@ -156,7 +156,7 @@ class Cart extends React.Component {
         const { subtotal } = this.state;
 
         cartItems.map((cartItem, i) => {
-            debugger
+            // debugger
             return <CartItem
                 cartId={cartItem.cartId}
                 shoeId={cartItem.shoeId}
@@ -222,7 +222,7 @@ class Cart extends React.Component {
                         <ul className="cart-items">
                            
                             {this.props.cartItems.map((cartItem, i) => {
-                                debugger
+                                {/* debugger */}
                           
                                 return (
                                     <CartItem

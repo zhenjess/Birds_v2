@@ -17,6 +17,7 @@ const cartItemsReducer = (oldState = {}, action) => {
             return newState;
         case RECEIVE_CART:
             newState = Object.assign({}, oldState, action.cartItems);
+            
             return newState;
         case REMOVE_CART_ITEM:
             newState = Object.assign({}, oldState);

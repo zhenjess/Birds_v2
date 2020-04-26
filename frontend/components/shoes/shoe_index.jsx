@@ -10,7 +10,7 @@ import CartItem from '../modal/cart_item';
 
 import Filter from './filter';
 
-import ShoeFilter from './shoe_filter';
+// import ShoeFilter from './shoe_filter';
 
 import { filterAllShoesByColor } from '../../actions/filter_shoes_actions';
 
@@ -44,21 +44,37 @@ class ShoeIndex extends React.Component {
         const material = ['wool', 'tree'];
 
         const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
+        //debugger
+        
+        // this.props.fetchCart(this.props.currentUser.id).then((cart) => {
+        //     this.props.fetchAllShoes().then(shoes => {
 
-        //props are passed in by parent component, props are configurations
-        this.props.fetchAllShoes().then(shoes => {
-            if (this.props.currentUser) {
-                this.props.fetchCart(this.props.currentUser.id).then((cart) => {
-                    this.setState({
-                        cart: cart
-                    });
-                });
+        //     });
+        // });
 
-            }
-            //invoke/call the function/use here
+        if(this.props.currentUser) {
+            this.props.fetchCart(this.props.currentUser.id)
+        }
+
+        this.props.fetchAllShoes().then(() => {
             this.getShoesByMaterialAndModel(material, style);
-           // console.log(this.state);
-        });
+        })
+        //props are passed in by parent component, props are configurations
+        // this.props.fetchAllShoes().then(shoes => {
+        //     if (this.props.currentUser) {
+        //         this.props.fetchCart(this.props.currentUser.id).then((cart) => {
+        //             this.setState({
+        //                 // cart: cart
+        //                 cart: this.props.cart
+
+        //             });
+        //         });
+
+        //     }
+        //     //invoke/call the function/use here
+        // this.getShoesByMaterialAndModel(material, style);
+        //    // console.log(this.state);
+        // });
         //set up local state for each category
     }
 
@@ -106,7 +122,7 @@ class ShoeIndex extends React.Component {
     render() {
         const { shoes } = this.props;
         const { addToCart } = this.props;
-
+       // debugger
         const fetchCartItems = () => {
             const cartItems = this.state.cartItems.map(cartItem => {
                 return (
@@ -135,7 +151,9 @@ class ShoeIndex extends React.Component {
         let treeSkippers = this.state.treeSkippers ? this.state.treeSkippers : [];
         let treeToppers = this.state.treeToppers ? this.state.treeToppers : [];
 
+        // debugger
         return (
+
             <div>
                 <div className="shoe-index-head">
                     <ShoesHeader
@@ -157,7 +175,7 @@ class ShoeIndex extends React.Component {
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
-                                        cart={this.state.cart}
+                                        cart={this.props.cart}
                                         currentUser={this.props.currentUser}
                                         createCartItem={this.props.createCartItem}
                                         addToCart={this.props.addToCart}

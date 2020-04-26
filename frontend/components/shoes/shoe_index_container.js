@@ -22,13 +22,13 @@ const mapStateToProps = (state, ownProps) => {
 
     let cart;
     let quantity;
-
+    debugger
     return ({
         shoes: filterAllShoesByGender(state, ownProps.match.params.gender),
         shoe: state.entities.shoes[shoeId],
         currentUser: currentUser,
         shoeId: shoeId,
-        cart: cart,
+        cart: state.entities.carts,
         cartItems: state.entities.cartItems,
         quantity: state.entities.cartItems[quantity],
         users: state.entities.users,
