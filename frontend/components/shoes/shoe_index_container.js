@@ -20,11 +20,13 @@ const mapStateToProps = (state, ownProps) => {
     const shoeId = ownProps.match.params.id;
     const currentUser = state.entities.users[state.session.id];
 
-    let cart;
+    let shoes = state.entities.shoes.filtered ? state.entities.shoes.filtered : filterAllShoesByGender(state, ownProps.match.params.gender) 
+
     let quantity;
     debugger
     return ({
-        shoes: filterAllShoesByGender(state, ownProps.match.params.gender),
+        // shoes: filterAllShoesByGender(state, ownProps.match.params.gender),
+        shoes: shoes,
         shoe: state.entities.shoes[shoeId],
         currentUser: currentUser,
         shoeId: shoeId,

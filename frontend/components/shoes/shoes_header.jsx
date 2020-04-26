@@ -25,11 +25,15 @@ class ShoesHeader extends React.Component {
         this.addFilter = this.addFilter.bind(this);
     }
 
-    addFilter(filter) {
-        // debugger
-        if (filter === 'Color'.toLowerCase()) {
-            this.props.filterAllShoesByColor(); //come back to this
+    addFilter(typeOfFilter, filter) {
+        debugger
+        if (typeOfFilter === 'color') {
+            this.props.filterAllShoesByColor(filter); //come back to this
         }
+
+        // if typeOfFilter === color ==> filterAll shoes by color(color)
+        // if typeOfFilter === style ==> filterallshoesbystyle(style)
+        // if typeOfFilter === material ==> filterallshoesbymaterial(material)
     }
 
     handleFilterAttrs(title, id, filters) {
@@ -37,6 +41,7 @@ class ShoesHeader extends React.Component {
         // debugger
        // console.log("Inside of filter attrs: ", title, id, filters)
         //call set state then
+        debugger
         this.setState(({ openFilter, filterAttributes }) => {
             const newFilterAttrs = {
                 filterTitle: title,
@@ -64,7 +69,7 @@ class ShoesHeader extends React.Component {
         const handleFilterAttrs = this.handleFilterAttrs;
         const { gender } = this.props;
         //console.log(this.state);
-
+        debugger
         if (gender === 'women') {
 
             return (

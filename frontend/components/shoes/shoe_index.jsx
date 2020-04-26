@@ -17,6 +17,7 @@ import { filterAllShoesByColor } from '../../actions/filter_shoes_actions';
 class ShoeIndex extends React.Component {
     constructor(props) {
         super(props);
+        debugger // check props
         this.state = {
             items: [],
             shouldAnimate: false,
@@ -38,14 +39,14 @@ class ShoeIndex extends React.Component {
     }
 
     componentDidMount() {
-
+        debugger
         const id = this.props.match.params.id;
 
         const material = ['wool', 'tree'];
 
         const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
-        //debugger
-        
+        debugger // check this.props
+
         // this.props.fetchCart(this.props.currentUser.id).then((cart) => {
         //     this.props.fetchAllShoes().then(shoes => {
 
@@ -59,6 +60,7 @@ class ShoeIndex extends React.Component {
         this.props.fetchAllShoes().then(() => {
             this.getShoesByMaterialAndModel(material, style);
         })
+
         //props are passed in by parent component, props are configurations
         // this.props.fetchAllShoes().then(shoes => {
         //     if (this.props.currentUser) {
@@ -82,6 +84,8 @@ class ShoeIndex extends React.Component {
         const id = this.props.match.params.id;
         if (this.props.location.pathname !== prevProp.location.pathname) {
         }
+        // debugger
+        // shoes in props
     }
 
     //function definitions not yet used
@@ -101,6 +105,7 @@ class ShoeIndex extends React.Component {
 
     //this function is not yet used, is just defined
     getShoesByMaterialAndModel(material, style) { //expecting these args to be passed in when using the function
+        debugger // check this.props.shoes
         for (let i = 0; i < material.length; i++) {
             let currMaterial = material[i];
 
@@ -112,17 +117,16 @@ class ShoeIndex extends React.Component {
                         shoe.material.toLowerCase() === currMaterial.toLowerCase())
                 // debugger
                 this.setState({
-                    [key]: shoesArr
+                    [key]: shoesArr //this doesn't allow rerender in componentDidUpdate
                 });
             }
-
         }
     }
 
     render() {
         const { shoes } = this.props;
         const { addToCart } = this.props;
-       // debugger
+
         const fetchCartItems = () => {
             const cartItems = this.state.cartItems.map(cartItem => {
                 return (
@@ -143,15 +147,36 @@ class ShoeIndex extends React.Component {
             )
         }
 
+        const material = ['wool', 'tree'];
+
+        const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
+
         const cartItems = Object.keys(this.props.shoes).length;
-        let woolRunners = this.state.woolRunners ? this.state.woolRunners : [];
+        // let woolRunners = this.state.woolRunners ? this.state.woolRunners : [];
+        let woolRunners = [];
         let treeRunners = this.state.treeRunners ? this.state.treeRunners : [];
         let woolLoungers = this.state.woolLoungers ? this.state.woolLoungers : [];
         let treeLoungers = this.state.treeLoungers ? this.state.treeLoungers : [];
         let treeSkippers = this.state.treeSkippers ? this.state.treeSkippers : [];
         let treeToppers = this.state.treeToppers ? this.state.treeToppers : [];
 
-        // debugger
+
+        for (let i = 0; i < material.length; i++) {
+            let currMaterial = material[i];
+
+            for (let j = 0; j < style.length; j++) {
+                let currStyle = style[j];
+                let key = currMaterial.concat(currStyle);
+                let shoesArr = this.props.shoes.filter(
+                    shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() &&
+                        shoe.material.toLowerCase() === currMaterial.toLowerCase())
+                // debugger
+                if(key === 'woolRunners') {
+                    woolRunners = shoesArr; //
+                }
+            }
+        }
+        debugger // check this.props.shoes, woolRunners
         return (
 
             <div>
@@ -201,7 +226,7 @@ class ShoeIndex extends React.Component {
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
-                                        cart={this.state.cart}
+                                        cart={this.props.cart}
                                         currentUser={this.props.currentUser}
                                         createCartItem={this.props.createCartItem}
                                         addToCart={this.props.addToCart}
@@ -225,7 +250,7 @@ class ShoeIndex extends React.Component {
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
-                                        cart={this.state.cart}
+                                        cart={this.props.cart}
                                         currentUser={this.props.currentUser}
                                         createCartItem={this.props.createCartItem}
                                         addToCart={this.props.addToCart}
@@ -249,7 +274,7 @@ class ShoeIndex extends React.Component {
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
-                                        cart={this.state.cart}
+                                        cart={this.props.cart}
                                         currentUser={this.props.currentUser}
                                         createCartItem={this.props.createCartItem}
                                         addToCart={this.props.addToCart}
@@ -274,7 +299,7 @@ class ShoeIndex extends React.Component {
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
-                                        cart={this.state.cart}
+                                        cart={this.props.cart}
                                         currentUser={this.props.currentUser}
                                         createCartItem={this.props.createCartItem}
                                         addToCart={this.props.addToCart}
@@ -298,7 +323,7 @@ class ShoeIndex extends React.Component {
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
-                                        cart={this.state.cart}
+                                        cart={this.props.cart}
                                         currentUser={this.props.currentUser}
                                         createCartItem={this.props.createCartItem}
                                         addToCart={this.props.addToCart}

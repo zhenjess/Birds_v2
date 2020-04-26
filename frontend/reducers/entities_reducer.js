@@ -30,7 +30,7 @@ const entitiesReducer = combineReducers({
     colors: colorsReducer,
     cartItems: cartItemsReducer,
     carts: cartsReducer,
-    filteredShoes: filteredShoesReducer
+    // filteredShoes: filteredShoesReducer
 });
 
 export default entitiesReducer; 
