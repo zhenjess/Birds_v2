@@ -17,7 +17,7 @@ const shoesReducer = (oldState={}, action) => {
             /*
             shoes state: 2 POJOS {"allshoes"}, {"filtered shoes per categ"}
             */
-           debugger
+          // debugger
             // return Object.assign({}, oldState, action.payload.shoes);
             return action.payload.shoes;
         case RECEIVE_SHOE:

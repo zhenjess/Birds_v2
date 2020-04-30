@@ -23,7 +23,7 @@ const mapStateToProps = (state, ownProps) => {
     let shoes = state.entities.shoes.filtered ? state.entities.shoes.filtered : filterAllShoesByGender(state, ownProps.match.params.gender) 
 
     let quantity;
-    debugger
+    //debugger
     return ({
         // shoes: filterAllShoesByGender(state, ownProps.match.params.gender),
         shoes: shoes,

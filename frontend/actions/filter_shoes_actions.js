@@ -19,7 +19,7 @@ const filterByMaterial = payload => ({
 
 //continue from here
 export const filterAllShoesByColor = (payload) => dispatch => {
-    debugger
+    //debugger
     return dispatch(filterByColor(payload));
 }; //currying here fn returning another fn
 
