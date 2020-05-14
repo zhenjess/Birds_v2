@@ -6,8 +6,12 @@ class ShoeIndex extends React.Component {
         super(props);
         this.state = { 
            // shoes: null //key of shoes point to null
-           shoes: []
+        //    shoes: []*-
+          shoes: props.shoes,
+          defaultFilters: 'default', //color--> 'black', 'blue', 'size'
         };
+        this.handleClick = this.handleClick.bind(this);
+
     }
 
     componentDidMount() { //.then updates localstate from null to shoes from redux store
@@ -16,28 +20,64 @@ class ShoeIndex extends React.Component {
                 shoes: Object.values(shoes.payload.shoes) //payload is the value shoes from line 12
             }); //key: shoes, values: shoes
         })
+        
     }
 
+    // click a button, change the fiter
     handleClick(color) {
+        console.log(color);
+        // event, currentTarget, innerText => "red"
+
+        // return (e) => {
+        //     e.preventDefault();
+        //     defaultFilters: 'filters'
+        // }
         this.setState({
-            shoes: this.state.shoes.filter((shoe) => {
-                if (shoe.color === color[0].toUpperCase() + color.slice(1).toLowerCase()) {
+            // shoes: this.state.shoes.filter((shoe) => {
+            //     if (shoe.color === color[0].toUpperCase() + color.slice(1).toLowerCase()) {
+            //         return true;
+            //     } else {
+            //         return false;
+            //     }
+            // })
+            defaultFilters: color
+            
+            //set defaultFilter
+            // defaultFilter
+        });
+
+    }
+    render() { //hit this first before hit componentdidmount
+        const { shoes } = this.state.shoes;
+        // console.log(this.state);
+       
+        if (this.state.shoes === null) {
+            return null;
+        }
+
+        let currentShoes = this.state.shoes;
+        if (this.state.defaultFilters !== 'default') {
+            currentShoes = this.state.shoes.filter((shoe) => {
+                if (shoe.color === this.state.defaultFilters) {
                     return true;
                 } else {
                     return false;
                 }
             })
-        });
-    }
-    render() { //hit this first before hit componentdidmount
-        const { shoes } = this.state.shoes;
-        console.log(this.state);
-        // if (this.state.shoes === null) {
-        //     return null;
+        }
+        console.log(currentShoes);
        // valid to map over empty arr for will return an empty arr
+       
+       /*
+            let currShoes = this.state.shoes
+            if(this.state.defaultFault !== 'default'){
+                currShoes = this.state.shoes.filter( filter you want) ==> new array
+            }
+            render currShoes
+       */
             return (
                 <div>
-                    {this.state.shoes.map((shoe) => {
+                    {currentShoes.map((shoe) => {
                         return (
                         <div>
                                 {shoe.material + shoe.style + shoe.color + shoe.id + shoe.gender};
@@ -46,7 +86,7 @@ class ShoeIndex extends React.Component {
                         </div>
                         )
                     })}
-                    {['red', 'black', 'blue'].map((color) => {
+                    {['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'].map((color) => {
                         return <button onClick={() => this.handleClick(color)}>{color}</button>
                     })}
                 </div>
