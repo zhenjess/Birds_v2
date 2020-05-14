@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ShoeIndex from './shoe_index';
+import ShoeIndexz from './shoe_index';
 
 import { fetchAllShoes } from '../../actions/shoes_actions';
 
@@ -50,4 +50,4 @@ const mapDispatchToProps = dispatch => ({
     filterAllShoesByColor: (color) => dispatch(filterAllShoesByColor(color))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShoeIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(ShoeIndexz);

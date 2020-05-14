@@ -11,6 +11,7 @@ class ShoeIndex extends React.Component {
           defaultFilters: 'default', //color--> 'black', 'blue', 'size'
         };
         this.handleClick = this.handleClick.bind(this);
+        this.groupShoesByMaterialAndStyle = this.groupShoesByMaterialAndStyle.bind(this);
        // this.checkFilterType = this.checkFilterType.bind(this);
 
     }
@@ -49,6 +50,23 @@ class ShoeIndex extends React.Component {
 
     }
 
+    groupShoesByMaterialAndStyle(shoes) {
+        const materials = ['Wool', 'Tree'];
+        const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
+
+        for (let i = 0; i < materials.length; i++) {
+            let currMaterial = materials[i];
+
+            for (let j = 0; j < styles.length; j++) {
+                let currStyle = styles[j];
+
+                let shoeGroupArr = shoes.filter(shoe => 
+                    shoe.material.toLowerCase() === currMaterial && 
+                    shoe.style.toLowerCase() === currStyle
+                )
+            }
+        }
+    }
 
     render() { //hit this first before hit componentdidmount
         const { shoes } = this.state.shoes;
@@ -90,6 +108,7 @@ class ShoeIndex extends React.Component {
                     return false;
                 }
             })
+        }
             // shoe color, size, material..
             // if (shoe.color === this.state.defaultFilters) {
             //     shoe[filterType] === this.state.defaulFilters; //access shoe[type]
@@ -97,10 +116,9 @@ class ShoeIndex extends React.Component {
             // } else {
             //     return false;
             // }
-        }
         // includes() is constant in worst case for fixed arr length
 
-        console.log(currentShoes);
+        // console.log(currentShoes);
     
        // valid to map over empty arr for will return an empty arr
        

@@ -14,7 +14,7 @@ import Filter from './filter';
 
 import { filterAllShoesByColor } from '../../actions/filter_shoes_actions';
 
-class ShoeIndex extends React.Component {
+class ShoeIndexz extends React.Component {
     constructor(props) {
         super(props);
        // debugger // check props
@@ -469,6 +469,6 @@ class ShoeIndex extends React.Component {
     }
 }
 
-export default ShoeIndex;
+export default ShoeIndexz;
 
 
