@@ -58,14 +58,44 @@ class ShoeIndex extends React.Component {
         let currentShoes = this.state.shoes;
         if (this.state.defaultFilters !== 'default') {
             currentShoes = this.state.shoes.filter((shoe) => {
+                // shoe color, size, material..
                 if (shoe.color === this.state.defaultFilters) {
+                    shoe[type] === this.state.defaulFilters
+                 
+                    shoe.color ===> shoe["color"]
                     return true;
                 } else {
                     return false;
                 }
+
             })
         }
+
+        helper() {
+            if (this.state.defaulFilters is color) return "color";
+            else if (this.state.defaulFilters is number) return "size"
+            else if ()
+        }
+
+        // includes() is constant in worst case for fixed arr length
+
+        const materials = ['Wool', 'Tree'];
+        const colors = ['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'];
+        const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
+
         console.log(currentShoes);
+        
+        // if this.state.detault is a number, then size
+        // else check
+        function checkFilterType(defaultFilters) { 
+            if (this.state.defaultFilters === color) {
+                return 'color';
+            } else if (this.state.defaultFilters === style) {
+                return 'style';
+            } else if (this.state.defaultFilters === material) {
+                return 'material';
+            }
+        }
        // valid to map over empty arr for will return an empty arr
        
        /*
