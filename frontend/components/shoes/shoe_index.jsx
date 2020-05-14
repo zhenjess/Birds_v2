@@ -11,6 +11,7 @@ class ShoeIndex extends React.Component {
           defaultFilters: 'default', //color--> 'black', 'blue', 'size'
         };
         this.handleClick = this.handleClick.bind(this);
+       // this.checkFilterType = this.checkFilterType.bind(this);
 
     }
 
@@ -49,53 +50,56 @@ class ShoeIndex extends React.Component {
     }
     render() { //hit this first before hit componentdidmount
         const { shoes } = this.state.shoes;
+        const materials = ['Wool', 'Tree'];
+        const colors = ['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'];
+        const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
         // console.log(this.state);
        
         if (this.state.shoes === null) {
             return null;
         }
 
+        // if this.state.detault is a number, then size
+        // else check
+        //this is the helper function 
+        const checkFilterType = function(filter) {
+            if (colors.includes(filter)) {
+                return 'color';
+            } else if (styles.includes(filter)) {
+                return 'style';
+            } else if (materials.includes(filter)) {
+                return 'material';
+            }
+        }
+
+        /*
+            filterType = 'color'
+            shoe.color === shoe[filterType] // 'Red' === shoe['color']='Red'
+        */
+
         let currentShoes = this.state.shoes;
         if (this.state.defaultFilters !== 'default') {
+            //get filter type 
+            let filterType = checkFilterType(this.state.defaultFilters); // return either 'color', 'style', 'material'
             currentShoes = this.state.shoes.filter((shoe) => {
-                // shoe color, size, material..
-                if (shoe.color === this.state.defaultFilters) {
-                    shoe[type] === this.state.defaulFilters
-                 
-                    shoe.color ===> shoe["color"]
+                if (shoe[filterType] === this.state.defaultFilters) {
                     return true;
                 } else {
                     return false;
                 }
-
             })
+            // shoe color, size, material..
+            // if (shoe.color === this.state.defaultFilters) {
+            //     shoe[filterType] === this.state.defaulFilters; //access shoe[type]
+            //     return true;
+            // } else {
+            //     return false;
+            // }
         }
-
-        helper() {
-            if (this.state.defaulFilters is color) return "color";
-            else if (this.state.defaulFilters is number) return "size"
-            else if ()
-        }
-
         // includes() is constant in worst case for fixed arr length
 
-        const materials = ['Wool', 'Tree'];
-        const colors = ['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'];
-        const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
-
         console.log(currentShoes);
-        
-        // if this.state.detault is a number, then size
-        // else check
-        function checkFilterType(defaultFilters) { 
-            if (this.state.defaultFilters === color) {
-                return 'color';
-            } else if (this.state.defaultFilters === style) {
-                return 'style';
-            } else if (this.state.defaultFilters === material) {
-                return 'material';
-            }
-        }
+    
        // valid to map over empty arr for will return an empty arr
        
        /*
@@ -113,11 +117,19 @@ class ShoeIndex extends React.Component {
                                 {shoe.material + shoe.style + shoe.color + shoe.id + shoe.gender};
                                 <img src={shoe.photoUrl}></img>
 
+                                <shoeindexitem >
+
                         </div>
                         )
                     })}
-                    {['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'].map((color) => {
+                    {colors.map((color) => {
                         return <button onClick={() => this.handleClick(color)}>{color}</button>
+                    })}
+                    {styles.map((style) => {
+                        return <button onClick={() => this.handleClick(style)}>{style}</button>
+                    })}
+                    {materials.map((material) => {
+                        return <button onClick={() => this.handleClick(material)}>{material}</button>
                     })}
                 </div>
             );
