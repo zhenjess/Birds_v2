@@ -48,6 +48,8 @@ class ShoeIndex extends React.Component {
         });
 
     }
+
+
     render() { //hit this first before hit componentdidmount
         const { shoes } = this.state.shoes;
         const materials = ['Wool', 'Tree'];
@@ -117,7 +119,7 @@ class ShoeIndex extends React.Component {
                                 {shoe.material + shoe.style + shoe.color + shoe.id + shoe.gender};
                                 <img src={shoe.photoUrl}></img>
 
-                                <shoeindexitem >
+                                {/* <shoeindexitem > */}
 
                         </div>
                         )
