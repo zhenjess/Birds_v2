@@ -70,7 +70,20 @@ class ShoeIndex extends React.Component {
                     {cartItems}
                 </ul>
             );
-        }
+        };
+
+        const cartItems = Object.keys(this.props.shoes).length;
+
+        return (
+            <div>
+                <div className="shoe-index-head">
+                    <ShoesHeader
+                        cartItems={cartItems}
+                        gender={this.props.match.params.gender}
+                    />
+                </div>
+            </div>
+        );
     }
 }
 
