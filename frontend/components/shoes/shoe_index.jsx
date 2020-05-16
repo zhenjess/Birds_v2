@@ -17,4 +17,18 @@ class ShoeIndex extends React.Component {
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
     }
+
+    componentDidMount() {
+        const id = this.props.match.params.id;
+
+        this.props.fetchAllShoes();
+
+        if (this.props.currentUser) {
+            this.props.fetchCart(this.props.currentUser.id).then((cart) => {
+                this.setState({
+                    cart: cart
+                });
+            });
+        }
+    }
 }
