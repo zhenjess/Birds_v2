@@ -65,6 +65,11 @@ class ShoeIndex extends React.Component {
                     />
                 );
             });
+            return (
+                <ul>
+                    {cartItems}
+                </ul>
+            );
         }
     }
 }
