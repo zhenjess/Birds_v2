@@ -31,4 +31,25 @@ class ShoeIndex extends React.Component {
             });
         }
     }
+    
+    componentDidUpdate(prevProp) {
+        const id = this.props.match.params.id;
+        if (this.props.location.pathname !== prevProp.location.pathname) {
+        }
+    }
+
+    handleAnimationEnd() {
+        this.setState({ shouldAnimate: false });
+    }
+
+    startNotification() {
+        this.setState({ animateNotification: true });
+    }
+
+    endNotification() {
+        this.setState({ animateNotification: false });
+    }
+
 }
+
+export default ShoeIndex;
