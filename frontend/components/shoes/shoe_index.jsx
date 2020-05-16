@@ -82,6 +82,17 @@ class ShoeIndex extends React.Component {
                         gender={this.props.match.params.gender}
                     />
                 </div>
+
+                <div className="shoe">
+                    <div className="shoe-index-text">
+                        <h2>Wool Runners</h2>
+                        <ul className="shoe-category">
+                            {
+                                
+                            }
+                        </ul>
+                    </div>
+                </div>
             </div>
         );
     }
