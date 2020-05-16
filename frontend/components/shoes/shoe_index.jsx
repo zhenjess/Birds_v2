@@ -50,6 +50,23 @@ class ShoeIndex extends React.Component {
         this.setState({ animateNotification: false });
     }
 
+    render() {
+        const { shoes, addToCart } = this.props;
+        
+        const fetchCartItems = () => {
+            const cartItems = this.state.cartItems.map(cartItem => {
+                return (
+                    <CartItem
+                        startNotification={this.startNotification}
+                        animateItems={this.state.animateItems}
+                        addToCart={addToCart}
+                        cartItem={cartItem}
+                        key={`${cartItem.id}`}
+                    />
+                );
+            });
+        }
+    }
 }
 
 export default ShoeIndex;
