@@ -59,6 +59,12 @@ class ShoeIndex extends React.Component {
         this.setState({ animateNotification: false });
     }
 
+    handleClick(filter) {
+        this.setState({
+            defaultFilters: filter
+        });
+    }
+
     getShoesByMaterialAndStyle(shoes) {
         const materials = ['Wool', 'Tree'];
         const styles = ['Runners', 'Loungers', 'Skippers', 'Breezers'];
