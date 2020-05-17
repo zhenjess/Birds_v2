@@ -22,6 +22,12 @@ class ShoeIndex extends React.Component {
             animateItems: true,
             animateNotification: false,
             cart: {},
+            woolRunners: [],
+            treeRunners: [],
+            woolLoungers: [],
+            treeLoungers: [],
+            treeSkippers: [],
+            treeToppers: [],
             shoes: props.shoes,
             defaultFilters: 'default',
         };
@@ -36,19 +42,21 @@ class ShoeIndex extends React.Component {
     componentDidMount() {
         debugger
         const id = this.props.match.params.id;
-        const materials = ['Wool', 'Tree'];
-        const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
+
+        const material = ['wool', 'tree'];
+
+        const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
         debugger // check this.props
 
-        if (this.props.currentUser) {
-            this.props.fetchCart(this.props.currentUser.id)
-        }
+        // this.props.fetchCart(this.props.currentUser.id).then((cart) => {
+        //     this.props.fetchAllShoes().then(shoes => {
 
-        this.props.fetchAllShoes().then((shoes) => {
-            this.setState({
-                shoes: Object.values(shoes.payload.shoes)
-            });
-        })
+        //     });
+        // });
+
+        // if (this.props.currentUser) {
+        //     this.props.fetchCart(this.props.currentUser.id)
+        // }
 
         if (this.props.currentUser) {
             this.props.fetchCart(this.props.currentUser.id).then((cart) => {
@@ -57,12 +65,16 @@ class ShoeIndex extends React.Component {
                 });
             });
         }
+
+        this.props.fetchAllShoes().then(() => {
+            //this.getShoesByMaterialAndStyle(materials, styles);
+            //         this.props.fetchAllShoes().then((shoes) => {
+            this.setState({
+                shoes: Object.values(shoes.payload.shoes)
+            });
+        })
+
     }
-
-        // this.props.fetchAllShoes().then(() => {
-        //     this.getShoesByMaterialAndModel(material, style);
-        // })
-
 
         //props are passed in by parent component, props are configurations
         // this.props.fetchAllShoes().then(shoes => {
@@ -86,9 +98,10 @@ class ShoeIndex extends React.Component {
         const id = this.props.match.params.id;
         if (this.props.location.pathname !== prevProp.location.pathname) {
         }
+    }
         // debugger
         // shoes in props
-    }
+    
 
     //function definitions not yet used
     handleAnimationEnd() {
@@ -112,17 +125,17 @@ class ShoeIndex extends React.Component {
     }
 
     //this function is not yet used, is just defined
-    getShoesByMaterialAndStyle(materials, styles) { //expecting these args to be passed in when using the function
+    getShoesByMaterialAndStyle(material, style) { //expecting these args to be passed in when using the function
         debugger // check this.props.shoes
-        for (let i = 0; i < materials.length; i++) {
-            let currMaterial = materials[i];
+        for (let i = 0; i < material.length; i++) {
+            let currMaterial = material[i];
 
-            for (let j = 0; j < styles.length; j++) {
-                let currStyle = styles[j];
+            for (let j = 0; j < style.length; j++) {
+                let currStyle = style[j];
                 let key = currMaterial.concat(currStyle);
                 let shoesArr = this.props.shoes.filter(
-                    shoe => shoe.styles.toLowerCase() === currStyle.toLowerCase() &&
-                        shoe.materials.toLowerCase() === currMaterial.toLowerCase())
+                    shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() &&
+                        shoe.material.toLowerCase() === currMaterial.toLowerCase())
                 // debugger
                 this.setState({
                     [key]: shoesArr //this doesn't allow rerender in componentDidUpdate
@@ -132,9 +145,10 @@ class ShoeIndex extends React.Component {
     }
 
     render() {
-        const { shoes } = this.state.shoes;
         //const { shoes } = this.props;
+        const { shoes } = this.state.shoes;
         const { addToCart } = this.props;
+
         const materials = ['Wool', 'Tree'];
         const colors = ['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'];
         const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
@@ -185,8 +199,46 @@ class ShoeIndex extends React.Component {
             )
         }
 
-        const cartItems = Object.keys(this.props.shoes).length;
+        const material = ['wool', 'tree'];
+        const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
 
+        const cartItems = Object.keys(this.props.shoes).length;
+        let woolRunners = this.state.woolRunners ? this.state.woolRunners : [];
+        //let woolRunners = [];
+        let treeRunners = this.state.treeRunners ? this.state.treeRunners : [];
+        let woolLoungers = this.state.woolLoungers ? this.state.woolLoungers : [];
+        let treeLoungers = this.state.treeLoungers ? this.state.treeLoungers : [];
+        let treeSkippers = this.state.treeSkippers ? this.state.treeSkippers : [];
+        let treeToppers = this.state.treeToppers ? this.state.treeToppers : [];
+
+
+        for (let i = 0; i < material.length; i++) {
+            let currMaterial = material[i];
+
+            for (let j = 0; j < style.length; j++) {
+                let currStyle = style[j];
+                let key = currMaterial.concat(currStyle);
+                let shoesArr = this.props.shoes.filter(
+                    shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() &&
+                        shoe.material.toLowerCase() === currMaterial.toLowerCase())
+                // debugger
+                if (key === 'woolRunners') {
+                    woolRunners = shoesArr; //
+                } else if (key === 'treeRunners') {
+                    treeRunners = shoesArr;
+                } else if (key === 'woolLoungers') {
+                    woolLoungers = shoesArr;
+                } else if (key === 'treeLoungers') {
+                    treeLoungers = shoesArr;
+                } else if (key === 'treeSkippers') {
+                    treeSkippers = shoesArr;
+                } else if (key === 'treeToppers') {
+                    treeToppers = shoesArr;
+                } else if (key === 'treeBreezers') {
+                    treeBreezers = shoesArr;
+                }
+            }
+        }
         debugger // check this.props.shoes, woolRunners
         return (
 
@@ -195,14 +247,13 @@ class ShoeIndex extends React.Component {
                     <ShoesHeader
                         cartItems={cartItems}
                         gender={this.props.match.params.gender}
-                        // filterAllShoesByColor={this.props.filterAllShoesByColor}
+                        filterAllShoesByColor={this.props.filterAllShoesByColor}
                     />
                     {currentShoes.map((shoe) => {
                         return (
                             <div>
                                 {shoe.material + shoe.style + shoe.color + shoe.id + shoe.gender};
                                 <img src={shoe.photoUrl}></img>
-
                                 {/* <shoeindexitem > */}
                             </div>
                         )
@@ -225,7 +276,7 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndStyle('Wool', 'Runners').map(shoe => (                               
+                                woolRunners.map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -252,7 +303,7 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndStyle('Tree', 'Runners').map(shoe => (
+                                treeRunners.map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -277,7 +328,7 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndStyle('Wool', 'Loungers').map(shoe => (
+                                woolLoungers.map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -302,7 +353,7 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndStyle('Tree', 'Loungers').map(shoe => (
+                                treeLoungers.map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -328,7 +379,7 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndStyle('Tree', 'Skippers').map(shoe => (
+                                treeSkippers.map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -353,7 +404,7 @@ class ShoeIndex extends React.Component {
 
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialAndStyle('Tree', 'Toppers').map(shoe => (
+                                treeToppers.map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -372,6 +423,7 @@ class ShoeIndex extends React.Component {
                             }
 
                         </ul>
+
                         <br />
                     </div>
                 </div>
@@ -381,5 +433,4 @@ class ShoeIndex extends React.Component {
 }
 
 export default ShoeIndex;
-
 
