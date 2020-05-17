@@ -12,10 +12,13 @@ class ShoeIndex extends React.Component {
             animateItems: true,
             animateNotification: false,
             cart: {},
+            shoes: props.shoes,
+            defaultFilters: 'default',
         };
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
+        this.getShoesByMaterialAndStyle = this.getShoesByMaterialAndStyle.bind(this);
     }
 
     componentDidMount() {
@@ -106,7 +109,7 @@ class ShoeIndex extends React.Component {
                         <h2>Wool Runners</h2>
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialandStyle('wool', 'runners').map(shoe => (
+                                this.getShoesByMaterialAndStyle('wool', 'runners').map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -130,7 +133,7 @@ class ShoeIndex extends React.Component {
                         <h2>Tree Runners</h2>
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialandStyle('tree', 'runners').map(shoe => (
+                                this.getShoesByMaterialAndStyle('tree', 'runners').map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -154,7 +157,7 @@ class ShoeIndex extends React.Component {
                         <h2>Wool Loungers</h2>
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialandStyle('wool', 'loungers').map(shoe => (
+                                this.getShoesByMaterialAndStyle('wool', 'loungers').map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -178,7 +181,7 @@ class ShoeIndex extends React.Component {
                         <h2>Tree Loungers</h2>
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialandStyle('tree', 'loungers').map(shoe => (
+                                this.getShoesByMaterialAndStyle('tree', 'loungers').map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -202,7 +205,7 @@ class ShoeIndex extends React.Component {
                         <h2>Tree Skippers</h2>
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialandStyle('tree', 'skippers').map(shoe => (
+                                this.getShoesByMaterialAndStyle('tree', 'skippers').map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -226,7 +229,7 @@ class ShoeIndex extends React.Component {
                         <h2>Tree Toppers</h2>
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialandStyle('tree', 'toppers').map(shoe => (
+                                this.getShoesByMaterialAndStyle('tree', 'toppers').map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
@@ -250,7 +253,7 @@ class ShoeIndex extends React.Component {
                         <h2>Tree Breezers</h2>
                         <ul className="shoe-category">
                             {
-                                this.getShoesByMaterialandStyle('tree', 'breezers').map(shoe => (
+                                this.getShoesByMaterialAndStyle('tree', 'breezers').map(shoe => (
                                     <ShoeIndexItem
                                         shoe={shoe}
                                         key={shoe.id}
