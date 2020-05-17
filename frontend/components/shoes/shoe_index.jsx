@@ -50,6 +50,24 @@ class ShoeIndex extends React.Component {
         this.setState({ animateNotification: false });
     }
 
+    getShoesByMaterialAndStyle(shoes) {
+        const materials = ['Wool', 'Tree'];
+        const styles = ['Runners', 'Loungers', 'Skippers', 'Breezers'];
+
+        for (let i = 0; i < materials.length; i++) {
+            let currMaterial = materials[i];
+
+            for (let j = 0; j < styles.length; j++) {
+                let currStyle = styles[j];
+
+                let shoeGroupArr = shoes.filter(shoe => 
+                    shoe.material.toLowerCase() === currMaterial &&
+                    shoe.style.toLowerCase() === currStyle
+                )
+            }
+        }
+    }
+
     render() {
         const { shoes, addToCart } = this.props;
         
