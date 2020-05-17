@@ -88,7 +88,22 @@ class ShoeIndex extends React.Component {
                         <h2>Wool Runners</h2>
                         <ul className="shoe-category">
                             {
-                                
+                                this.getShoesByMaterialandStyle('wool', 'runners').map(shoe => (
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        updateCartItem={this.props.updateCartItem}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                        cartItem={this.props.cartItems}
+                                        history={this.props.history}
+                                    />
+                                ))
                             }
                         </ul>
                     </div>
