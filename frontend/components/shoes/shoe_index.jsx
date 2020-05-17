@@ -85,7 +85,7 @@ class ShoeIndex extends React.Component {
 
     render() {
         const { shoes } = this.state.shoes;
-        const { shoes, addToCart } = this.props;
+        const { addToCart } = this.props;
         const materials = ['Wool', 'Tree'];
         const colors = ['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'];
         const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
