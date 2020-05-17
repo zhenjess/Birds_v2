@@ -105,6 +105,18 @@ class ShoeIndex extends React.Component {
             }
         };
 
+        let currentShoes = this.state.shoes;
+        if (this.state.defaultFilters !== 'default') {
+            let filterType = checkFilterType(this.state.defaultFilters);
+            currentShoes = this.state.shoes.filter((shoe) => {
+                if (shoe[filterType] === this.state.defaultFilters) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        }
+
         const fetchCartItems = () => {
             const cartItems = this.state.cartItems.map(cartItem => {
                 return (
