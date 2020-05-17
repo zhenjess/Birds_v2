@@ -106,6 +106,150 @@ class ShoeIndex extends React.Component {
                                 ))
                             }
                         </ul>
+
+                        <br />
+
+                        <h2>Tree Runners</h2>
+                        <ul className="shoe-category">
+                            {
+                                this.getShoesByMaterialandStyle('tree', 'runners').map(shoe => (
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        updateCartItem={this.props.updateCartItem}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                        cartItem={this.props.cartItems}
+                                        history={this.props.history}
+                                    />
+                                ))
+                            }
+                        </ul>
+                       
+                        <br />
+
+                        <h2>Wool Loungers</h2>
+                        <ul className="shoe-category">
+                            {
+                                this.getShoesByMaterialandStyle('wool', 'loungers').map(shoe => (
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        updateCartItem={this.props.updateCartItem}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                        cartItem={this.props.cartItems}
+                                        history={this.props.history}
+                                    />
+                                ))
+                            }
+                        </ul>
+                       
+                        <br />
+
+                        <h2>Tree Loungers</h2>
+                        <ul className="shoe-category">
+                            {
+                                this.getShoesByMaterialandStyle('tree', 'loungers').map(shoe => (
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        updateCartItem={this.props.updateCartItem}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                        cartItem={this.props.cartItems}
+                                        history={this.props.history}
+                                    />
+                                ))
+                            }
+                        </ul>
+
+                        <br />
+
+                        <h2>Tree Skippers</h2>
+                        <ul className="shoe-category">
+                            {
+                                this.getShoesByMaterialandStyle('tree', 'skippers').map(shoe => (
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        updateCartItem={this.props.updateCartItem}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                        cartItem={this.props.cartItems}
+                                        history={this.props.history}
+                                    />
+                                ))
+                            }
+                        </ul>
+
+                        <br />
+
+                        <h2>Tree Toppers</h2>
+                        <ul className="shoe-category">
+                            {
+                                this.getShoesByMaterialandStyle('tree', 'toppers').map(shoe => (
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        updateCartItem={this.props.updateCartItem}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                        cartItem={this.props.cartItems}
+                                        history={this.props.history}
+                                    />
+                                ))
+                            }
+                        </ul>
+
+                        <br />
+
+                        <h2>Tree Breezers</h2>
+                        <ul className="shoe-category">
+                            {
+                                this.getShoesByMaterialandStyle('tree', 'breezers').map(shoe => (
+                                    <ShoeIndexItem
+                                        shoe={shoe}
+                                        key={shoe.id}
+                                        cart={this.state.cart}
+                                        currentUser={this.props.currentUser}
+                                        updateCartItem={this.props.updateCartItem}
+                                        createCartItem={this.props.createCartItem}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
+                                        cartItem={this.props.cartItems}
+                                        history={this.props.history}
+                                    />
+                                ))
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>
