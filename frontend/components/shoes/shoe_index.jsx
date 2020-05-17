@@ -75,14 +75,16 @@ class ShoeIndex extends React.Component {
             for (let j = 0; j < styles.length; j++) {
                 let currStyle = styles[j];
 
-                let shoeGroupArr = shoes.filter(shoe => 
-                    shoe.material.toLowerCase() === currMaterial &&
-                    shoe.style.toLowerCase() === currStyle
-                );
+                let shoeGroupArr = this.shoes.filter(
+                    shoe => shoe.material.toLowerCase() === currMaterial &&
+                    shoe.style.toLowerCase() === currStyle)
 
-                return shoeGroupArr;
+                    this.setState({
+                        shoeGroupArr: shoeGroupArr
+                    });
             }
         }
+        return shoeGroupArr;
     }
 
     render() {
