@@ -145,6 +145,27 @@ class ShoeIndex extends React.Component {
                         cartItems={cartItems}
                         gender={this.props.match.params.gender}
                     />
+
+                    {currentShoes.map((shoe) => {
+                        return (
+                            <div>
+                                {shoe.material + shoe.style + shoe.color + shoe.id + shoe.gender};
+                                <img src={shoe.photoUrl}></img>
+
+                                {/* <shoeindexitem > */}
+
+                            </div>
+                        )
+                    })}
+                    {colors.map((color) => {
+                        return <button onClick={() => this.handleClick(color)}>{color}</button>
+                    })}
+                    {styles.map((style) => {
+                        return <button onClick={() => this.handleClick(style)}>{style}</button>
+                    })}
+                    {materials.map((material) => {
+                        return <button onClick={() => this.handleClick(material)}>{material}</button>
+                    })}
                 </div>
 
                 <div className="shoe">
