@@ -23,7 +23,7 @@ class ShoeIndex extends React.Component {
             animateNotification: false,
             cart: {},
             shoes: props.shoes,
-            defaultFilters: 'default';
+            defaultFilters: 'default',
         };
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
         this.startNotification = this.startNotification.bind(this);
