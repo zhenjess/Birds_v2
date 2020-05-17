@@ -95,6 +95,16 @@ class ShoeIndex extends React.Component {
             return null;
         }
         
+        const checkFilterType = function (filter) {
+            if (colors.includes(filter)) {
+                return 'color';
+            } else if (styles.includes(filter)) {
+                return 'style';
+            } else if (materials.includes(filter)) {
+                return 'material';
+            }
+        };
+
         const fetchCartItems = () => {
             const cartItems = this.state.cartItems.map(cartItem => {
                 return (
