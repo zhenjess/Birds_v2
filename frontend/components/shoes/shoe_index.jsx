@@ -78,7 +78,9 @@ class ShoeIndex extends React.Component {
                 let shoeGroupArr = shoes.filter(shoe => 
                     shoe.material.toLowerCase() === currMaterial &&
                     shoe.style.toLowerCase() === currStyle
-                )
+                );
+
+                return shoeGroupArr;
             }
         }
     }
