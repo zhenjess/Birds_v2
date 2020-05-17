@@ -1,7 +1,7 @@
 import React from 'react';
 import ShoeIndexItem from './shoe_index_item';
 
-class ShoeIndex extends React.Component {
+class Shoe extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -234,4 +234,4 @@ class ShoeIndex extends React.Component {
     }
 };
 
-export default ShoeIndex;
+export default Shoe;

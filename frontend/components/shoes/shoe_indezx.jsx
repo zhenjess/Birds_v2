@@ -237,7 +237,7 @@ class ShoeIndexz extends React.Component {
     }
 }
 
-       debugger // check this.props.shoes, woolRunners
+      // debugger // check this.props.shoes, woolRunners
         return (
             <div>
                 {currentShoes.map((shoe) => {

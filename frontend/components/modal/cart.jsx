@@ -6,7 +6,7 @@ import CartItem from './cart_item';
 
 import { deleteCartItem, deleteCartItems, updateCartItem } from '../../util/cart_items_api_util';
 
-import ShoeIndexz from '../shoes/shoe_index';
+import ShoeIndex from '../shoes/shoe_index';
 
 import ShoeIndexContainer from '../shoes/shoe_index_container';
 
