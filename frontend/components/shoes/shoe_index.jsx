@@ -19,6 +19,7 @@ class ShoeIndex extends React.Component {
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
         this.getShoesByMaterialAndStyle = this.getShoesByMaterialAndStyle.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
