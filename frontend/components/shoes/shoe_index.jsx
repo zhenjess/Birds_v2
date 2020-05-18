@@ -70,7 +70,8 @@ class ShoeIndex extends React.Component {
             //this.getShoesByMaterialAndStyle(materials, styles);
             //         this.props.fetchAllShoes().then((shoes) => {
             this.setState({
-                shoes: Object.values(shoes.payload.shoes)
+                // shoes: Object.values(shoes.payload.shoes)
+                shoes: Object.values(this.props.shoes)
             });
         })
 
@@ -218,7 +219,7 @@ class ShoeIndex extends React.Component {
             for (let j = 0; j < style.length; j++) {
                 let currStyle = style[j];
                 let key = currMaterial.concat(currStyle);
-                let shoesArr = this.props.shoes.filter(
+                let shoesArr = currentShoes.filter(
                     shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() &&
                         shoe.material.toLowerCase() === currMaterial.toLowerCase())
                 // debugger
@@ -249,15 +250,15 @@ class ShoeIndex extends React.Component {
                         gender={this.props.match.params.gender}
                         filterAllShoesByColor={this.props.filterAllShoesByColor}
                     />
-                    {currentShoes.map((shoe) => {
+                    {/* {currentShoes.map((shoe) => {
                         return (
                             <div>
                                 {shoe.material + shoe.style + shoe.color + shoe.id + shoe.gender};
                                 <img src={shoe.photoUrl}></img>
-                                {/* <shoeindexitem > */}
+                                 <shoeindexitem > 
                             </div>
                         )
-                    })}
+                    })} */}
                     {colors.map((color) => {
                         return <button onClick={() => this.handleClick(color)}>{color}</button>
                     })}
