@@ -26,10 +26,14 @@ class ShoesHeader extends React.Component {
     }
 
     addFilter(typeOfFilter, filter) {
-        debugger
+     //   debugger
         if (typeOfFilter === 'color') {
             this.props.filterAllShoesByColor(filter); //come back to this
-        }
+        } else if (typeOfFilter === 'style') {
+            this.props.filterAllShoesByStyle(filter);
+        } else if (typeOfFilter === 'material') {
+            this.props.filterAllShoesByMaterial(filter);
+        } 
 
         // if typeOfFilter === color ==> filterAll shoes by color(color)
         // if typeOfFilter === style ==> filterallshoesbystyle(style)
@@ -69,7 +73,7 @@ class ShoesHeader extends React.Component {
         const handleFilterAttrs = this.handleFilterAttrs;
         const { gender } = this.props;
         //console.log(this.state);
-        debugger
+      //  debugger
         if (gender === 'women') {
 
             return (

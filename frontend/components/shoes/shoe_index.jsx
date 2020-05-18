@@ -10,12 +10,12 @@ import Filter from './filter';
 
 // import ShoeFilter from './shoe_filter';
 
-import { filterAllShoesByColor } from '../../actions/filter_shoes_actions';
+import { filterAllShoesByColor, filterAllShoesByStyle, filterAllShoesByMaterial } from '../../actions/filter_shoes_actions';
 
 class ShoeIndex extends React.Component {
     constructor(props) {
         super(props);
-        debugger // check props
+        //debugger // check props
         this.state = {
             items: [],
             shouldAnimate: false,
@@ -40,13 +40,13 @@ class ShoeIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
+        //debugger
         const id = this.props.match.params.id;
 
         const material = ['wool', 'tree'];
 
         const style = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
-        debugger // check this.props
+     //   debugger // check this.props
 
         // this.props.fetchCart(this.props.currentUser.id).then((cart) => {
         //     this.props.fetchAllShoes().then(shoes => {
@@ -127,7 +127,7 @@ class ShoeIndex extends React.Component {
 
     //this function is not yet used, is just defined
     getShoesByMaterialAndStyle(material, style) { //expecting these args to be passed in when using the function
-        debugger // check this.props.shoes
+       // debugger // check this.props.shoes
         for (let i = 0; i < material.length; i++) {
             let currMaterial = material[i];
 
@@ -146,39 +146,39 @@ class ShoeIndex extends React.Component {
     }
 
     render() {
-        //const { shoes } = this.props;
-        const { shoes } = this.state.shoes;
+        const { shoes } = this.props;
+        //const { shoes } = this.state.shoes;
         const { addToCart } = this.props;
 
-        const materials = ['Wool', 'Tree'];
-        const colors = ['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'];
-        const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
+        // const materials = ['Wool', 'Tree'];
+        // const colors = ['Black', 'Grey', 'White', 'Red', 'Green', 'Blue'];
+        // const styles = ['Runners', 'Loungers', 'Skippers', 'Toppers'];
 
         if (this.state.shoes === null) {
             return null;
         }
 
-        const checkFilterType = function (filter) {
-            if (colors.includes(filter)) {
-                return 'color';
-            } else if (styles.includes(filter)) {
-                return 'style';
-            } else if (materials.includes(filter)) {
-                return 'material';
-            }
-        };
+        // const checkFilterType = function (filter) {
+        //     if (colors.includes(filter)) {
+        //         return 'color';
+        //     } else if (styles.includes(filter)) {
+        //         return 'style';
+        //     } else if (materials.includes(filter)) {
+        //         return 'material';
+        //     }
+        // };
 
-        let currentShoes = this.state.shoes;
-        if (this.state.defaultFilters !== 'default') {
-            let filterType = checkFilterType(this.state.defaultFilters);
-            currentShoes = this.state.shoes.filter((shoe) => {
-                if (shoe[filterType] === this.state.defaultFilters) {
-                    return true;
-                } else {
-                    return false;
-                }
-            });
-        }
+        // let currentShoes = this.state.shoes;
+        // if (this.state.defaultFilters !== 'default') {
+        //     let filterType = checkFilterType(this.state.defaultFilters);
+        //     currentShoes = this.state.shoes.filter((shoe) => {
+        //         if (shoe[filterType] === this.state.defaultFilters) {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     });
+        // }
 
         const fetchCartItems = () => {
             const cartItems = this.state.cartItems.map(cartItem => {
@@ -205,7 +205,6 @@ class ShoeIndex extends React.Component {
 
         const cartItems = Object.keys(this.props.shoes).length;
         let woolRunners = this.state.woolRunners ? this.state.woolRunners : [];
-        //let woolRunners = [];
         let treeRunners = this.state.treeRunners ? this.state.treeRunners : [];
         let woolLoungers = this.state.woolLoungers ? this.state.woolLoungers : [];
         let treeLoungers = this.state.treeLoungers ? this.state.treeLoungers : [];
@@ -219,7 +218,7 @@ class ShoeIndex extends React.Component {
             for (let j = 0; j < style.length; j++) {
                 let currStyle = style[j];
                 let key = currMaterial.concat(currStyle);
-                let shoesArr = currentShoes.filter(
+                let shoesArr = shoes.filter(
                     shoe => shoe.style.toLowerCase() === currStyle.toLowerCase() &&
                         shoe.material.toLowerCase() === currMaterial.toLowerCase())
                 // debugger
@@ -240,7 +239,7 @@ class ShoeIndex extends React.Component {
                 }
             }
         }
-        debugger // check this.props.shoes, woolRunners
+      //  debugger // check this.props.shoes, woolRunners
         return (
 
             <div>
@@ -249,6 +248,8 @@ class ShoeIndex extends React.Component {
                         cartItems={cartItems}
                         gender={this.props.match.params.gender}
                         filterAllShoesByColor={this.props.filterAllShoesByColor}
+                        filterAllShoesByStyle={this.props.filterAllShoesByStyle}
+                        filterAllShoesByMaterial={this.props.filterAllShoesByMaterial}
                     />
                     {/* {currentShoes.map((shoe) => {
                         return (
@@ -259,15 +260,15 @@ class ShoeIndex extends React.Component {
                             </div>
                         )
                     })} */}
-                    {colors.map((color) => {
-                        return <button onClick={() => this.handleClick(color)}>{color}</button>
+                    {/* {colors.map((color) => {
+                        return <button key={color} onClick={() => this.handleClick(color)}>{color}</button>
                     })}
                     {styles.map((style) => {
-                        return <button onClick={() => this.handleClick(style)}>{style}</button>
+                        return <button key={style} onClick={() => this.handleClick(style)}>{style}</button>
                     })}
                     {materials.map((material) => {
-                        return <button onClick={() => this.handleClick(material)}>{material}</button>
-                    })}
+                        return <button key={material} onClick={() => this.handleClick(material)}>{material}</button>
+                    })} */}
                 </div>
 
                 <div className="shoe">

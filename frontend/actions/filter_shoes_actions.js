@@ -23,13 +23,13 @@ export const filterAllShoesByColor = (payload) => dispatch => {
     return dispatch(filterByColor(payload));
 }; //currying here fn returning another fn
 
+export const filterAllShoesByStyle = (payload) => dispatch => {
+    //debugger
+    return dispatch(filterByStyle(payload));
+}; //currying here fn returning another fn
 
-export const filterAllShoesByStyle = () => dispatch => (
-    store.filterAllShoesByStyle()
-        .then(payload => dispatch(filterByStyle(payload)))
-);
+export const filterAllShoesByMaterial = (payload) => dispatch => {
+    //debugger
+    return dispatch(filterByMaterial(payload));
+}; //currying here fn returning another fn
 
-export const filterAllShoesByMaterial = () => dispatch => (
-    store.filterAllShoesByMaterial()
-        .then(payload => dispatch(filterByMaterial(payload)))
-);

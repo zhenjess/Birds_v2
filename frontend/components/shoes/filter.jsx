@@ -9,6 +9,7 @@ class Filter extends React.Component {
 
         console.log('console logging:', this.props.filters);
 
+       // debugger
         const filters = this.props.filters.map( filter => (  
             <li className={`${this.props.id}-dropdown-attributes`}
                 onClick={() => this.props.addFilter(this.props.id, filter)}

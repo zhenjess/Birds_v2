@@ -11,6 +11,9 @@ import {
 
 const shoesReducer = (oldState={}, action) => {
     Object.freeze(oldState);
+    let newState = Object.assign({}, oldState);
+    let shoeKeyOfIds = Object.keys(oldState); // arr of shoe ids
+
 
     switch(action.type) {
         case RECEIVE_ALL_SHOES:
@@ -26,20 +29,20 @@ const shoesReducer = (oldState={}, action) => {
             return Object.assign({}, oldState, newShoe);
 
         case FILTER_BY_COLOR:
-            let newState = Object.assign({}, oldState);
 
             let shoesFilteredByColor = [];
-            let shoeKeyOfIds = Object.keys(oldState); // arr of shoe ids
 
             for (let i = 0; i < shoeKeyOfIds.length; i++) {
                 let id = parseInt(shoeKeyOfIds[i]); //ex. "76"
-                // debugger
-                // let shoe = oldState[id]; //is shoe object:
-                if (oldState[id].color === action.payload) { //action.payload === 'black'
-                    shoesFilteredByColor.push(oldState[id]); //arr of shoe objects
+                if (!isNaN(id)) { //before hit 'red' shoes global state doesn't have filter, when hit red, there is a filter at end
+                    // let shoe = oldState[id]; //is shoe object:
+                    if (oldState[id].color === action.payload) { //action.payload === 'black'
+                        shoesFilteredByColor.push(oldState[id]); //arr of shoe objects
+                    }
                 }
+                //debugger
             }
-            debugger
+         //   debugger
             newState["filtered"] = shoesFilteredByColor;
             return newState;    //have all shoes and filtered shoes
                 // {76:
@@ -55,35 +58,72 @@ const shoesReducer = (oldState={}, action) => {
             // debugger
             // shoes state: {allshoes}, "filtered": [all shoes matching that filter] array of shoe obj elements
         case FILTER_BY_STYLE:
+
             let shoesFilteredByStyle = [];
-            let shoeStyleKeys = Object.keys(oldState);
-            for (let i = 0; i < shoeStyleKeys.length; i++) {
-                let id = shoeStyleKeys[i];
-                let shoe = oldState.shoes[id]; //is shoe object
-            }
 
-            if (shoe.style === action.payload.style) {
-                shoesFilteredByStyle.push(shoe);
+            for (let i = 0; i < shoeKeyOfIds.length; i++) {
+                let id = parseInt(shoeKeyOfIds[i]); //ex. "76"
+                if (!isNaN(id)) { //before hit 'red' shoes global state doesn't have filter, when hit red, there is a filter at end
+                    // let shoe = oldState[id]; //is shoe object:
+                    if (oldState[id].style === action.payload) { //action.payload === 'black'
+                        shoesFilteredByStyle.push(oldState[id]); //arr of shoe objects
+                    }
+                }
+                //debugger
             }
-            return shoesFilteredByStyle;
+            //   debugger
+            newState["filtered"] = shoesFilteredByStyle;
+            return newState;    //have all shoes and filtered shoes
+
         case FILTER_BY_MATERIAL:
-            // look through all shoes in the oldstate
-            // find shoes that match action.payload.material
-            // return an object with all the shoes that match
-            let shoesFilteredByMaterial = [];
-            let shoeMaterialKeys = Object.keys(oldState);
-            for (let i = 0; i < shoeMaterialKeys.length; i++) {
-                let id = shoeMaterialKeys[i];
-                let shoe = oldState.shoes[id]; //is shoe object
-            }
 
-            if (shoe.material === action.payload.material) {
-                shoesFilteredByMaterial.push(shoe);
+            let shoesFilteredByMaterial = [];
+
+            for (let i = 0; i < shoeKeyOfIds.length; i++) {
+                let id = parseInt(shoeKeyOfIds[i]); //ex. "76"
+                if (!isNaN(id)) { //before hit 'red' shoes global state doesn't have filter, when hit red, there is a filter at end
+                    // let shoe = oldState[id]; //is shoe object:
+                    if (oldState[id].material === action.payload) { //action.payload === 'black'
+                        shoesFilteredByMaterial.push(oldState[id]); //arr of shoe objects
+                    }
+                }
+                //debugger
             }
-            return shoesFilteredByMaterial;
+            //   debugger
+            newState["filtered"] = shoesFilteredByMaterial;
+            return newState;    //have all shoes and filtered shoes
         default:
             return oldState;
     }
 };
 
 export default shoesReducer;
+
+
+//         case FILTER_BY_STYLE:
+// let shoesFilteredByStyle = [];
+// let shoeStyleKeys = Object.keys(oldState);
+// for (let i = 0; i < shoeStyleKeys.length; i++) {
+//     let id = shoeStyleKeys[i];
+//     let shoe = oldState.shoes[id]; //is shoe object
+// }
+
+// if (shoe.style === action.payload.style) {
+//     shoesFilteredByStyle.push(shoe);
+// }
+// return shoesFilteredByStyle;
+//         case FILTER_BY_MATERIAL:
+// // look through all shoes in the oldstate
+// // find shoes that match action.payload.material
+// // return an object with all the shoes that match
+// let shoesFilteredByMaterial = [];
+// let shoeMaterialKeys = Object.keys(oldState);
+// for (let i = 0; i < shoeMaterialKeys.length; i++) {
+//     let id = shoeMaterialKeys[i];
+//     let shoe = oldState.shoes[id]; //is shoe object
+// }
+
+// if (shoe.material === action.payload.material) {
+//     shoesFilteredByMaterial.push(shoe);
+// }
+// return shoesFilteredByMaterial;

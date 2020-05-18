@@ -14,7 +14,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 import { createCartItem, updateCartItem } from '../../actions/cart_items_actions';
 
-import { filterAllShoesByColor } from '../../actions/filter_shoes_actions';
+import { filterAllShoesByColor, filterAllShoesByStyle, filterAllShoesByMaterial } from '../../actions/filter_shoes_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const shoeId = ownProps.match.params.id;
@@ -47,7 +47,10 @@ const mapDispatchToProps = dispatch => ({
     addToCart: (cartItem) => dispatch(addToCart(cartItem)),
     openModal: () => dispatch(openModal()),
     closeModal: () => dispatch(closeModal()),
-    filterAllShoesByColor: (color) => dispatch(filterAllShoesByColor(color))
+    filterAllShoesByColor: (color) => dispatch(filterAllShoesByColor(color)),
+    filterAllShoesByStyle: (style) => dispatch(filterAllShoesByStyle(style)),
+    filterAllShoesByMaterial: (material) => dispatch(filterAllShoesByMaterial(material))
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoeIndex);
