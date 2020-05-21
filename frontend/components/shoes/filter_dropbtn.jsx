@@ -1,6 +1,6 @@
 import React from 'react';
 
-const dropDownBtn = ({ openFilter, currentOpenFilter, title, id, filters, dropDownFilter, handleFilterAttrs }) => {
+const DropDownBtn = ({ openFilter, currentOpenFilter, title, id, filters, dropDownFilter, handleFilterAttrs }) => {
 
     if (dropDownFilter) {
         return (
@@ -41,4 +41,4 @@ const dropDownBtn = ({ openFilter, currentOpenFilter, title, id, filters, dropDo
     }
 };
 
-export default dropDownBtn;
+export default DropDownBtn;

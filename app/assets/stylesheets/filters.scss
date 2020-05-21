@@ -24,6 +24,7 @@
     background-color: rgb(199, 199, 199);
     &:hover {
        background-color: rgb(211, 211, 211);
+       cursor: pointer;
     }
 }
 
@@ -92,9 +93,8 @@
     }
 
     h4 {
-        transform: translateY(18px);
+        transform: translateY(30px);
     }
-
 }
 
 .style-dropdown-attributes {
