@@ -16,6 +16,7 @@
     background-color: rgb(65, 65, 65);
     &:hover {
        background-color: rgb(90, 90, 90);
+       cursor: pointer;
     }
 }
 
@@ -30,6 +31,7 @@
     background-color: rgb(240, 240, 230);
     &:hover {
        background-color: rgb(245, 246, 238);
+       cursor: pointer;
     }
 }
 
@@ -37,6 +39,7 @@
     background-color: #b41e37;
     &:hover {
        background-color: #ce2440;
+       cursor: pointer;
     }
 }
 
@@ -44,6 +47,7 @@
     background-color: #475c3f;
     &:hover {
        background-color: #58754d;
+       cursor: pointer;
     }
 }
 
@@ -51,6 +55,7 @@
     background-color: #100858;
     &:hover {
        background-color: #3e358a;
+       cursor: pointer;
     }
 }
 
@@ -118,18 +123,22 @@
 
 #Runners {
     background: image-url("silhouette_runner.png"); 
+    cursor: pointer;
 }
 
 #Loungers {
     background: image-url("silhouette_lounger.png"); 
+    cursor: pointer;
 }
 
 #Skippers {
     background: image-url("silhouette_skipper.png"); 
+    cursor: pointer;
 }
 
 #Toppers {
     background: image-url("silhouette_topper.png"); 
+    cursor: pointer;
 }
 
 #Runners, 
@@ -169,6 +178,7 @@
     background-color: rgb(240, 240, 230);
     &:hover {
         background-color: rgb(245, 246, 238);
+        cursor: pointer;
     }
 }
 
@@ -176,5 +186,6 @@
     background-color: #2d5c1a;
     &:hover {
         background-color: #58754d;
+        cursor: pointer;
     }
 }
