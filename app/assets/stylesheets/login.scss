@@ -5,7 +5,6 @@
 }
 .login-form {
     position: relative;
-
     margin: 215px 100px 215px 100px;
 }
 .login-content {
@@ -15,16 +14,12 @@
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 450;
-
     h2 {
         font-family: 'Roboto', sans-serif;
         font-size: 25px;
-
         margin-bottom: 100px;
     }
-
     input {
-
         box-sizing: border-box;
         min-height: 40px;
         min-width: 400px;
@@ -35,14 +30,11 @@
         font-size: 13px;
         border-radius: 2px;
     }
-
-
     .submit:hover {
         cursor: pointer;
         background-color: #EEE8E6;
         color: black;
     }
-
     .submit{
         background-color: black;
         color: white;
@@ -51,16 +43,13 @@
         transition: 0.3s;
         border: 2px solid black;
     }
-
 }
 .errors {
     top: 120px;
     position: absolute;
-
     ul {
         padding: 0px;
     }
-
     li  {
         list-style-type: none;
         padding: 0px;

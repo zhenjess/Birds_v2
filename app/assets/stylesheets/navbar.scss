@@ -8,36 +8,30 @@
   align-items: center;
   z-index: 1;
 }
-
 .header {
-    display: flex;
-    box-shadow: none;
+  display: flex;
+  box-shadow: none;
 }
-
 .active-header {
-    display: flex;
+  display: flex;
 }
-
 .active-header.with-dropdown {
-    box-shadow: none;
+  box-shadow: none;
 }
-
 #navs {
-    display: flex;
-    justify-content: space-between;
-    align-items: space-around;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-around;
+  width: 100%;
 }
-
 .nav-link h2 {
-   top: 8px;
-   font-family: 'Roboto', sans-serif;
-   font-size: 14px;
+  top: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
-
 h2.nav-link {
-    font-family: $title-font-1;
-    font-size: 12px; 
+  font-family: $title-font-1;
+  font-size: 12px; 
 }
 
 .a-header-button {

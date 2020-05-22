@@ -2,15 +2,12 @@ body, html {
     height: 100%;
     width: 100%;
 }
-
 a {
     color: black;
 }
-
 a:visited {
     color: black;
 }
-
 .women-shoe-image {
     display: flex;
     background-image: image-url("women.png");
@@ -25,22 +22,18 @@ a:visited {
     justify-content: center;
     min-height: 500px;
     box-sizing: inherit;
-
     .shoe-header-text {
         text-align: center;
         color: white;
         font-family: 'Merriweather Sans', sans-serif;
-
         .shoe-header-title {
             font-size: 48px;
         }
-
         .shoe-header-texts {
             font-size: 16px;
         }
     }
 }
-
 .shoe-bar {
     height: 75px;
     display: flex;
@@ -52,7 +45,6 @@ a:visited {
     z-index: 10;
     border-bottom: 1px solid gray;
     top: 0px; 
-
     .left-bar p {
         position: relative;
         width: 220px;
@@ -63,23 +55,18 @@ a:visited {
         margin-left: 50px;
         top: 4px;
     }
-
     ul li {
         margin: 10px;
     }
-
     .open-filter-dropdown {
         max-height: 200px;
     }
-
     .close-filter-dropdown {
         max-height: 0px;
     }
-
     .animation-wipe {
         animation: wipe .5s;
     }
-
    .right-bar {
         position: relative;
         width: 350px;
@@ -90,44 +77,36 @@ a:visited {
         font-weight: bold;
         display: flex;
         align-items: center;
-
         &:hover {
             cursor: pointer;
             user-select: none;
-        }
-        
+        } 
         .shoe-filter-container {
             display: flex;
             height: 40px;
             margin-left: 10px;
             align-items: flex-start;
             justify-content: flex-end;
-            overflow: hidden;
-            
+            overflow: hidden;     
             .swipe-left {
                 animation: swipe-left .3s;
             }  
-
             h2 {
                 font-family: 'Roboto', sans-serif;
                 font-size: 16px;
                 margin-left: 10px;
             }
-
             h5 {
                 margin-left: 10px;
                 box-sizing: border-box;
                 width: 20px;
             }
-
             .x {
                 font-size: 18px;
             }
-
             .minus {
                 font-size: 32px;
             }
-
             .drop-down {
                 margin-top: 15px;
                 font-size: 16px;
@@ -135,7 +114,6 @@ a:visited {
         }
     }
 }
-
 .men-shoe-image {
     display: flex;
     background-image: image-url("men.png");
@@ -150,22 +128,18 @@ a:visited {
     justify-content: center;
     min-height: 500px;
     box-sizing: inherit;
-
     .shoe-header-text {
         text-align: center;
         color: white;
         font-family: 'Merriweather Sans', sans-serif;
-
         .shoe-header-title {
             font-size: 48px;
         }
-
         .shoe-header-texts {
             font-size: 16px;
         }
     }
 }
-
 .shoe-index-item {
     flex-direction: row;
     background-repeat: no-repeat;
@@ -173,17 +147,14 @@ a:visited {
     padding: 0px;
     position: relative;
     list-style-type: none;
-
     .shoe-image {
         display: flex;
         margin: 10px;
-    
         img {
             width: 300px;
         }
     }
 }
-
 .shoe {
     footer {
         height: 200px;
@@ -198,7 +169,6 @@ a:visited {
         vertical-align: baseline;
     }
 }
-
 .shoe-index-text {
     font-family: sans-serif;
     margin-top: 75px;
@@ -206,7 +176,6 @@ a:visited {
     font-size: 24px;
     line-height: 1.31;
 }
-
 .shoe-category {
     display: flex;
     flex-wrap: wrap;  
@@ -215,8 +184,6 @@ a:visited {
     background-size: cover;
     padding: 0px;
 }
-
-
 .shoe-index-item:hover {
     box-shadow: 50px 50px 50px 50px #ebe8e8;
 }

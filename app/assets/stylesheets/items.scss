@@ -4,15 +4,12 @@
 .fadeInUp {
   animation: fadeInUp .3s;
 }
-
 .item {
     margin: 20px 20px 20px 20px;
-    
     .shoe-item-color {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         h3 {
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
@@ -20,12 +17,10 @@
         margin: 10px 0 5px 10px;
         }
     }
-
     .shoe-image {
         height: 350px;
         width: 350px;
-        background-color: $bg-light-grey;
-        
+        background-color: $bg-light-grey; 
         .shoe-image-item {
             height: 350px;
             width: 350px;
@@ -37,11 +32,9 @@
             }
         }
     }
-
     .shoe-item-content {
         display: flex;
         flex-direction: row;
-
         h3 {
             font-family: 'Roboto', sans-serif;
             font-weight: bold;
@@ -50,17 +43,14 @@
         }
     }
 }
-
 .size-selections-container {
     display: flex;
     justify-content: center;
     margin-left: -40px;
-
     .size {
         display: flex;
         align-items: center;
         justify-content: center;
-
         h4 {
             box-sizing: border-box;
             padding: 20px;
@@ -80,7 +70,6 @@
 
     }
 }
-
 .notification {
     position: fixed;
     box-sizing: border-box;
@@ -98,9 +87,7 @@
     color: transparent;
     background: transparent;
     border: 10px solid black;
-
 }
-
 .fadeout {
     animation: fadeout 3s;
     &:hover {

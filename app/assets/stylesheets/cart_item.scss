@@ -1,5 +1,4 @@
 @import 'utils';
-
 .cart-item-container {
     display: flex;
     align-items: center;
@@ -9,20 +8,17 @@
     padding-bottom: 20px;
     border-bottom: 1px solid $bg-grey;
 }
-
 .cart-item-image-container {
     height: 114px;
     width: 114px;
     background-color: $bg-grey;
     margin-right: 20px;
 }
-
 .cart-image {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
-
 .cart-item-info {
     width: 307px;
     height: 114px;
@@ -30,21 +26,17 @@
     flex-direction: column;
     align-items: space-between;
 }
-
 .cart-item-info h2{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
-
 .cart-item-info h3 {
     font-size: 14px;
     margin: 5px 0 5px 0;
 }
-
 .quantity-container {
     margin: 10px 0 0 0;
 }
-
 .quantity-buttons {
     display: flex;
     justify-content: center;
@@ -52,13 +44,11 @@
     border: 2px solid $mid-grey;
     width: min-content;
 }
-
 .quantity-integer {
     font-size: 14px;
     width: 15px;
     text-align: center;
 }
-
 .change-quantity {
     &:hover {
         cursor: pointer;
@@ -70,12 +60,10 @@
     font-size: 24px;
     transition: 0.2s;
 }
-
 .cart-item-back-container {
     height: 114px;
     padding-right: 15px;
 }
-
 .cart-item-back {
     display: flex;
     height: 100%;
@@ -83,7 +71,6 @@
     align-items: flex-end;
     justify-content: space-between;
 }
-
 .exit {
     &:hover {
         cursor: pointer;

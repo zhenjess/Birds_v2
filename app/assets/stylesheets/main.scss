@@ -1,12 +1,10 @@
 body, html {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
-
 a:visited {
   color: white;
 }
-
 .main-image {
   display: flex;
   background-image: image-url("main.png");
@@ -21,7 +19,6 @@ a:visited {
   justify-content: center;
   min-height: 500px;
 }
-
 .header-text {
   margin-top: -160px;
   text-align: center;
@@ -32,9 +29,8 @@ a:visited {
   letter-spacing: 10px;
   font-weight: 650;
 }
-
 .main-links {
-   a:visited {
+  a:visited {
     color: white;
   }
     display: flex;
@@ -51,7 +47,6 @@ a:visited {
     transition: .2s;
     font-family: sans-serif;
     font-size: 14px;
-    
     .link-text {
       a:visited {
         color: white;

@@ -8,11 +8,9 @@
 }
 
 .about-sugar-material {
-
     display: flex;
     justify-content: space-between;
     height: 455px;
-    
     .about-sugar-image {
        display: flex;
        background-image: image-url("about_sugar.png");
@@ -24,12 +22,10 @@
         object-fit: cover;
         overflow: hidden;
     }
-
     .sugar-text {
         display: flex;
         flex-direction: column;
         width: 500px;
-        
         .about-sugar-text {
             p {
                 display: flex;

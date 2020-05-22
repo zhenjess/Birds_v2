@@ -2,15 +2,13 @@
     height: 100vh;
     background-color: #f1ebe6;
     box-sizing: border-box;
-  
     .logout-form-container {
         background-color: #F1EBE7;
         display: flex;
         justify-content: center;
         align-items: center;
         background-position: 50% 100%;
-        padding-top: 250px;
-    
+        padding-top: 250px; 
         h2 {
             font-family: 'HurmeGeometricSans3-Bold', Helvetica, Arial, sans-serif;
             font-size: 1.5em;
@@ -18,7 +16,6 @@
             letter-spacing: 2px;
             text-align: center;
         }
-    
         .logout-link {
             display: block;
             font-family: 'HurmeGeometricSans3-SemiBold', Helvetica, Arial, sans-serif;
@@ -31,11 +28,9 @@
             text-decoration: underline;
         }
     }
-    
     .logout-status {
         display: flex;
         justify-content: center;
-
         p {
             text-align: left;
             margin: 0;
@@ -44,8 +39,7 @@
             font-size: 100%;
             font: inherit;
             vertical-align: baseline;
-        }
-    
+        }  
         .orders p{
             display: block;
             font-size: 0.875em;
@@ -53,8 +47,7 @@
             font-family: 'Roboto', sans-serif;
             font-size: 13px;
             margin-right: 300px;
-        }
-    
+        }  
         .default {
             display: block;
             background-color: white;
@@ -63,23 +56,19 @@
             font-size: 0.875em;
             line-height: 1.7;
             margin-left: 300px;
-
             .name {
                 font-size: 1.125em;
                 letter-spacing: 2px;
                 margin-bottom: 30px;
-            }
-    
+            }  
             .address-body {
                 margin-bottom: 55px;
                 font-family: 'Roboto', sans-serif;
                 font-size: 13px;
-            }
-    
+            }  
             .email {
                 word-wrap: break-word;
-            }
-    
+            }  
             a {
                 color: #333;
                 font-size: 0.75em;

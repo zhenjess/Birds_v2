@@ -7,7 +7,6 @@
   background: rgba(0, 0, 0, 0.7);
   z-index: 10;
 }
-
 .modal-child {
   position: fixed;
   top: 50%;
@@ -24,17 +23,14 @@
 }
 .cart-form {
     margin-left: -120px;
-
     .cart-text {
         border-bottom: 3px solid grey;
-
         .cart-img {
             display: flex;
             justify-content: center;
             align-items: center;
         }
     }
-
     .shop-links {
         display: flex;
         align-items: center;
@@ -43,10 +39,8 @@
         flex-direction: column;
         justify-content: center;
         margin-left: -100px;
-
         .shop-link {
             margin: 10px;
-
             button {
                 box-sizing: border-box;
                 min-width: 175px;
@@ -59,14 +53,12 @@
                 border-radius: 2px;
                 text-align: center;
             }
-        
             .submit:hover {
                 cursor: pointer;
                 background-color: black;
                 color: white;
                 font-weight: bold;
             }
-        
             .submit{
                 background-color: white;
                 color: black;
@@ -74,7 +66,6 @@
                 padding: 20px;
                 transition: 0.3s;
                 border: 2px solid black;
-        
                 value:hover {
                     color: white;
                 }

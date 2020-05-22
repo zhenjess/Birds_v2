@@ -9,8 +9,7 @@
     .about-trino-material {
         display: flex;
         justify-content: space-between;
-        height: 455px;
-        
+        height: 455px;   
         .about-trino-image {
             display: flex;
             background-image: image-url("about_trino.png");
@@ -23,12 +22,10 @@
             object-fit: cover;
             overflow: hidden;
         }
-    
         .trino-text {
             display: flex;
             flex-direction: column;
-            width: 500px;
-            
+            width: 500px;     
             .about-trino-text {
                 p {
                     display: flex;

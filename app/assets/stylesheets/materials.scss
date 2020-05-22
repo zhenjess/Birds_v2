@@ -1,8 +1,7 @@
 body, html {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
-
 .material-image {
   display: flex;
   background-image: image-url("wool.png");
@@ -17,7 +16,6 @@ body, html {
   justify-content: center;
   min-height: 500px;
 }
-
 .header-text {
   margin-top: -100px;
   text-align: center;
@@ -28,7 +26,6 @@ body, html {
   letter-spacing: 10px;
   font-weight: 650;
 }
-
 .material-types {
     display: flex;
     align-items: center;
@@ -37,11 +34,8 @@ body, html {
     flex-direction: row;
     justify-content: center;
     border-bottom: 2px solid lightgray;
-
     .material-link {
-
         margin: 10px;
-
         button {
             box-sizing: border-box;
             min-width: 175px;
@@ -54,14 +48,12 @@ body, html {
             border-radius: 2px;
             text-align: center;
         }
-    
         .submit:hover {
             cursor: pointer;
             background-color: black;
             color: white;
             font-weight: bold;
         }
-    
         .submit{
             background-color: white;
             color: black;
@@ -69,7 +61,6 @@ body, html {
             padding: 20px;
             transition: 0.3s;
             border: 2px solid black;
-    
             value:hover {
                 color: white;
             }

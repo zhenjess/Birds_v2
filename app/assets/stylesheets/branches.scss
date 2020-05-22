@@ -9,8 +9,7 @@
     .sf-branch {
         display: flex;
         justify-content: space-between;
-        height: 455px;
-        
+        height: 455px;  
         .sf-image {
             display: flex;
             background-image: image-url("sf.png");
@@ -23,12 +22,10 @@
             object-fit: cover;
             overflow: hidden;
         }
-    
         .sf-text {
             display: flex;
             flex-direction: column;
             width: 500px;
-
             h2 {
                 display: flex;
                 margin-top: 175px;

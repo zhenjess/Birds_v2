@@ -1,23 +1,19 @@
 .signup-errors {
     position: absolute;
     top: 150px;
-
     ul{
         padding: 0px;
     }
-
     li {
         list-style-type: none;
     }
 }
-
 .signup-form-container {
     background-color: #F1EBE7;
     display: flex;
     flex-direction: column;
     position: relative;
 }
-
 .signup-form {
     display: flex;
     flex-direction: column;
@@ -27,13 +23,11 @@
     font-size: 13px;
     font-weight: 450;
     position: relative;
-    
     h2 {
         font-family: 'Roboto', sans-serif;
         font-size: 25px;
         margin-bottom: 0px;
     }
-
     input {
         box-sizing: border-box;
         padding: 20px;
@@ -43,13 +37,11 @@
         font-size: 13px;
         border-radius: 2px;
     }
-
     .submit:hover {
         cursor: pointer;
         background-color: #EEE8E6;
         color: black;
     }
-
     .submit{
         background-color: black;
         color: white;
@@ -59,17 +51,14 @@
         border: 2px solid black;
     }
 }
-
 .first-p {
     margin-bottom: 70px;
 }
-
 .second-last-p {
     font-weight: 10px;
     font-size: 10px;
     margin-left: 50px;
 }
-
 .last-p {
     margin-left: 160px;
 }
