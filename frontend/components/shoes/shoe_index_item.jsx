@@ -24,9 +24,10 @@ class ShoeIndexItem extends React.Component {
             .then(this.props.openModal())
     }
 
-    updateCart(quant) {
+    updateCart(quant, idx) {
         //debugger
-        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1, size_idx: idx }
+        // let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1, size_idx: idx }
+        let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.id, quantity: quant + 1, size_idx: idx }
         this.props.updateCartItem(cartItem)
             .then(this.props.startNotification())
             .then(this.props.openModal())
@@ -36,13 +37,12 @@ class ShoeIndexItem extends React.Component {
         let returned = 0;
 
         if (this.props.cartItem) {
-       
             Object.values(this.props.cartItem).forEach((el) => {
            
                 if (el.shoeId === this.props.shoe.id) {
-                    if (el.cartId === this.props.cart.cart.id) { 
+                    // if (el.cartId === this.props.cart.cart.id) { 
                         returned = el.quantity;
-                    }
+                    // }
                 }
             });
         }
