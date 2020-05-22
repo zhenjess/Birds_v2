@@ -33,26 +33,26 @@ class ShoeIndexItem extends React.Component {
             .then(this.props.openModal())
     }
 
-    compareCartItems() {
+    compareCartItems(idx) {
         let returned = 0;
 
+        debugger
         if (this.props.cartItem) {
             Object.values(this.props.cartItem).forEach((el) => {
-           
-                if (el.shoeId === this.props.shoe.id) {
+                if (el.shoeId === this.props.shoe.id && idx === el.size_idx) {
                     // if (el.cartId === this.props.cart.cart.id) { 
                         returned = el.quantity;
                     // }
-                }
+                } 
             });
         }
         return returned;
     }
 
     handleClick(idx) { 
-        let quant = this.compareCartItems();
-
-        if (quant > 0) {
+        let quant = this.compareCartItems(idx);
+       debugger
+        if (quant > 1) {
             this.updateCart(quant, idx)
         } else {
             this.addToCart(idx)
