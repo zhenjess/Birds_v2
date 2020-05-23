@@ -28,8 +28,9 @@ const removeCartItem = (cartItem) => {
 
 export const createCartItem = (cartItem) => dispatch => {
     return APIUtil.createCartItem(cartItem)
-        .then((cartItem) => dispatch(receiveCartItem(cartItem)),
-            (errors) => dispatch(receiveCartItemErrors(errors.responseJSON)))
+        .then((cartItem) =>  {
+            dispatch(receiveCartItem(cartItem)),
+            (errors) => dispatch(receiveCartItemErrors(errors.responseJSON))})
 };
 
 export const updateCartItem = (cartItem) => dispatch => {

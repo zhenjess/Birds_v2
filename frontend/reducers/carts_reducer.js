@@ -7,7 +7,7 @@ const cartsReducer = (oldState = {}, action) => {
     let newState;
     switch (action.type) {
         case RECEIVE_CART:
-            // debugger
+            debugger
             // newState = Object.assign({}, oldState, action.cart);
             // return newState;
             return action.cart

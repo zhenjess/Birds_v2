@@ -13,8 +13,6 @@ class ShoeIndexItem extends React.Component {
         this.compareCartItems = this.compareCartItems.bind(this);
     }
 
-    
-
     addToCart(idx) { 
         //debugger
         let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.id, quantity: 1, size_idx: idx };
@@ -25,7 +23,7 @@ class ShoeIndexItem extends React.Component {
     }
 
     updateCart(quant, idx) {
-        //debugger
+        debugger
         // let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.cart.id, quantity: quant + 1, size_idx: idx }
         let cartItem = { shoe_id: this.props.shoe.id, cart_id: this.props.cart.id, quantity: quant + 1, size_idx: idx }
         this.props.updateCartItem(cartItem)
@@ -39,7 +37,7 @@ class ShoeIndexItem extends React.Component {
         debugger
         if (this.props.cartItem) {
             Object.values(this.props.cartItem).forEach((el) => {
-                if (el.shoeId === this.props.shoe.id && idx === el.size_idx) {
+                if (el.shoeId === this.props.shoe.id && idx === el.sizeIdx) {
                     // if (el.cartId === this.props.cart.cart.id) { 
                         returned = el.quantity;
                     // }

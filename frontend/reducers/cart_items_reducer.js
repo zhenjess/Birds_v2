@@ -5,12 +5,12 @@ import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 
 const cartItemsReducer = (oldState = {}, action) => { 
     Object.freeze(oldState);
-
     let newState;
     switch (action.type) {
 
         case RECEIVE_CART_ITEM:
             newState = Object.assign({}, oldState, { [action.cartItem.id]: action.cartItem });
+            debugger
             return newState;
         case RECEIVE_ALL_SHOES:
             newState = Object.assign({}, oldState, action.payload.cartItems);

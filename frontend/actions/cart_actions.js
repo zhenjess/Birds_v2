@@ -46,8 +46,10 @@ export const fetchCart = (user) => dispatch => {
 };
 
 export const addToCart = (cartItem) => dispatch => {
+
     return CartItemAPIUtil.createCartItem(cartItem)
         .then((payload) => {
+            debugger
             dispatch(receiveCartItems(payload))
         })
 };

@@ -9,7 +9,13 @@ class Api::CartItemsController < ApplicationController
     def create 
         @cart_item = CartItem.includes(:shoe).find_by_cart_id_and_shoe_id(current_user.cart.id, params[:cartItem][:shoe_id])
 
-        @cart_item = @cart_item ||= CartItem.new(cart_item_params)
+        if (@cart_item && @cart_item.size_idx == params[:cartItem][:size_idx])
+            @cart_item = @cart_item
+        else
+           @cart_item = CartItem.new(cart_item_params)
+        end
+        
+       # @cart_item = @cart_item ||= CartItem.new(cart_item_params)
 
         if(@cart_item.save)
             render :show 
